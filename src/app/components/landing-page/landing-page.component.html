@@ -1,3 +1,249 @@
-<p>
-  landing-page works!
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="./img/favicon.png" rel="shortcut icon"/>
+  <meta charset="utf-8"/>
+  <meta content="width=1440, maximum-scale=1.0" name="viewport"/>
+</head>
+
+<body style="margin: 0;
+ background: rgba(255, 255, 255, 1.0);">
+
+<input id="anPageName" name="page" type="hidden" value="landingpage"/>
+<div class="landingpage">
+  <div style="width: 1440px; height: 100%; position:relative; margin:auto;">
+    <img src="./assets/images/landing-page-screenshot-2020-01-21-132616.png" class="screenshot20200121132616"/>
+    <div class="welcometorateme">
+      Welcome to Rate Me
+    </div>
+    <img src="./assets/images/landing-page-rectangle.png" class="rectangle"/>
+    <div class="rateme">
+      Rate Me
+    </div>
+    <a href="signupform.html">
+      <button class="group">
+        <div class="rectangle1">
+        </div>
+        <div class="signup">
+          Signup
+        </div>
+      </button>
+    </a>
+    <button class="group1">
+      <div class="rectangle1">
+      </div>
+      <div class="signup">
+        Signup
+      </div>
+    </button>
+    <button class="group2">
+      <div class="rectangle1">
+      </div>
+      <div class="login">
+        Login
+      </div>
+    </button>
+    <div class="createsurveysthat">
+      Create surveys that are straight to the point
+    </div>
+    <div class="reachyourcustomers">
+      Reach your customers easier
+    </div>
+    <div class="getinsightscreate">
+      Get insights, create and communicate action plans from customer feedback
+    </div>
+    <div class="aboutus">
+      About us
+    </div>
+    <div class="group3">
+      <div class="tabfixedtabsicononlyflat">
+        <img src="./assets/images/landing-page-surface.png" class="surface"/>
+        <div class="containercolor">
+          <div class="background">
+          </div>
+          <div class="u21b3tonalpalette">
+            <div class="rectangle13">
+            </div>
+          </div>
+        </div>
+        <div class="divider">
+          <div class="surface1">
+          </div>
+          <div class="u21b3dividercolor">
+            <div class="rectangle3">
+            </div>
+          </div>
+        </div>
+        <div class="tab3">
+          <div class="surface1">
+          </div>
+          <div class="u21b3icon">
+            <img src="./assets/images/landing-page-u21b3-icon@2x.png" class="u21b3icon1"/>
+          </div>
+        </div>
+        <div class="tab2">
+          <div class="surface1">
+          </div>
+          <div class="u21b3icon">
+            <img src="./assets/images/landing-page-u21b3-icon-1@2x.png" class="u21b3icon1"/>
+          </div>
+        </div>
+        <div class="tab0">
+          <div class="surface1">
+          </div>
+          <div class="u21b3icon">
+            <img src="./assets/images/landing-page-u21b3-icon-2@2x.png" class="u21b3icon1"/>
+          </div>
+        </div>
+      </div>
+      <div class="group31">
+      </div>
+      <div class="systembarprimary">
+        <div class="background">
+        </div>
+        <div class="u21b3systembarcolor">
+          <div class="background1">
+          </div>
+          <div class="u21b3tonalpalette">
+            <div class="rectangle13">
+            </div>
+          </div>
+        </div>
+        <div class="icons">
+          <img src="./assets/images/landing-page-icons@2x.png" class="icons1"/>
+        </div>
+      </div>
+      <img src="./assets/images/landing-page-oval@2x.png" class="oval"/>
+      <img src="./assets/images/landing-page-javalogo2@2x.png" class="javalogo2"/>
+      <div class="hijuma">
+        Hi, Juma
+      </div>
+      <div class="wevalueyouasacu">
+        We value you as a customer and because of that we would like to make your experience better
+      </div>
+      <div class="pleasetellushowy">
+        Please tell us how your experience today was
+      </div>
+      <div class="okbuthadanissue">
+        OK but had an issue
+      </div>
+      <div class="choices">
+        <div class="rectangle1">
+        </div>
+        <div class="slowservice">
+          Slow service
+        </div>
+      </div>
+      <div class="choices1">
+        <div class="rectangle1">
+        </div>
+        <div class="slowservice">
+          Communication
+        </div>
+      </div>
+      <div class="choices2">
+        <div class="rectangle1">
+        </div>
+        <div class="slowservice">
+          Food
+        </div>
+      </div>
+      <div class="choices3">
+        <div class="rectangle1">
+        </div>
+        <div class="slowservice">
+          Drinks
+        </div>
+      </div>
+      <div class="choices4">
+        <div class="rectangle1">
+        </div>
+        <div class="slowservice">
+          Ambience
+        </div>
+      </div>
+      <img src="./assets/images/landing-page-10416-slider-mango2@2x.png" class="a10416slidermango2"/>
+    </div>
+    <img src="./assets/images/landing-page-2523-loading.png" class="a2523loading"/>
+    <img src="./assets/images/landing-page-13634-data-analysis-animation.png" class="a13634dataanalysisanimation"/>
+  </div>
+</div>
+<!-- Scripts -->
+<script>
+  anima_isHidden = function(e) {
+    if (!(e instanceof HTMLElement)) return !1;
+    if (getComputedStyle(e).display == "none") return !0; else if (e.parentNode && anima_isHidden(e.parentNode)) return !0;
+    return !1;
+  };
+  anima_loadAsyncSrcForTag = function(tag) {
+    var elements = document.getElementsByTagName(tag);
+    var toLoad = [];
+    for (var i = 0; i < elements.length; i++) {
+      var e = elements[i];
+      var src = e.getAttribute("src");
+      var loaded = (src != undefined && src.length > 0 && src != 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+      if (loaded) continue;
+      var asyncSrc = e.getAttribute("anima-src");
+      if (asyncSrc == undefined || asyncSrc.length == 0) continue;
+      if (anima_isHidden(e)) continue;
+      toLoad.push(e);
+    }
+    toLoad.sort(function(a, b) {
+      return anima_getTop(a) - anima_getTop(b);
+    });
+    for (var i = 0; i < toLoad.length; i++) {
+      var e = toLoad[i];
+      var asyncSrc = e.getAttribute("anima-src");
+      e.setAttribute("src", asyncSrc);
+    }
+  };
+  anima_pauseHiddenVideos = function(tag) {
+    var elements = document.getElementsByTagName("video");
+    for (var i = 0; i < elements.length; i++) {
+      var e = elements[i];
+      var isPlaying = !!(e.currentTime > 0 && !e.paused && !e.ended && e.readyState > 2);
+      var isHidden = anima_isHidden(e);
+      if (!isPlaying && !isHidden && e.getAttribute("autoplay") == "autoplay") {
+        e.play();
+      } else if (isPlaying && isHidden) {
+        e.pause();
+      }
+    }
+  };
+  anima_loadAsyncSrc = function(tag) {
+    anima_loadAsyncSrcForTag("img");
+    anima_loadAsyncSrcForTag("iframe");
+    anima_loadAsyncSrcForTag("video");
+    anima_pauseHiddenVideos();
+  };
+  var anima_getTop = function(e) {
+    var top = 0;
+    do {
+      top += e.offsetTop || 0;
+      e = e.offsetParent;
+    } while (e);
+    return top;
+  };
+  anima_loadAsyncSrc();
+  anima_old_onResize = window.onresize;
+  anima_new_onResize = undefined;
+  anima_updateOnResize = function() {
+    if (anima_new_onResize == undefined || window.onresize != anima_new_onResize) {
+      anima_new_onResize = function(x) {
+        if (anima_old_onResize != undefined) anima_old_onResize(x);
+        anima_loadAsyncSrc();
+      };
+      window.onresize = anima_new_onResize;
+      setTimeout(function() {
+        anima_updateOnResize();
+      }, 3000);
+    }
+  };
+  anima_updateOnResize();
+  setTimeout(function() {
+    anima_loadAsyncSrc();
+  }, 200);
+</script>
+<!-- End of Scripts -->
+</body>
+</html>
