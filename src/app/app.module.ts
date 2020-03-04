@@ -12,6 +12,7 @@ import { CustomersComponent } from './components/home/customers/customers.compon
 import { DashboardComponent } from './components/home/dashboard/dashboard.component';
 import { FeebackFormsComponent } from './components/home/feeback-forms/feeback-forms.component';
 import { DesignFeedbackFormsComponent } from './components/home/design-feedback-forms/design-feedback-forms.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DesignFeedbackFormsComponent } from './components/home/design-feedback-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

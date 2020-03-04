@@ -4,17 +4,18 @@
   /*src: url('../fonts/Product Sans Regular.ttf') format("truetype");*/
 }
 
-.signupform {
+.signup {
   width               : 100%;
   min-width           : 1440px;
   height              : 100vh;
-  min-height          : 1203px;
+  min-height          : 955px;
   position            : relative;
   overflow            : hidden;
   margin              : 0px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color    : rgba(255, 255, 255, 1.0);
+  opacity             : 1.0;
 }
 a {
   text-decoration     : none;
@@ -31,580 +32,428 @@ div {
 div {
   -webkit-text-size-adjust: none;
 }
-.signupform .rectangle {
-  background-color    : rgba(219, 79, 60, 1.0);
-  top                 : 0px;
-  height              : 1203px;
-  width               : 720px;
-  position            : absolute;
-  margin              : 0;
-  left                : 720px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
-}
-.signupform .inputweb {
+.signup .hiletu2019sgetyoual {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 348px;
-  height              : 89px;
-  width               : 558px;
-  position            : absolute;
-  margin              : 0;
-  left                : 82px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
-}
-.signupform .inputweb .rectangle1 {
-  background-color    : rgba(215, 215, 215, 1.0);
-  top                 : 0px;
-  height              : 89px;
-  width               : 558px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 3px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
-  opacity             : 0.7;
-}
-.signupform .inputweb .businessname {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 25px;
+  top                 : 64px;
   height              : auto;
   width               : auto;
   position            : absolute;
   margin              : 0;
-  left                : 30px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 757px;
   transform           : rotate(0deg);
-  opacity             : 0.7;
+  opacity             : 1.0;
   font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 27.0px;
+  font-size           : 38.0px;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
-  letter-spacing      : 1.32px;
-  line-height         : 33.0px;
+  letter-spacing      : 0.54px;
+  line-height         : 46.0px;
 }
-.signupform .inputweb1 {
+.signup .shouldonlytakeac {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 476px;
-  height              : 89px;
-  width               : 558px;
-  position            : absolute;
-  margin              : 0;
-  left                : 82px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
-}
-.signupform .inputweb1 .rectangle1 {
-  background-color    : rgba(215, 215, 215, 1.0);
-  top                 : 0px;
-  height              : 89px;
-  width               : 558px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 3px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
-  opacity             : 0.7;
-}
-.signupform .inputweb1 .businessname {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 25px;
+  top                 : 546px;
   height              : auto;
-  width               : auto;
+  width               : 473px;
   position            : absolute;
   margin              : 0;
-  left                : 30px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 129px;
   transform           : rotate(0deg);
   opacity             : 0.7;
   font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 27.0px;
+  font-size           : 18.0px;
   color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 1.32px;
-  line-height         : 33.0px;
-}
-.signupform .tokeepconnectedlo {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 258px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 832px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 25.0px;
-  color               : rgba(255, 255, 255, 1.0);
   text-align          : center;
-  letter-spacing      : 1.22px;
-  line-height         : 30.0px;
+  letter-spacing      : 1.07px;
+  line-height         : 22.0px;
 }
-.signupform .createaccount {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 141px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 156px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 50.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 2.44px;
-  line-height         : 61.0px;
-}
-.signupform .welcomebacksigni {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 141px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 813px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 50.0px;
-  color               : rgba(255, 255, 255, 1.0);
-  text-align          : left;
-  letter-spacing      : 2.44px;
-  line-height         : 61.0px;
-}
-.signupform .eenterthedetailso {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 228px;
-  height              : auto;
-  width               : 485px;
-  position            : absolute;
-  margin              : 0;
-  left                : 109px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
-  opacity             : 0.7;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 25.0px;
-  color               : rgba(255, 255, 255, 1.0);
-  text-align          : center;
-  letter-spacing      : 1.22px;
-  line-height         : 30.0px;
-}
-.signupform .eenterthedetailso .span1 {
 
-}
-.signupform .eenterthedetailso .span2 {
-  color               : rgba(0, 0, 0, 1.0);
-  letter-spacing      : 1.17px;
-}
-.signupform .inputweb2 {
+.signup .input {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 607px;
-  height              : 89px;
-  width               : 558px;
+  top                 : 266px;
+  height              : 77px;
+  width               : 594px;
   position            : absolute;
   margin              : 0;
-  left                : 82px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 756px;
   transform           : rotate(0deg);
+  opacity             : 1.0;
 }
-.signupform .inputweb2 .rectangle1 {
-  background-color    : rgba(215, 215, 215, 1.0);
+.signup .input .rectangle {
+  background-color    : rgba(249, 249, 249, 1.0);
   top                 : 0px;
-  height              : 89px;
-  width               : 558px;
+  height              : 77px;
+  width               : 594px;
   position            : absolute;
   margin              : 0;
   left                : 0px;
   border-radius       : 3px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
-  opacity             : 0.7;
+  opacity             : 1.0;
 }
-.signupform .inputweb2 .businessname {
+.signup .input .email {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 25px;
+  top                 : 28px;
   height              : auto;
   width               : auto;
   position            : absolute;
   margin              : 0;
-  left                : 30px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 27px;
   transform           : rotate(0deg);
   opacity             : 0.7;
   font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 27.0px;
+  font-size           : 16.0px;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
-  letter-spacing      : 1.32px;
-  line-height         : 33.0px;
+  letter-spacing      : 0.23px;
+  line-height         : 19.0px;
 }
-.signupform .inputweb3 {
+.signup .input1 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 735px;
-  height              : 89px;
-  width               : 558px;
+  top                 : 373px;
+  height              : 77px;
+  width               : 594px;
   position            : absolute;
   margin              : 0;
-  left                : 82px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 757px;
   transform           : rotate(0deg);
+  opacity             : 1.0;
 }
-.signupform .inputweb3 .rectangle1 {
-  background-color    : rgba(215, 215, 215, 1.0);
+.signup .input1 .rectangle {
+  background-color    : rgba(249, 249, 249, 1.0);
   top                 : 0px;
-  height              : 89px;
-  width               : 558px;
+  height              : 77px;
+  width               : 594px;
   position            : absolute;
   margin              : 0;
   left                : 0px;
   border-radius       : 3px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
-  opacity             : 0.7;
+  opacity             : 1.0;
 }
-.signupform .inputweb3 .businessname {
+.signup .input1 .email {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 25px;
+  top                 : 28px;
   height              : auto;
   width               : auto;
   position            : absolute;
   margin              : 0;
-  left                : 30px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 27px;
   transform           : rotate(0deg);
   opacity             : 0.7;
   font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 27.0px;
+  font-size           : 16.0px;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
-  letter-spacing      : 1.32px;
-  line-height         : 33.0px;
+  letter-spacing      : 0.23px;
+  line-height         : 19.0px;
 }
-.signupform .group3 {
+.signup .input2 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 863px;
-  height              : 89px;
-  width               : 558px;
+  top                 : 159px;
+  height              : 77px;
+  width               : 594px;
   position            : absolute;
   margin              : 0;
-  left                : 82px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 757px;
   transform           : rotate(0deg);
+  opacity             : 1.0;
 }
-.signupform .group3 .inputweb6 {
-  background-color    : rgba(255,255,255,0.0);
+.signup .input2 .rectangle {
+  background-color    : rgba(249, 249, 249, 1.0);
   top                 : 0px;
-  height              : 89px;
-  width               : 558px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
-}
-.signupform .group3 .inputweb6 .rectangle1 {
-  background-color    : rgba(215, 215, 215, 1.0);
-  top                 : 0px;
-  height              : 89px;
-  width               : 558px;
+  height              : 77px;
+  width               : 594px;
   position            : absolute;
   margin              : 0;
   left                : 0px;
   border-radius       : 3px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
-  opacity             : 0.7;
+  opacity             : 1.0;
 }
-.signupform .group3 .inputweb6 .businessname {
+.signup .input2 .email {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 25px;
+  top                 : 28px;
   height              : auto;
   width               : auto;
   position            : absolute;
   margin              : 0;
-  left                : 30px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 27px;
   transform           : rotate(0deg);
   opacity             : 0.7;
   font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 27.0px;
+  font-size           : 16.0px;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
-  letter-spacing      : 1.32px;
-  line-height         : 33.0px;
+  letter-spacing      : 0.23px;
+  line-height         : 19.0px;
 }
-.signupform .group3 .uploadfile {
+.signup .iconnavigationexpandmore24px {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 24px;
-  height              : 42px;
-  width               : 157px;
+  top                 : 514px;
+  height              : 13px;
+  width               : 20px;
   position            : absolute;
   margin              : 0;
-  left                : 386px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 1296px;
   transform           : rotate(0deg);
+  opacity             : 1.0;
 }
-.signupform .group3 .uploadfile .rectangle1 {
-  background-color    : rgba(255, 255, 255, 1.0);
+.signup .iconnavigationexpandmore24px .iconnavigationexpandmore24px1 {
+  background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
-  height              : 42px;
-  width               : 157px;
+  height              : 13px;
+  width               : 20px;
   position            : absolute;
   margin              : 0;
   left                : 0px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
+  opacity             : 1.0;
 }
-.signupform .group3 .uploadfile .choosefile {
+
+.signup .form-control{
+  border: none;
+  padding-left: 20px;
+}
+.signup .input3 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 11px;
-  height              : auto;
-  width               : auto;
+  top                 : 481px;
+  height              : 77px;
+  width               : 594px;
   position            : absolute;
   margin              : 0;
-  left                : 20px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 757px;
   transform           : rotate(0deg);
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 20.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.98px;
-  line-height         : 24.0px;
+  opacity             : 1.0;
+  border: none;
 }
-.signupform .inputweb4 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 476px;
-  height              : 89px;
-  width               : 558px;
-  position            : absolute;
-  margin              : 0;
-  left                : 818px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
-}
-.signupform .inputweb4 .rectangle1 {
-  background-color    : rgba(215, 215, 215, 1.0);
+.signup .input3 .rectangle {
+  background-color    : rgba(249, 249, 249, 1.0);
   top                 : 0px;
-  height              : 89px;
-  width               : 558px;
+  height              : 77px;
+  width               : 594px;
   position            : absolute;
   margin              : 0;
   left                : 0px;
   border-radius       : 3px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
-  opacity             : 0.7;
+  opacity             : 1.0;
+  border:none;
 }
-.signupform .inputweb4 .businessname {
+.signup .input3 .email {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 25px;
+  top                 : 28px;
   height              : auto;
   width               : auto;
   position            : absolute;
   margin              : 0;
-  left                : 30px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 27px;
   transform           : rotate(0deg);
   opacity             : 0.7;
   font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 27.0px;
+  font-size           : 16.0px;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
-  letter-spacing      : 1.32px;
-  line-height         : 33.0px;
+  letter-spacing      : 0.23px;
+  line-height         : 19.0px;
 }
-.signupform .inputweb5 {
+.signup .input4 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 619px;
-  height              : 89px;
-  width               : 558px;
+  top                 : 588px;
+  height              : 77px;
+  width               : 594px;
   position            : absolute;
   margin              : 0;
-  left                : 818px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 757px;
   transform           : rotate(0deg);
+  opacity             : 1.0;
 }
-.signupform .inputweb5 .rectangle1 {
-  background-color    : rgba(215, 215, 215, 1.0);
+.signup .input4 .rectangle {
+  background-color    : rgba(249, 249, 249, 1.0);
   top                 : 0px;
-  height              : 89px;
-  width               : 558px;
+  height              : 77px;
+  width               : 594px;
   position            : absolute;
   margin              : 0;
   left                : 0px;
   border-radius       : 3px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
-  opacity             : 0.7;
+  opacity             : 1.0;
 }
-.signupform .inputweb5 .businessname {
+.signup .input4 .email {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 25px;
+  top                 : 28px;
   height              : auto;
   width               : auto;
   position            : absolute;
   margin              : 0;
-  left                : 30px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 27px;
   transform           : rotate(0deg);
   opacity             : 0.7;
   font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 27.0px;
+  font-size           : 16.0px;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
-  letter-spacing      : 1.32px;
-  line-height         : 33.0px;
+  letter-spacing      : 0.23px;
+  line-height         : 19.0px;
 }
-.signupform .group2 {
+.signup .input5 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 803px;
-  height              : 75px;
-  width               : 281px;
+  top                 : 588px;
+  height              : 77px;
+  width               : 594px;
   position            : absolute;
   margin              : 0;
-  left                : 928px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 757px;
   transform           : rotate(0deg);
+  opacity             : 1.0;
 }
-.signupform .group2 .rectangle1 {
-  background-color    : rgba(255, 255, 255, 1.0);
+.signup .input5 .rectangle {
+  background-color    : rgba(249, 249, 249, 1.0);
   top                 : 0px;
-  height              : 75px;
-  box-sizing          : border-box;
-  width               : 281px;
+  height              : 77px;
+  width               : 594px;
   position            : absolute;
   margin              : 0;
   left                : 0px;
-  border-radius       : 5px;
-  border-style        : solid;
-  border-width        : 1px;
-  border-color        : rgba(150, 150, 150, 1.0);
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  border-radius       : 3px;
   transform           : rotate(0deg);
+  opacity             : 1.0;
 }
-.signupform .group2 .login {
+.signup .input5 .email {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 13px;
+  top                 : 28px;
   height              : auto;
   width               : auto;
   position            : absolute;
   margin              : 0;
-  left                : 96px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 27px;
   transform           : rotate(0deg);
+  opacity             : 0.7;
   font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 33.0px;
+  font-size           : 16.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.23px;
+  line-height         : 19.0px;
+}
+.signup .input6 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 695px;
+  height              : 77px;
+  width               : 594px;
+  position            : absolute;
+  margin              : 0;
+  left                : 756px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.signup .input6 .rectangle {
+  background-color    : rgba(249, 249, 249, 1.0);
+  top                 : 0px;
+  height              : 77px;
+  width               : 594px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 3px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.signup .input6 .email {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 28px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 27px;
+  transform           : rotate(0deg);
+  opacity             : 0.7;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 16.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.23px;
+  line-height         : 19.0px;
+}
+.signup .rateme {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 54px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 130px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 30.0px;
   color               : rgba(219, 79, 60, 1.0);
-  text-align          : center;
-  letter-spacing      : 1.61px;
-  line-height         : 40.0px;
+  text-align          : left;
+  letter-spacing      : 1.47px;
+  line-height         : 37.0px;
 }
-.signupform .group {
+.signup .signupbutton {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 1034px;
-  height              : 75px;
-  width               : 281px;
+  top                 : 840px;
+  height              : 48px;
+  width               : 214px;
   position            : absolute;
   margin              : 0;
-  left                : 193px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 947px;
   transform           : rotate(0deg);
+  opacity             : 1.0;
 }
-.signupform .group .rectangle1 {
+.signup .signupbutton .group {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 48px;
+  width               : 214px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.signup .signupbutton .group .rectangle {
   background-color    : rgba(219, 79, 60, 1.0);
   top                 : 0px;
-  height              : 75px;
-  width               : 281px;
-  position            : absolute;
+  height              : 48px;
+  width               : 214px;
+  position            : relative;
   margin              : 0;
   left                : 0px;
   border-radius       : 4px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
+  opacity             : 1.0;
 }
-.signupform .group .signup {
+.signup .signupbutton .signup1 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 16px;
+  top                 : 15px;
   height              : auto;
-  width               : auto;
+  width               : 71px;
   position            : absolute;
   margin              : 0;
-  left                : 85px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 72px;
   transform           : rotate(0deg);
+  opacity             : 1.0;
   font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 33.0px;
+  font-size           : 14.0px;
   color               : rgba(255, 255, 255, 1.0);
   text-align          : center;
-  letter-spacing      : 1.61px;
-  line-height         : 40.0px;
+  letter-spacing      : 0.68px;
+  line-height         : 17.0px;
 }
-.signupform .iconnavigationexpandmore24px {
+.signup .screenshot20200121132616 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 773px;
-  height              : 15px;
-  width               : 24px;
+  top                 : 147px;
+  height              : 315px;
+  width               : 538px;
   position            : absolute;
   margin              : 0;
-  left                : 582px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  left                : 130px;
   transform           : rotate(0deg);
-}
-.signupform .iconnavigationexpandmore24px .iconnavigationexpandmore24px1 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 15px;
-  width               : 24px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
+  opacity             : 1.0;
 }
 /* .anima-animate-appear prefix for appear animations */
 .anima-animate-appear {
@@ -684,4 +533,35 @@ div {
   {
     opacity: 1;
   }
+}
+.anima-component-wrapper,
+.anima-component-wrapper * {
+  pointer-events      : none;
+}
+.anima-component-wrapper a *,
+.anima-component-wrapper a,
+.anima-component-wrapper input,
+.anima-component-wrapper video,
+.anima-component-wrapper iframe,
+.anima-listeners-active,
+.anima-listeners-active * {
+  pointer-events      : auto;
+}
+.anima-hidden,
+.anima-hidden * {
+  visibility          : hidden;
+  pointer-events      : none;
+}
+.anima-smart-layers-pointers,
+.anima-smart-layers-pointers * {
+  pointer-events      : auto;
+  visibility          : visible;
+}
+.anima-component-wrapper.anima-not-ready,
+.anima-component-wrapper.anima-not-ready * {
+  visibility          : hidden !important;
+}
+.anima-listeners-active-click,
+.anima-listeners-active-click * {
+  cursor              : pointer;
 }

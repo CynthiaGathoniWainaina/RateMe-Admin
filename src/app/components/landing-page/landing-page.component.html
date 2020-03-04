@@ -4,11 +4,11 @@
   <link href="./img/favicon.png" rel="shortcut icon"/>
   <meta charset="utf-8"/>
   <meta content="width=1440, maximum-scale=1.0" name="viewport"/>
+<!--  <link href="./css/landingPage.css" rel="stylesheet" type="text/css"/>-->
 </head>
 
 <body style="margin: 0;
  background: rgba(255, 255, 255, 1.0);">
-
 <input id="anPageName" name="page" type="hidden" value="landingpage"/>
 <div class="landingpage">
   <div style="width: 1440px; height: 100%; position:relative; margin:auto;">
@@ -20,24 +20,28 @@
     <div class="rateme">
       Rate Me
     </div>
-    <a href="signupform.html">
-      <button class="group">
+    <button class="signupbutton" routerLink="/signup">
+      <div class="group">
         <div class="rectangle1">
         </div>
-        <div class="signup">
-          Signup
+      </div>
+      <span class="signup">
+        Signup
+      </span>
+    </button>
+    <button class="signupbutton1" routerLink="/signup">
+      <div class="group">
+        <div class="rectangle1">
         </div>
-      </button>
-    </a>
-    <button class="group1">
-      <div class="rectangle1">
       </div>
       <div class="signup">
         Signup
       </div>
     </button>
-    <button class="group2">
-      <div class="rectangle1">
+    <button class="loginbutton" routerLink="/login">
+      <div class="group2">
+        <div class="rectangle1">
+        </div>
       </div>
       <div class="login">
         Login
@@ -55,119 +59,13 @@
     <div class="aboutus">
       About us
     </div>
-    <div class="group3">
-      <div class="tabfixedtabsicononlyflat">
-        <img src="./assets/images/landing-page-surface.png" class="surface"/>
-        <div class="containercolor">
-          <div class="background">
-          </div>
-          <div class="u21b3tonalpalette">
-            <div class="rectangle13">
-            </div>
-          </div>
-        </div>
-        <div class="divider">
-          <div class="surface1">
-          </div>
-          <div class="u21b3dividercolor">
-            <div class="rectangle3">
-            </div>
-          </div>
-        </div>
-        <div class="tab3">
-          <div class="surface1">
-          </div>
-          <div class="u21b3icon">
-            <img src="./assets/images/landing-page-u21b3-icon@2x.png" class="u21b3icon1"/>
-          </div>
-        </div>
-        <div class="tab2">
-          <div class="surface1">
-          </div>
-          <div class="u21b3icon">
-            <img src="./assets/images/landing-page-u21b3-icon-1@2x.png" class="u21b3icon1"/>
-          </div>
-        </div>
-        <div class="tab0">
-          <div class="surface1">
-          </div>
-          <div class="u21b3icon">
-            <img src="./assets/images/landing-page-u21b3-icon-2@2x.png" class="u21b3icon1"/>
-          </div>
-        </div>
-      </div>
-      <div class="group31">
-      </div>
-      <div class="systembarprimary">
-        <div class="background">
-        </div>
-        <div class="u21b3systembarcolor">
-          <div class="background1">
-          </div>
-          <div class="u21b3tonalpalette">
-            <div class="rectangle13">
-            </div>
-          </div>
-        </div>
-        <div class="icons">
-          <img src="./assets/images/landing-page-icons@2x.png" class="icons1"/>
-        </div>
-      </div>
-      <img src="./assets/images/landing-page-oval@2x.png" class="oval"/>
-      <img src="./assets/images/landing-page-javalogo2@2x.png" class="javalogo2"/>
-      <div class="hijuma">
-        Hi, Juma
-      </div>
-      <div class="wevalueyouasacu">
-        We value you as a customer and because of that we would like to make your experience better
-      </div>
-      <div class="pleasetellushowy">
-        Please tell us how your experience today was
-      </div>
-      <div class="okbuthadanissue">
-        OK but had an issue
-      </div>
-      <div class="choices">
-        <div class="rectangle1">
-        </div>
-        <div class="slowservice">
-          Slow service
-        </div>
-      </div>
-      <div class="choices1">
-        <div class="rectangle1">
-        </div>
-        <div class="slowservice">
-          Communication
-        </div>
-      </div>
-      <div class="choices2">
-        <div class="rectangle1">
-        </div>
-        <div class="slowservice">
-          Food
-        </div>
-      </div>
-      <div class="choices3">
-        <div class="rectangle1">
-        </div>
-        <div class="slowservice">
-          Drinks
-        </div>
-      </div>
-      <div class="choices4">
-        <div class="rectangle1">
-        </div>
-        <div class="slowservice">
-          Ambience
-        </div>
-      </div>
-      <img src="./assets/images/landing-page-10416-slider-mango2@2x.png" class="a10416slidermango2"/>
-    </div>
-    <img src="./assets/images/landing-page-2523-loading.png" class="a2523loading"/>
-    <img src="./assets/images/landing-page-13634-data-analysis-animation.png" class="a13634dataanalysisanimation"/>
+    <img src="./assets/images/landing-page-2523-loading.png" class="a2523loading" />
+    <img src="./assets/images/landing-page-13634-data-analysis-animation.png" class="a13634dataanalysisanimation" />
+    <img src="./assets/images/landing-page-screenshot-2020-03-03-111607.png" class="screenshot20200303111607" />
   </div>
 </div>
+
+
 <!-- Scripts -->
 <script>
   anima_isHidden = function(e) {
