@@ -6,6 +6,7 @@ import { IndustryService } from 'src/app/shared/services/industry.service';
 import { FileUploadService } from 'src/app/shared/services/fileUpload.service';
 import { dev } from 'src/app/shared/dev/dev';
 import { OrgProfileService } from 'src/app/shared/services/orgProfile.service';
+import { NotificationService } from 'src/app/shared/services/notification.service';
 
 @Component({
   selector: 'app-signup',
@@ -29,7 +30,8 @@ export class SignupComponent implements OnInit {
     private userService: UserService,
     private orgProfileService: OrgProfileService,
     private industryService: IndustryService,
-    private fileUploadService: FileUploadService
+    private fileUploadService: FileUploadService,
+    private notification: NotificationService
   ) { }
 
 
@@ -163,7 +165,7 @@ onSubmit() {
         this.registerUser();
       },
       error => {
-        console.log('Error Uploading Logo');
+        this.notification.showInfo('Logo was not uploaded', 'Info');
         // in case the logo is not uploaded successfuly, registration continues,
         // if you want to stop registration, do not call the registerUser function
         this.registerUser();
@@ -192,7 +194,7 @@ registerUser() {
     data => {
       this.createOrgProfile();
     },
-    error => console.log(error.error.message)
+    error => this.notification.showWarning(error.error.message, 'Failed')
   );
 }
 
