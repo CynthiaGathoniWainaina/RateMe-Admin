@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders  } from '@angular/common/http';
 import { dev } from '../dev/dev';
+import { UserModel } from '../models/user.model';
 
 
 @Injectable({
@@ -26,7 +27,7 @@ export class UserService {
 
     constructor( private http: HttpClient ) { }
 
-    registerUser( registrationData: any ) {
+    registerUser( registrationData: UserModel ) {
         return this.http.post<any>(this.url + 'register', registrationData, {headers : this.registrationHeader});
     }
 

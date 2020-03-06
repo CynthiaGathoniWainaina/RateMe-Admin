@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import {LandingPageComponent} from './components/landing-page/landing-page.component';
 import {SignupComponent} from './components/signup/signup.component';
 import {LoginComponent} from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { TokenGuard } from './shared/authGuards/token.guard';
 
 const routes: Routes = [
 
@@ -12,7 +14,9 @@ const routes: Routes = [
 
   { path: 'signup', component: SignupComponent },
 
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+
+  { path: 'home', component: HomeComponent, canActivate: [TokenGuard] },
 
 
 

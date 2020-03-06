@@ -17,7 +17,7 @@
       Hi, Let’s get you all set up
     </div>
 
-    <form class="form">
+    <form class="form" [formGroup]="signUpForm"  (ngSubmit)="onSubmit()">
     <div class="shouldonlytakeac">
       Should only take a couple of minutes to start your journey with us
     </div>
@@ -28,21 +28,24 @@
 
     <div class="form-group">
     <div class="input">
-      <input type="text" class="form-control rectangle" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Email">
+      <input type="text" class="form-control rectangle" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Email"
+      formControlName="email"  [class.is-invalid]="formSignUp.email.invalid && formSignUp.email.touched" >
     </div>
     </div>
 
 <!--Location-->
     <div class="form-group">
     <div class="input1">
-      <input type="text" class="form-control rectangle" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Location">
+      <input type="text" class="form-control rectangle" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Location"
+      formControlName="location"  [class.is-invalid]="formSignUp.location.invalid && formSignUp.location.touched">
       </div>
     </div>
 
 <!--Business Name-->
     <div class="form-group">
     <div class="input2">
-      <input type="text" class="form-control rectangle" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Business name">
+      <input type="text" class="form-control rectangle" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Business name"
+      formControlName="businessName"  [class.is-invalid]="formSignUp.businessName.invalid && formSignUp.businessName.touched">
     </div>
     </div>
 
@@ -55,9 +58,10 @@
         </div>
 
         <select aria-label="Small" aria-describedby="inputGroup-sizing-sm"
-                class="form-control" required>
+                class="form-control" required
+                formControlName="industryId"  [class.is-invalid]="formSignUp.industryId.invalid && formSignUp.industryId.touched">
           <option value="" disabled selected hidden >Industry Type</option>
-          <option></option>
+          <option *ngFor="let industry of AllIndustryTypes" [value]="industry._id">{{industry.industryName}}</option>
         </select>
       </div>
     </div>
@@ -66,14 +70,21 @@
 <!--Upload Logo-->
     <div class="form-group">
     <div class="input5">
-      <input type="file" class="rectangle">
+      <input *ngIf="!previewLogo" type="file" class="rectangle"
+      name="fileUploaded" (change)="uploadLogo($event)">
+      <div *ngIf="previewLogo" id="fileUploadedWrap" class="d-flex">
+        <img [src]="previewLogo" alt="logo">
+        <button (click)="removeLogo()">Remove</button>
+      </div>
     </div>
     </div>
+
 
 <!--Password-->
     <div class="form-group">
     <div class="input6">
-      <input type="text" class="form-control rectangle" placeholder="Password">
+      <input type="password" class="form-control rectangle" placeholder="Password"
+      formControlName="password"  [class.is-invalid]="formSignUp.password.invalid && formSignUp.password.touched">
     </div>
     </div>
 
@@ -83,7 +94,7 @@
     </div>
 
 <!--Submit button-->
-    <button type="submit" class="signupbutton">
+    <button type="submit" [disabled]="!signUpForm.valid" class="signupbutton">
       <div class="group">
         <div class="rectangle">
         </div>

@@ -28,21 +28,23 @@
         Enter your details to keep connected
       </div>
 
-<form class="form">
+<form class="form" [formGroup]="signInForm">
 <div class="form-body">
 
 <!--Email address-->
 
       <div class="form-group">
         <div class="input">
-          <input type="text" class="form-control rectangle" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Email">
+          <input type="text" class="form-control rectangle" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Email"
+          formControlName="email"  [class.is-invalid]="formSignIn.email.invalid && formSignIn.email.touched" >
         </div>
       </div>
 
 <!--Password-->
       <div class="form-group">
       <div class="input1">
-        <input type="text" class="form-control rectangle" placeholder="Password">
+        <input type="text" class="form-control rectangle" placeholder="Password"
+        formControlName="password"  [class.is-invalid]="formSignIn.password.invalid && formSignIn.password.touched" >
       </div>
       </div>
 
@@ -69,7 +71,7 @@
       Rate Me
     </div>
 
-    <button class="signupbutton">
+    <button [disabled]="!signInForm.valid" class="signupbutton" (click)="signIn()">
       <div class="group">
         <div class="rectangle">
         </div>

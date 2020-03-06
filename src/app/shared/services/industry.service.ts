@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders  } from '@angular/common/http';
 import { dev } from '../dev/dev';
+import { IndustryModel } from '../models/industry.model';
 
 
 @Injectable({
@@ -22,7 +23,7 @@ export class IndustryService {
     constructor( private http: HttpClient ) { }
 
 
-    createIndustry( data: any ) {
+    createIndustry( data: IndustryModel ) {
         return this.http.post<any>(this.url + 'create', data, {headers : this.header});
     }
 

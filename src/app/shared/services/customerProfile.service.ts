@@ -11,7 +11,7 @@ import { dev } from '../dev/dev';
 export class UserProfileService {
 
 
-    public url = `${dev.connect}api/userProfile/`;
+    public url = `${dev.connect}api/customerProfile/`;
 
 
     header = new HttpHeaders().set(

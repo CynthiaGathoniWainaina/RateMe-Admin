@@ -565,3 +565,31 @@ div {
 .anima-listeners-active-click * {
   cursor              : pointer;
 }
+
+
+
+#fileUploadedWrap {
+  position: absolute;
+  width: 100%;
+  display: flex;
+}
+
+#fileUploadedWrap img {
+  width: 80px;
+  height: 75px;
+  margin: auto auto auto 0;
+  border-radius: 2px;
+}
+
+#fileUploadedWrap button {
+  width: 7em;
+  outline: none;
+  border: none;
+  padding: .5em;
+  border-radius: 2px;
+  background-color: whitesmoke;
+  color: black;
+  font-size: 13px;
+  margin: auto;
+  cursor: pointer;
+}
