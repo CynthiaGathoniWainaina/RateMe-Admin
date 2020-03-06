@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/shared/services/user.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { NotificationService } from 'src/app/shared/services/notification.service';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +16,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private formBuilder: FormBuilder,
     private userService: UserService,
+    private notification: NotificationService
   ) { }
 
 
@@ -45,7 +47,7 @@ signIn() {
       localStorage.setItem('loggedInUserType', data.userType);
       this.router.navigate(['/home']);
     },
-    error => console.log(error.error.message)
+    error =>  this.notification.showError(error.error.message, 'Test')
   );
 }
 
