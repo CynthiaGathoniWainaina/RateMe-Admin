@@ -18,6 +18,7 @@ import { FeebackFormsComponent } from './components/home/feeback-forms/feeback-f
 import { DesignFeedbackFormsComponent } from './components/home/design-feedback-forms/design-feedback-forms.component';
 import { IndustryService } from './shared/services/industry.service';
 import { HttpClientModule } from '@angular/common/http';
+import {ChartsModule} from 'ng2-charts';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ChartsModule,
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
