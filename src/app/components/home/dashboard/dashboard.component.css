@@ -1,0 +1,1031 @@
+
+@font-face {
+  font-family: "ProductSans-Bold";
+  /*src: url('../fonts/Product Sans Bold.ttf') format("truetype");*/
+}
+@font-face {
+  font-family: "ProductSans-Regular";
+  /*src: url('../fonts/Product Sans Regular.ttf') format("truetype");*/
+}
+
+.dashboard {
+  width               : 100%;
+  min-width           : 1440px;
+  height              : 100vh;
+  min-height          : 1999px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color    : rgba(249, 249, 249, 1.0);
+  opacity             : 1.0;
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-full-width-a {
+  width               : 100%;
+}
+.anima-full-height-a {
+  height              : 100%;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.dashboard .group6 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 546px;
+  height              : 134px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 51px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group6 .rectangle {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 134px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 9px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group6 .a40 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 63px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 18px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Bold", Helvetica, Arial, serif;
+  font-size           : 45.0px;
+  color               : rgba(219, 79, 60, 1.0);
+  text-align          : left;
+  letter-spacing      : 2.59px;
+  line-height         : 54.0px;
+}
+.dashboard .group6 .totalnoofraters {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 17px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 14px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 1.04px;
+  line-height         : 22.0px;
+}
+.dashboard .group {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1466px;
+  height              : 470px;
+  width               : 588px;
+  position            : absolute;
+  margin              : 0;
+  left                : 46px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group .rectangle {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 470px;
+  width               : 588px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 9px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group .mostcommonemotion {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 207px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 142px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 16.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.92px;
+  line-height         : 19.0px;
+}
+.dashboard .group .avgsatisfactionrat {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 160px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 142px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 16.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.92px;
+  line-height         : 19.0px;
+}
+.dashboard .group .a5ratings {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 108px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 436px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(242, 106, 75, 1.0);
+  text-align          : left;
+  letter-spacing      : 1.04px;
+  line-height         : 22.0px;
+}
+.dashboard .group .oval {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 116px;
+  height              : 80px;
+  width               : 80px;
+  position            : absolute;
+  margin              : 0;
+  left                : 38px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group .kendiashley {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 112px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 142px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 16.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.92px;
+  line-height         : 19.0px;
+}
+.dashboard .group .a55 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 157px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 435px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(242, 106, 75, 1.0);
+  text-align          : left;
+  letter-spacing      : 1.04px;
+  line-height         : 22.0px;
+}
+.dashboard .group .screenshot20200306094811 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 196px;
+  height              : 44px;
+  width               : 55px;
+  position            : absolute;
+  margin              : 0;
+  left                : 426px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group .line {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 253px;
+  height              : 2px;
+  width               : 484px;
+  position            : absolute;
+  margin              : 0;
+  left                : 39px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group .topraters {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 33px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 19px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 1.44px;
+  line-height         : 30.0px;
+}
+.dashboard .group5 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1574px;
+  height              : 147px;
+  width               : 485px;
+  position            : absolute;
+  margin              : 0;
+  left                : 84px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 546px;
+  height              : 134px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 376px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group4 .rectangle {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 134px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 9px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group4 .a52 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 62px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 20px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Bold", Helvetica, Arial, serif;
+  font-size           : 45.0px;
+  color               : rgba(219, 79, 60, 1.0);
+  text-align          : left;
+  letter-spacing      : 2.59px;
+  line-height         : 54.0px;
+}
+.dashboard .group4 .averagesatisfaction {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 24px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 14px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 1.04px;
+  line-height         : 22.0px;
+}
+.dashboard .group7 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 544px;
+  height              : 134px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 701px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group7 .rectangle {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 134px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 9px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group7 .a10 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 60px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 12px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Bold", Helvetica, Arial, serif;
+  font-size           : 45.0px;
+  color               : rgba(219, 79, 60, 1.0);
+  text-align          : left;
+  letter-spacing      : 2.59px;
+  line-height         : 54.0px;
+}
+.dashboard .group7 .noofactionstobe {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 24px;
+  height              : auto;
+  width               : 269px;
+  position            : absolute;
+  margin              : 0;
+  left                : 11px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 1.04px;
+  line-height         : 22.0px;
+}
+.dashboard .group7 .iconnavigationarrowforward24px {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 28px;
+  height              : 16px;
+  width               : 16px;
+  position            : absolute;
+  margin              : 0;
+  left                : 258px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group7 .iconnavigationarrowforward24px .iconnavigationarrowforward24px1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 16px;
+  width               : 16px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group9 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 721px;
+  height              : 134px;
+  width               : 337px;
+  position            : absolute;
+  margin              : 0;
+  left                : 51px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group9 .rectangle {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 134px;
+  width               : 337px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 9px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group9 .a25 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 66px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 22px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Bold", Helvetica, Arial, serif;
+  font-size           : 45.0px;
+  color               : rgba(219, 79, 60, 1.0);
+  text-align          : left;
+  letter-spacing      : 2.59px;
+  line-height         : 54.0px;
+}
+.dashboard .group9 .totalnoofunpleas {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 20px;
+  height              : auto;
+  width               : 317px;
+  position            : absolute;
+  margin              : 0;
+  left                : 13px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 1.04px;
+  line-height         : 22.0px;
+}
+.dashboard .group10 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 915px;
+  height              : 532px;
+  width               : 692px;
+  position            : absolute;
+  margin              : 0;
+  left                : 671px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group10 .rectangle {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 532px;
+  width               : 692px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 9px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group10 .topissues {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 25px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 64px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.67px;
+  line-height         : 30.0px;
+}
+.dashboard .group2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1466px;
+  height              : 475px;
+  width               : 692px;
+  position            : absolute;
+  margin              : 0;
+  left                : 680px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group2 .group11 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 475px;
+  width               : 692px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group2 .group11 .rectangle {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 475px;
+  width               : 692px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 9px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group2 .group11 .mostcommoninterest {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 341px;
+  height              : auto;
+  width               : 629px;
+  position            : absolute;
+  margin              : 0;
+  left                : 36px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 16.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.92px;
+  line-height         : 19.0px;
+}
+.dashboard .group2 .group11 .customerdemographic {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 30px;
+  height              : auto;
+  width               : 398px;
+  position            : absolute;
+  margin              : 0;
+  left                : 37px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 1.44px;
+  line-height         : 30.0px;
+}
+.dashboard .group2 .group11 .averagecustomerage {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 117px;
+  height              : auto;
+  width               : 223px;
+  position            : absolute;
+  margin              : 0;
+  left                : 36px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 16.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.92px;
+  line-height         : 19.0px;
+}
+.dashboard .group2 .group11 .wheremostofyoucu {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 228px;
+  height              : auto;
+  width               : 336px;
+  position            : absolute;
+  margin              : 0;
+  left                : 36px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 16.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.92px;
+  line-height         : 19.0px;
+}
+.dashboard .group2 .group11 .a35 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 166px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 37px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Bold", Helvetica, Arial, serif;
+  font-size           : 30.0px;
+  color               : rgba(219, 79, 60, 1.0);
+  text-align          : left;
+  letter-spacing      : 1.73px;
+  line-height         : 37.0px;
+}
+.dashboard .group2 .group11 .nairobi {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 273px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 36px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Bold", Helvetica, Arial, serif;
+  font-size           : 30.0px;
+  color               : rgba(219, 79, 60, 1.0);
+  text-align          : left;
+  letter-spacing      : 1.73px;
+  line-height         : 37.0px;
+}
+.dashboard .group2 .group11 .boardgames {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 379px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 33px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Bold", Helvetica, Arial, serif;
+  font-size           : 23.0px;
+  color               : rgba(219, 79, 60, 1.0);
+  text-align          : left;
+  letter-spacing      : 1.32px;
+  line-height         : 28.0px;
+}
+.dashboard .group12 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 154px;
+  height              : 267px;
+  width               : 1340px;
+  position            : absolute;
+  margin              : 0;
+  left                : 51px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group12 .rectangle {
+  background-color    : rgba(219, 79, 60, 1.0);
+  top                 : 60px;
+  height              : 201px;
+  width               : 1340px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 16px;
+  transform           : rotate(0deg);
+  opacity             : 0.69;
+}
+.dashboard .group12 .lunchru2014tontonmarty {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 267px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1044px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group12 .welcomeback {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 94px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 144px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Bold", Helvetica, Arial, serif;
+  font-size           : 30.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.81px;
+  line-height         : 37.0px;
+}
+.dashboard .group12 .haveaquicklookab {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 152px;
+  height              : auto;
+  width               : 632px;
+  position            : absolute;
+  margin              : 0;
+  left                : 145px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  letter-spacing      : 1.15px;
+  line-height         : 24.0px;
+}
+.dashboard .dashboard1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 124px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 51px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.67px;
+  line-height         : 30.0px;
+}
+.dashboard .dashboarddate {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 454px;
+  height              : 70px;
+  width               : 239px;
+  position            : absolute;
+  margin              : 0;
+  left                : 56px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .dashboarddate .rectangle {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 70px;
+  width               : 239px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .dashboarddate .today {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 15px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 86px;
+  transform           : rotate(0deg);
+  opacity             : 0.7;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.35px;
+  line-height         : 30.0px;
+}
+.dashboard .dashboarddate .iconeditorinsertinvitation24px {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 19px;
+  height              : 26px;
+  width               : 24px;
+  position            : absolute;
+  margin              : 0;
+  left                : 50px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .dashboarddate .iconeditorinsertinvitation24px .iconeditorinsertinvitation24px1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 26px;
+  width               : 24px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group8 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 544px;
+  height              : 134px;
+  width               : 337px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1026px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group8 .rectangle {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 134px;
+  width               : 337px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 9px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group8 .a15 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 69px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 16px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Bold", Helvetica, Arial, serif;
+  font-size           : 45.0px;
+  color               : rgba(219, 79, 60, 1.0);
+  text-align          : left;
+  letter-spacing      : 2.59px;
+  line-height         : 54.0px;
+}
+.dashboard .group8 .totalnoofpleasan {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 20px;
+  height              : auto;
+  width               : 269px;
+  position            : absolute;
+  margin              : 0;
+  left                : 16px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : 1.04px;
+  line-height         : 22.0px;
+}
+.dashboard .group3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 915px;
+  height              : 461px;
+  width               : 588px;
+  position            : absolute;
+  margin              : 0;
+  left                : 54px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group3 .rectangle {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 461px;
+  width               : 588px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 9px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.dashboard .group3 .howmostofyourcus {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 47px;
+  height              : auto;
+  width               : 518px;
+  position            : absolute;
+  margin              : 0;
+  left                : 38px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  letter-spacing      : 1.44px;
+  line-height         : 30.0px;
+}
+.dashboard .group3 .screenshot20200305152334 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 135px;
+  height              : 314px;
+  width               : 373px;
+  position            : absolute;
+  margin              : 0;
+  left                : 93px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+/*.anima-animate-nodelay {*/
+/*  -webkit-animation-delay: 0;*/
+/*  -moz-animation-delay: 0;*/
+/*  -o-animation-delay  : 0;*/
+/*  animation-delay     : 0;*/
+/*}*/
+@-webkit-keyframes anima-reveal {
+  0%
+
+  {
+    opacity: 0;
+  }
+
+
+  100%
+
+  {
+    opacity: 1;
+  }
+}
+@-moz-keyframes anima-reveal {
+  0%
+
+  {
+    opacity: 0;
+  }
+
+
+  100%
+
+  {
+    opacity: 1;
+  }
+}
+@-o-keyframes anima-reveal {
+  0%
+
+  {
+    opacity: 0;
+  }
+
+
+  100%
+
+  {
+    opacity: 1;
+  }
+}
+@keyframes anima-reveal {
+  0%
+
+  {
+    opacity: 0;
+  }
+
+
+  100%
+
+  {
+    opacity: 1;
+  }
+}
+.anima-component-wrapper,
+.anima-component-wrapper * {
+  pointer-events      : none;
+}
+.anima-component-wrapper a *,
+.anima-component-wrapper a,
+.anima-component-wrapper input,
+.anima-component-wrapper video,
+.anima-component-wrapper iframe,
+.anima-listeners-active,
+.anima-listeners-active * {
+  pointer-events      : auto;
+}
+.anima-hidden,
+.anima-hidden * {
+  visibility          : hidden;
+  pointer-events      : none;
+}
+.anima-smart-layers-pointers,
+.anima-smart-layers-pointers * {
+  pointer-events      : auto;
+  visibility          : visible;
+}
+.anima-component-wrapper.anima-not-ready,
+.anima-component-wrapper.anima-not-ready * {
+  visibility          : hidden !important;
+}
+.anima-listeners-active-click,
+.anima-listeners-active-click * {
+  cursor              : pointer;
+}
+
+/*.wrapper{*/
+/*  width: 400px;*/
+/*  display: block;*/
+/*  overflow: hidden;*/
+/*  margin: 0 auto;*/
+/*  padding: 60px 20px;*/
+/*  background: #fff;*/
+/*  border-radius: 4px;*/
+/*}*/
+
+canvas{
+  background: #fff;
+  width: 548px;
+  height: 800px;
+  padding-top: 60px;
+}

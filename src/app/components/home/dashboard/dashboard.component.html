@@ -1,3 +1,265 @@
-<p>
-  dashboard works!
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="./assets/images/dashboard/favicon.png" rel="shortcut icon"/>
+  <meta charset="utf-8"/>
+  <meta content="width=1440, maximum-scale=1.0" name="viewport"/>
+
+</head>
+<body style="margin: 0;
+ background: rgba(249, 249, 249, 1.0);">
+<input id="anPageName" name="page" type="hidden" value="dashboard"/>
+<div class="dashboard">
+  <div style="width: 1440px; height: 100%; position:relative; margin:auto;">
+
+    <div class="dashboard1">
+      Dashboard
+    </div>
+
+    <div class="group12">
+      <div class="rectangle">
+      </div>
+      <img src="./assets/images/dashboard/dashboard-lunchr-u2014-tonton-marty@2x.png" class="lunchru2014tontonmarty"/>
+      <div class="welcomeback">
+        Welcome back !
+      </div>
+      <div class="haveaquicklookab">
+        Have a quick look about your customers’ experiences with your service
+      </div>
+    </div>
+
+    <div class="dashboarddate">
+      <img src="./assets/images/dashboard/dashboard-rectangle@2x.png" class="rectangle"/>
+      <div class="today">
+        Last week
+      </div>
+      <div class="iconeditorinsertinvitation24px">
+        <img src="./assets/images/dashboard/dashboard-iconeditorinsertinvitation24px@2x.png" class="iconeditorinsertinvitation24px1" />
+      </div>
+    </div>
+
+
+    <div class="group6">
+      <div class="rectangle">
+      </div>
+      <div class="a40">
+        40
+      </div>
+      <div class="totalnoofraters">
+        Total no. of raters
+      </div>
+    </div>
+
+    <div class="group4">
+      <div class="rectangle">
+      </div>
+      <div class="a52">
+        52%
+      </div>
+      <div class="averagesatisfaction">
+        Average satisfaction rate
+      </div>
+    </div>
+
+    <div class="group7">
+      <div class="rectangle">
+      </div>
+      <div class="a10">
+        10
+      </div>
+      <div class="noofactionstobe">
+        No. of actions to be taken
+      </div>
+      <div class="iconnavigationarrowforward24px">
+        <img src="./assets/images/dashboard/dashboard-iconnavigationarrowforward24px@2x.png" class="iconnavigationarrowforward24px1"/>
+      </div>
+    </div>
+
+    <div class="group8">
+      <div class="rectangle">
+      </div>
+      <div class="a15">
+        15
+      </div>
+      <div class="totalnoofpleasan">
+        Total no. of pleasant reactions
+      </div>
+    </div>
+
+    <div class="group9">
+      <div class="rectangle">
+      </div>
+      <div class="a25">
+        25
+      </div>
+      <div class="totalnoofunpleas">
+        Total no. of unpleasant reactions
+      </div>
+    </div>
+
+    <div class="group3">
+      <div class="rectangle">
+      </div>
+      <div class="howmostofyourcus">
+        How most of your customers felt about their experince at your facility
+      </div>
+      <img src="./assets/images/dashboard/dashboard-screenshot-2020-03-05-152334.png" class="screenshot20200305152334" />
+    </div>
+
+    <div class="group10">
+      <div class="rectangle">
+        <canvas baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"
+                [colors]="chartColors" >
+        </canvas>
+      </div>
+      <div class="topissues">
+        Top issues
+      </div>
+
+    </div>
+
+    <div class="group">
+      <div class="rectangle">
+      </div>
+      <div class="mostcommonemotion">
+        Most common emotion
+      </div>
+      <div class="avgsatisfactionrat">
+        Avg satisfaction rate
+      </div>
+      <div class="a5ratings">
+        5 ratings
+      </div>
+      <img src="./assets/images/dashboard/dashboard-oval@2x.png" class="oval"/>
+      <div class="kendiashley">
+        Kendi Ashley
+      </div>
+      <div class="a55">
+        55%
+      </div>
+      <img src="./assets/images/dashboard/dashboard-screenshot-2020-03-06-094811@2x.png" class="screenshot20200306094811"/>
+      <img src="./assets/images/dashboard/dashboard-line.png" class="line" />
+      <div class="topraters">
+        Top raters
+      </div>
+    </div>
+    <div class="group5">
+    </div>
+
+
+
+    <div class="group2">
+      <div class="group11">
+        <div class="rectangle">
+        </div>
+        <div class="mostcommoninterest">
+          Most common interests among your customers
+        </div>
+        <div class="customerdemographic">
+          Customer demographics
+        </div>
+        <div class="averagecustomerage">
+          Average customer age<br/>
+        </div>
+        <div class="wheremostofyoucu">
+          Where most of you customers live
+        </div>
+        <div class="a35">
+          35
+        </div>
+        <div class="nairobi">
+          Nairobi
+        </div>
+        <div class="boardgames">
+          Board games
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<!-- Scripts -->
+<script>
+  anima_isHidden = function(e) {
+    if (!(e instanceof HTMLElement)) return !1;
+    if (getComputedStyle(e).display == "none") return !0; else if (e.parentNode && anima_isHidden(e.parentNode)) return !0;
+    return !1;
+  };
+  anima_loadAsyncSrcForTag = function(tag) {
+    var elements = document.getElementsByTagName(tag);
+    var toLoad = [];
+    for (var i = 0; i < elements.length; i++) {
+      var e = elements[i];
+      var src = e.getAttribute("src");
+      var loaded = (src != undefined && src.length > 0 && src != 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+      if (loaded) continue;
+      var asyncSrc = e.getAttribute("src");
+      if (asyncSrc == undefined || asyncSrc.length == 0) continue;
+      if (anima_isHidden(e)) continue;
+      toLoad.push(e);
+    }
+    toLoad.sort(function(a, b) {
+      return anima_getTop(a) - anima_getTop(b);
+    });
+    for (var i = 0; i < toLoad.length; i++) {
+      var e = toLoad[i];
+      var asyncSrc = e.getAttribute("src");
+      e.setAttribute("src", asyncSrc);
+    }
+  };
+  anima_pauseHiddenVideos = function(tag) {
+    var elements = document.getElementsByTagName("video");
+    for (var i = 0; i < elements.length; i++) {
+      var e = elements[i];
+      var isPlaying = !!(e.currentTime > 0 && !e.paused && !e.ended && e.readyState > 2);
+      var isHidden = anima_isHidden(e);
+      if (!isPlaying && !isHidden && e.getAttribute("autoplay") == "autoplay") {
+        e.play();
+      } else if (isPlaying && isHidden) {
+        e.pause();
+      }
+    }
+  };
+  anima_loadAsyncSrc = function(tag) {
+    anima_loadAsyncSrcForTag("img");
+    anima_loadAsyncSrcForTag("iframe");
+    anima_loadAsyncSrcForTag("video");
+    anima_pauseHiddenVideos();
+  };
+  var anima_getTop = function(e) {
+    var top = 0;
+    do {
+      top += e.offsetTop || 0;
+      e = e.offsetParent;
+    } while (e);
+    return top;
+  };
+  anima_loadAsyncSrc();
+  anima_old_onResize = window.onresize;
+  anima_new_onResize = undefined;
+  anima_updateOnResize = function() {
+    if (anima_new_onResize == undefined || window.onresize != anima_new_onResize) {
+      anima_new_onResize = function(x) {
+        if (anima_old_onResize != undefined) anima_old_onResize(x);
+        anima_loadAsyncSrc();
+      };
+      window.onresize = anima_new_onResize;
+      setTimeout(function() {
+        anima_updateOnResize();
+      }, 3000);
+    }
+  };
+  anima_updateOnResize();
+  setTimeout(function() {
+    anima_loadAsyncSrc();
+  }, 200);
+</script>
+<!-- End of Scripts -->
+</body>
+</html>
