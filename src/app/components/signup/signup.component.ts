@@ -192,7 +192,7 @@ registerUser() {
   };
   this.userService.registerUser(newUserData).subscribe(
     data => {
-      this.createOrgProfile();
+      this.createOrgProfile(data._id);
     },
     error => this.notification.showWarning(error.error.message, 'Failed')
   );
@@ -203,8 +203,9 @@ registerUser() {
 
 
 
-createOrgProfile() {
+createOrgProfile(id) {
   let newOrgProfile = {
+    userId: id,
     businessName: this.signUpForm.value.businessName,
     industryId: this.signUpForm.value.industryId,
     logo: {name: this.signUpForm.value.logo.name, url: this.signUpForm.value.logo.url},

@@ -45,9 +45,9 @@ signIn() {
     data => {
       localStorage.setItem('loggedInUserToken', data.token);
       localStorage.setItem('loggedInUserType', data.userType);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/dashboard']);
     },
-    error =>  this.notification.showError(error.error.message, 'Test')
+    error =>  this.notification.showError(error.error.message, 'Access Denied')
   );
 }
 

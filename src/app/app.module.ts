@@ -16,9 +16,10 @@ import { CustomersComponent } from './components/home/customers/customers.compon
 import { DashboardComponent } from './components/home/dashboard/dashboard.component';
 import { FeebackFormsComponent } from './components/home/feeback-forms/feeback-forms.component';
 import { DesignFeedbackFormsComponent } from './components/home/design-feedback-forms/design-feedback-forms.component';
-import { IndustryService } from './shared/services/industry.service';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HttpClientModule } from '@angular/common/http';
 import {ChartsModule} from 'ng2-charts';
+import { EditorialComponent } from './components/home/editorial/editorial.component';
 
 
 @NgModule({
@@ -32,11 +33,13 @@ import {ChartsModule} from 'ng2-charts';
     CustomersComponent,
     DashboardComponent,
     FeebackFormsComponent,
-    DesignFeedbackFormsComponent
+    DesignFeedbackFormsComponent,
+    EditorialComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFontAwesomeModule,
     FormsModule,
     ChartsModule,
     ReactiveFormsModule,

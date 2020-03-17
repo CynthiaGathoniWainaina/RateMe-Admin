@@ -6,6 +6,7 @@ import {LoginComponent} from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { TokenGuard } from './shared/authGuards/token.guard';
 import {DashboardComponent} from './components/home/dashboard/dashboard.component';
+import { EditorialComponent } from './components/home/editorial/editorial.component';
 
 const routes: Routes = [
 
@@ -19,7 +20,9 @@ const routes: Routes = [
 
   { path: 'home', component: HomeComponent, canActivate: [TokenGuard] },
 
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [TokenGuard]},
+
+  { path: 'editorial', component: EditorialComponent, canActivate: [TokenGuard]},
 
 
 

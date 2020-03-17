@@ -1,0 +1,260 @@
+
+<main class="container">
+    <header>
+        <div class="title">Editorial</div>
+    </header>
+    
+    
+    <section>
+      
+   
+            <ul class="nav nav-tabs d-flex" id="myTab" role="tablist">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" id="interest-tab" data-toggle="tab" href="#interest" role="tab" aria-controls="interest" aria-selected="true" >Interests</a>
+                    </li>  
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="industry-tab" data-toggle="tab" href="#industry" role="tab" aria-controls="industry"  aria-selected="false" >Industries</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " id="ratingRange-tab"  data-toggle="tab" href="#ratingRange"  role="tab" aria-controls="ratingRange"  aria-selected="false" >Rating Ranges</a >
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " id="template-tab"  data-toggle="tab" href="#template"  role="tab" aria-controls="template"  aria-selected="false" >Templates</a >
+                    </li> 
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="question-tab"  data-toggle="tab"  href="#question"  role="tab" aria-controls="question" aria-selected="false" >Questions</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " id="response-tab"  data-toggle="tab" href="#response"  role="tab" aria-controls="response"  aria-selected="false" >Responses</a >
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " id="possibleSolution-tab"  data-toggle="tab" href="#possibleSolution"  role="tab" aria-controls="possibleSolution"  aria-selected="false" >Possible Solutions</a >
+                    </li>
+            </ul>
+        
+        
+        
+        
+        
+        
+            <div class="tab-content" id="myTabContent">
+        
+
+
+                <!-- Interest -->
+                    <div class="tab-pane fade show active" id="interest" role="tabpanel"aria-labelledby="interest-tab" >
+                        <form class="form" class="form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Interest Name" name="interestName" [(ngModel)]="interestForm.interestName">
+                            </div>
+
+                            <div class="btn-wrap">
+                                <button class="btn btn-sm btn-success" (click)="addInterest()">Save</button>
+                            </div>       
+                        </form> 
+
+                        <div class="list-wrap">
+                            <div class="list-item d-flex" *ngFor="let item of AllInterests"> <span class="mr-auto">{{item.interestName}}</span> <fa class="ml-auto" name="trash" (click)="removeInterest(item._id)"></fa></div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <!-- Industries -->
+                    <div class="tab-pane fade" id="industry" role="tabpanel"aria-labelledby="industry-tab">
+                        <form class="form" class="form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Industry Name" name="industryName" [(ngModel)]="industryForm.industryName">
+                            </div>
+
+                            <div class="btn-wrap">
+                                <button class="btn btn-sm btn-success" (click)="addIndustry()">Save</button>
+                            </div>       
+                        </form> 
+                        <div class="list-wrap">
+                            <div class="list-item d-flex" *ngFor="let item of AllIndustries"> <span class="mr-auto">{{item.industryName}}</span> <fa class="ml-auto" name="trash" (click)="removeIndustries(item._id)"></fa></div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <!-- ratingRange -->
+                    <div class="tab-pane fade" id="ratingRange" role="tabpanel" aria-labelledby="ratingRange-tab" >
+                        <form class="form" class="form">
+                            <div class="form-group">
+                                <input type="number" placeholder="Minimum Rate" name="minimumRange" [(ngModel)]="ratingRangeForm.minimumRange">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" placeholder="Maximum Rate" name="maximumRange" [(ngModel)]="ratingRangeForm.maximumRange">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" placeholder="Range Name" name="rangeName" [(ngModel)]="ratingRangeForm.rangeName">
+                            </div>
+
+                            <div class="btn-wrap">
+                                <button class="btn btn-sm btn-success" (click)="addRatingRange()">Save</button>
+                            </div>       
+                        </form> 
+                        <div class="list-wrap">
+                            <div class="list-item d-flex" *ngFor="let item of AllRatingRanges"> <span class="mr-auto">{{item.rangeName}}</span> <fa class="ml-auto" name="trash" (click)="removeRatingRange(item._id)"></fa></div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <!-- Template range -->
+                    <div class="tab-pane fade" id="template" role="tabpanel" aria-labelledby="template-tab" >
+                        <form class="form" class="form">
+                            <div class="form-group">
+                                <select type="text"  name="industryId" [(ngModel)]="templateForm.industryId">
+                                    <option value="" disabled selected hidden> --- Select industry</option>
+                                    <option *ngFor="let item of AllIndustries" [value]="item._id">{{item.industryName}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Template Name" name="templateName" [(ngModel)]="templateForm.templateName">
+                            </div>
+
+                            <div class="btn-wrap">
+                                <button class="btn btn-sm btn-success" (click)="addTemplate()">Save</button>
+                            </div>       
+                        </form> 
+                        <div class="list-wrap">
+                            <div class="list-item d-flex" *ngFor="let item of AllTemplates"> <span class="mr-auto">{{item.templateName}}</span> <fa class="ml-auto" name="trash" (click)="removeTemplate(item._id)"></fa></div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <!-- Question -->
+                    <div class="tab-pane fade" id="question" role="tabpanel" aria-labelledby="question-tab" >
+                        <form class="form" class="form">
+                            <div class="form-group">
+                                <select type="text"  name="industryId" [(ngModel)]="questionForm.industryId">
+                                    <option value="" disabled selected hidden> --- Select industry</option>
+                                    <option *ngFor="let item of AllIndustries" [value]="item._id">{{item.industryName}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select type="text" name="templateId" [(ngModel)]="questionForm.templateId">
+                                    <option value="" disabled selected hidden> --- Select template</option>
+                                    <option *ngFor="let item of AllTemplates" [hidden]="item.industryId !== questionForm.industryId" [value]="item._id">{{item.templateName}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select type="text" name="ratingRangeId" [(ngModel)]="questionForm.ratingRangeId">
+                                    <option value="" disabled selected hidden> --- Select Range</option>
+                                    <option *ngFor="let item of AllRatingRanges" [value]="item._id">{{item.rangeName}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Question" name="question" [(ngModel)]="questionForm.question">
+                            </div>
+
+                            <div class="btn-wrap">
+                                <button class="btn btn-sm btn-success" (click)="addQuestion()">Save</button>
+                            </div>       
+                        </form> 
+                        <div class="list-wrap">
+                            <div class="list-item d-flex" *ngFor="let item of AllQuestions"> <span class="mr-auto">{{item.question}}</span> <fa class="ml-auto" name="trash" (click)="removeQuestion(item._id)"></fa></div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                    <!-- Response -->
+                    <div class="tab-pane fade" id="response" role="tabpanel" aria-labelledby="response-tab" >
+                        <form class="form" class="form">
+                            <div class="form-group">
+                                <select type="text"  name="questionId" [(ngModel)]="responseForm.questionId">
+                                    <option value="" disabled selected hidden> --- Select Question</option>
+                                    <option *ngFor="let item of AllQuestions" [value]="item._id">{{item.question}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Response" name="response" [(ngModel)]="responseForm.response">
+                            </div>
+
+                            <div class="btn-wrap">
+                                <button class="btn btn-sm btn-success" (click)="addResponse()">Save</button>
+                            </div>        
+                        </form> 
+                        <div class="list-wrap">
+                            <div class="list-item d-flex" *ngFor="let item of AllResponses"> <span class="mr-auto">{{item.response}}</span> <fa class="ml-auto" name="trash" (click)="removeResponse(item._id)"></fa></div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <!-- possibleSolution -->
+                    <div class="tab-pane fade" id="possibleSolution" role="tabpanel" aria-labelledby="possibleSolution-tab" >
+                        <form class="form" class="form">
+                            <div class="form-group">
+                                <select type="text" name="responseId" [(ngModel)]="possibleSolutionForm.responseId">
+                                    <option value="" disabled selected hidden> --- Select Response</option>
+                                    <option *ngFor="let item of AllResponses" [value]="item._id">{{item.response}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Solution" name="solution" [(ngModel)]="possibleSolutionForm.solution">
+                            </div>
+
+                            <div class="btn-wrap">
+                                <button class="btn btn-sm btn-success" (click)="addPossibleSolution()">Save</button>
+                            </div>       
+                        </form> 
+                        <div class="list-wrap">
+                            <div class="list-item d-flex" *ngFor="let item of AllPossibleSolutions"> <span class="mr-auto">{{item.solution}}</span> <fa class="ml-auto" name="trash" (click)="removeSolution(item._id)"></fa></div>
+                        </div>
+                    </div>
+
+
+
+
+            </div><!-- tab-content -->
+        
+        
+    
+    
+    </section>
+</main>
+
+
+
+
+
+
+
+
