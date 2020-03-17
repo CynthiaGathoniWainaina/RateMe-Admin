@@ -54,32 +54,46 @@ public AllPossibleSolutions = [];
     this.updatePage();
     this.interestForm = {
       interestName: '',
+      createdAt: new Date(),
+      updatedAt: new Date()
     };
     this.industryForm = {
       industryName: '',
+      createdAt: new Date(),
+      updatedAt: new Date()
     };
     this.ratingRangeForm = {
       minimumRange: null,
       maximumRange: null,
-      rangeName: ''
+      rangeName: '',
+      createdAt: new Date(),
+      updatedAt: new Date()
     };
     this.templateForm = {
       industryId: '',
-      templateName: ''
+      templateName: '',
+      createdAt: new Date(),
+      updatedAt: new Date()
     };
     this.questionForm = {
       industryId: '',
       templateId: '',
       ratingRangeId: '',
-      question: ''
+      question: '',
+      createdAt: new Date(),
+      updatedAt: new Date()
     };
     this.responseForm = {
       questionId: '',
-      response: ''
+      response: '',
+      createdAt: new Date(),
+      updatedAt: new Date()
     };
     this.possibleSolutionForm = {
       responseId: '',
-      solution: ''
+      solution: '',
+      createdAt: new Date(),
+      updatedAt: new Date()
     };
   }
 
