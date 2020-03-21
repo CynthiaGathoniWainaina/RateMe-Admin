@@ -6,6 +6,10 @@ import {LoginComponent} from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { TokenGuard } from './shared/authGuards/token.guard';
 import {DashboardComponent} from './components/home/dashboard/dashboard.component';
+import {CustomersComponent} from './components/home/customers/customers.component';
+import {InsightsComponent} from './components/home/insights/insights.component';
+import {ActionPlansComponent} from './components/home/action-plans/action-plans.component';
+import {FeebackFormsComponent} from './components/home/feeback-forms/feeback-forms.component';
 
 const routes: Routes = [
 
@@ -19,7 +23,24 @@ const routes: Routes = [
 
   { path: 'home', component: HomeComponent, canActivate: [TokenGuard] },
 
-  { path: 'dashboard', component: DashboardComponent },
+  // { path: 'dashboard', component: DashboardComponent },
+
+  { path: 'customers', component: CustomersComponent},
+
+  { path: 'insights', component: InsightsComponent},
+
+  { path: 'actionplans', component: ActionPlansComponent},
+
+  { path: 'feedbackforms', component: FeebackFormsComponent},
+
+  // Calender
+  { path: 'dashboard', component: HomeComponent,
+    children: [{ path: '', component: DashboardComponent}]
+  },
+
+
+
+
 
 
 

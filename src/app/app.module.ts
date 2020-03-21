@@ -19,6 +19,10 @@ import { DesignFeedbackFormsComponent } from './components/home/design-feedback-
 import { IndustryService } from './shared/services/industry.service';
 import { HttpClientModule } from '@angular/common/http';
 import {ChartsModule} from 'ng2-charts';
+import {MatTooltipModule} from '@angular/material';
+import 'hammerjs';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
+import { InsightsComponent } from './components/home/insights/insights.component';
 
 
 @NgModule({
@@ -32,16 +36,19 @@ import {ChartsModule} from 'ng2-charts';
     CustomersComponent,
     DashboardComponent,
     FeebackFormsComponent,
-    DesignFeedbackFormsComponent
+    DesignFeedbackFormsComponent,
+    InsightsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ChartsModule,
+    MatTooltipModule,
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    AngularFontAwesomeModule,
     ToastrModule.forRoot({
       timeOut: 5000,
       positionClass: 'toast-bottom-right',
