@@ -16,10 +16,13 @@ import { CustomersComponent } from './components/home/customers/customers.compon
 import { DashboardComponent } from './components/home/dashboard/dashboard.component';
 import { FeebackFormsComponent } from './components/home/feeback-forms/feeback-forms.component';
 import { DesignFeedbackFormsComponent } from './components/home/design-feedback-forms/design-feedback-forms.component';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HttpClientModule } from '@angular/common/http';
 import {ChartsModule} from 'ng2-charts';
 import { EditorialComponent } from './components/home/editorial/editorial.component';
+import "hammerjs"
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 
 @NgModule({
@@ -39,10 +42,10 @@ import { EditorialComponent } from './components/home/editorial/editorial.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFontAwesomeModule,
     FormsModule,
     ChartsModule,
     ReactiveFormsModule,
+    MatTooltipModule,
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
@@ -50,6 +53,7 @@ import { EditorialComponent } from './components/home/editorial/editorial.compon
       positionClass: 'toast-bottom-right',
       preventDuplicates: false,
     }),
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

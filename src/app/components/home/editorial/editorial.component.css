@@ -6,6 +6,7 @@ main {
 main header {
     width: 100%;
     padding: 5em 0;
+    text-align: center;
 }
 main header .title {
     font-size: large;

@@ -20,9 +20,16 @@ const routes: Routes = [
 
   { path: 'home', component: HomeComponent, canActivate: [TokenGuard] },
 
-  { path: 'dashboard', component: DashboardComponent, canActivate: [TokenGuard]},
+  // Dashboard
+  { path: 'dashboard', component: HomeComponent, canActivate: [TokenGuard],
+    children: [{ path: '', component: DashboardComponent}]
+  },
 
   { path: 'editorial', component: EditorialComponent, canActivate: [TokenGuard]},
+
+
+
+
 
 
 
