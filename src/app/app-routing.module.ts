@@ -25,7 +25,12 @@ const routes: Routes = [
     children: [{ path: '', component: DashboardComponent}]
   },
 
-  { path: 'editorial', component: EditorialComponent, canActivate: [TokenGuard]},
+  // Editorial
+  { path: 'editorial', component: HomeComponent, canActivate: [TokenGuard],
+    children: [{ path: '', component: EditorialComponent}]
+  },
+
+
 
 
 

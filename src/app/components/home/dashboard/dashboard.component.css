@@ -1,21 +1,20 @@
 
 @font-face {
   font-family: "ProductSans-Bold";
-  /*src: url('../fonts/Product Sans Bold.ttf') format("truetype");*/
 }
 @font-face {
   font-family: "ProductSans-Regular";
-  /*src: url('../fonts/Product Sans Regular.ttf') format("truetype");*/
 }
+
 
 .dashboard {
   width               : 100%;
-  min-width           : 1440px;
+  min-width           : 1300px;
   height              : 100vh;
   min-height          : 1999px;
   position            : relative;
   overflow            : hidden;
-  margin              : 0px;
+  margin              : auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color    : rgba(249, 249, 249, 1.0);
