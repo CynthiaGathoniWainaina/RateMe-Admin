@@ -1,4 +1,4 @@
-
+<ngx-spinner></ngx-spinner>
 <main class="container">
     <header>
         <div class="title">Editorial</div>
@@ -15,7 +15,10 @@
     </header>
 
     <section>
-      
+
+        
+        
+    
    
             <ul class="nav nav-tabs d-flex" id="myTab" role="tablist">
 
@@ -32,7 +35,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link " id="template-tab"  data-toggle="tab" href="#template"  role="tab" aria-controls="template"  aria-selected="false" >Templates</a >
+                        <a class="nav-link " id="emoji-tab"  data-toggle="tab" href="#emoji"  role="tab" aria-controls="emoji"  aria-selected="false" >Emojis</a >
                     </li> 
 
                     <li class="nav-item">
@@ -70,7 +73,7 @@
                         </form> 
 
                         <div class="list-wrap">
-                            <div class="list-item d-flex" *ngFor="let item of AllInterests"> <span class="mr-auto">{{item.interestName}}</span> <fa class="ml-auto" name="trash" (click)="removeInterest(item._id)"></fa></div>
+                            <div class="list-item d-flex" *ngFor="let item of AllInterests"> <span class="mr-auto">{{item.interestName}}</span> <fa-icon [icon]="faTrash" (click)="removeInterest(item._id)"></fa-icon></div>
                         </div>
 
                     </div>
@@ -91,7 +94,7 @@
                             </div>       
                         </form> 
                         <div class="list-wrap">
-                            <div class="list-item d-flex" *ngFor="let item of AllIndustries"> <span class="mr-auto">{{item.industryName}}</span> <fa class="ml-auto" name="trash" (click)="removeIndustries(item._id)"></fa></div>
+                            <div class="list-item d-flex" *ngFor="let item of AllIndustries"> <span class="mr-auto">{{item.industryName}}</span> <fa-icon [icon]="faTrash" (click)="removeIndustries(item._id)"></fa-icon></div>
                         </div>
                     </div>
 
@@ -120,7 +123,7 @@
                             </div>       
                         </form> 
                         <div class="list-wrap">
-                            <div class="list-item d-flex" *ngFor="let item of AllRatingRanges"> <span class="mr-auto">{{item.rangeName}}</span> <fa class="ml-auto" name="trash" (click)="removeRatingRange(item._id)"></fa></div>
+                            <div class="list-item d-flex" *ngFor="let item of AllRatingRanges"> <span class="mr-auto">{{item.rangeName}}</span> <fa-icon [icon]="faTrash" (click)="removeRatingRange(item._id)"></fa-icon></div>
                         </div>
                     </div>
 
@@ -129,25 +132,36 @@
 
 
 
-                    <!-- Template range -->
-                    <div class="tab-pane fade" id="template" role="tabpanel" aria-labelledby="template-tab" >
+                    <!-- Emoji range -->
+                    <div class="tab-pane fade" id="emoji" role="tabpanel" aria-labelledby="emoji-tab" >
                         <form class="form" class="form">
                             <div class="form-group">
-                                <select type="text"  name="industryId" [(ngModel)]="templateForm.industryId">
-                                    <option value="" disabled selected hidden> --- Select industry</option>
-                                    <option *ngFor="let item of AllIndustries" [value]="item._id">{{item.industryName}}</option>
+                                <input type="text" placeholder="Emoji Name" name="emojiName" [(ngModel)]="emojiForm.emojiName">
+                            </div>
+
+                             <div class="form-group">
+                                <select type="text" name="rangeId" [(ngModel)]="emojiForm.rangeId">
+                                    <option value="" disabled selected hidden> --- Select Rating Range</option>
+                                    <option *ngFor="let item of AllRatingRanges"  [value]="item._id">{{item.rangeName}}</option>
                                 </select>
                             </div>
+
                             <div class="form-group">
-                                <input type="text" placeholder="Template Name" name="templateName" [(ngModel)]="templateForm.templateName">
+                                <textarea type="text" placeholder="Emoji Json Text" name="emojiJson" [(ngModel)]="emojiForm.emojiJson"></textarea>
                             </div>
 
                             <div class="btn-wrap">
-                                <button class="btn btn-sm btn-success" (click)="addTemplate()">Save</button>
+                                <button class="btn btn-sm btn-success" (click)="addEmoji()">Save</button>
                             </div>       
                         </form> 
                         <div class="list-wrap">
-                            <div class="list-item d-flex" *ngFor="let item of AllTemplates"> <span class="mr-auto">{{item.templateName}}</span> <fa class="ml-auto" name="trash" (click)="removeTemplate(item._id)"></fa></div>
+                            <div class="list-item d-flex" *ngFor="let item of AllEmojis"> 
+                                <span class="mr-auto">{{item.emojiName}}</span>
+                                <lottie-player
+                                [src]="item.emojiJson" class="mx-auto" speed="1" loop  autoplay > <!-- add  'controls' to see controls -->
+                                </lottie-player>
+                                
+                            <fa-icon [icon]="faTrash" class="ml-auto" (click)="removeEmoji(item._id)"></fa-icon></div>
                         </div>
                     </div>
 
@@ -166,12 +180,7 @@
                                     <option *ngFor="let item of AllIndustries" [value]="item._id">{{item.industryName}}</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <select type="text" name="templateId" [(ngModel)]="questionForm.templateId">
-                                    <option value="" disabled selected hidden> --- Select template</option>
-                                    <option *ngFor="let item of AllTemplates" [hidden]="item.industryId !== questionForm.industryId" [value]="item._id">{{item.templateName}}</option>
-                                </select>
-                            </div>
+                           
                             <div class="form-group">
                                 <select type="text" name="ratingRangeId" [(ngModel)]="questionForm.ratingRangeId">
                                     <option value="" disabled selected hidden> --- Select Range</option>
@@ -187,7 +196,7 @@
                             </div>       
                         </form> 
                         <div class="list-wrap">
-                            <div class="list-item d-flex" *ngFor="let item of AllQuestions"> <span class="mr-auto">{{item.question}}</span> <fa class="ml-auto" name="trash" (click)="removeQuestion(item._id)"></fa></div>
+                            <div class="list-item d-flex" *ngFor="let item of AllQuestions"> <span class="mr-auto">{{item.question}}</span> <fa-icon [icon]="faTrash" (click)="removeQuestion(item._id)"></fa-icon></div>
                         </div>
                     </div>
 
@@ -218,7 +227,7 @@
                             </div>        
                         </form> 
                         <div class="list-wrap">
-                            <div class="list-item d-flex" *ngFor="let item of AllResponses"> <span class="mr-auto">{{item.response}}</span> <fa class="ml-auto" name="trash" (click)="removeResponse(item._id)"></fa></div>
+                            <div class="list-item d-flex" *ngFor="let item of AllResponses"> <span class="mr-auto">{{item.response}}</span> <fa-icon [icon]="faTrash" (click)="removeResponse(item._id)"></fa-icon></div>
                         </div>
                     </div>
 
@@ -245,7 +254,7 @@
                             </div>       
                         </form> 
                         <div class="list-wrap">
-                            <div class="list-item d-flex" *ngFor="let item of AllPossibleSolutions"> <span class="mr-auto">{{item.solution}}</span> <fa class="ml-auto" name="trash" (click)="removeSolution(item._id)"></fa></div>
+                            <div class="list-item d-flex" *ngFor="let item of AllPossibleSolutions"> <span class="mr-auto">{{item.solution}}</span> <fa-icon [icon]="faTrash" (click)="removeSolution(item._id)"></fa-icon></div>
                         </div>
                     </div>
 

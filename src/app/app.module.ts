@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 // components
 import { AppRoutingModule } from './app-routing.module';
@@ -16,12 +17,13 @@ import { CustomersComponent } from './components/home/customers/customers.compon
 import { DashboardComponent } from './components/home/dashboard/dashboard.component';
 import { FeebackFormsComponent } from './components/home/feeback-forms/feeback-forms.component';
 import { DesignFeedbackFormsComponent } from './components/home/design-feedback-forms/design-feedback-forms.component';
-import { HttpClientModule } from '@angular/common/http';
 import {ChartsModule} from 'ng2-charts';
 import { EditorialComponent } from './components/home/editorial/editorial.component';
-import "hammerjs"
+import 'hammerjs';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { InterestService } from './shared/services/interest.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -37,7 +39,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     DashboardComponent,
     FeebackFormsComponent,
     DesignFeedbackFormsComponent,
-    EditorialComponent,
+    EditorialComponent
   ],
   imports: [
     BrowserModule,
@@ -45,8 +47,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FormsModule,
     ChartsModule,
     ReactiveFormsModule,
-    MatTooltipModule,
     HttpClientModule,
+    MatTooltipModule,
+    NgxSpinnerModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       timeOut: 5000,
@@ -55,7 +58,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     }),
     FontAwesomeModule,
   ],
-  providers: [],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,6 +7,10 @@ import { RatingRangeService } from 'src/app/shared/services/ratingRange.service'
 import { TemplateService } from 'src/app/shared/services/template.service';
 import { ResponseService } from 'src/app/shared/services/response.service';
 import { PossibleSolutionService } from 'src/app/shared/services/possibleSolution.service';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { EmojiService } from 'src/app/shared/services/emoji.service';
+
 
 @Component({
   selector: 'app-editorial',
@@ -20,6 +24,7 @@ export class EditorialComponent implements OnInit {
 
 
   constructor(
+    private spinner: NgxSpinnerService,
     private notification: NotificationService,
     private interestService: InterestService,
     private questionService: QuestionService,
@@ -27,15 +32,18 @@ export class EditorialComponent implements OnInit {
     private ratingRangeService: RatingRangeService,
     private templateService: TemplateService,
     private resposeService: ResponseService,
-    private possibleSolutionService: PossibleSolutionService
+    private possibleSolutionService: PossibleSolutionService,
+    private emojiService: EmojiService
 
   ) { }
 
 
+public faTrash = faTrash;
+
 public interestForm;
 public industryForm;
 public ratingRangeForm;
-public templateForm;
+public emojiForm;
 public questionForm;
 public responseForm;
 public possibleSolutionForm;
@@ -47,6 +55,7 @@ public AllTemplates = [];
 public AllQuestions = [];
 public AllResponses = [];
 public AllPossibleSolutions = [];
+public AllEmojis = [];
 
 
 
@@ -69,15 +78,15 @@ public AllPossibleSolutions = [];
       createdAt: new Date(),
       updatedAt: new Date()
     };
-    this.templateForm = {
-      industryId: '',
-      templateName: '',
+    this.emojiForm = {
+      emojiName: '',
+      rangeId: '',
+      emojiJson: '',
       createdAt: new Date(),
       updatedAt: new Date()
     };
     this.questionForm = {
       industryId: '',
-      templateId: '',
       ratingRangeId: '',
       question: '',
       createdAt: new Date(),
@@ -99,6 +108,14 @@ public AllPossibleSolutions = [];
 
 
   updatePage() {
+    return new Promise((resolve, reject) => {
+    this.emojiService.getAllEmojis().subscribe(
+      data => {
+        this.AllEmojis = data;
+      },
+      error => console.log('Error')
+    );
+
     this.interestService.getAllInterests().subscribe(
       data => {
         this.AllInterests = data;
@@ -137,83 +154,160 @@ public AllPossibleSolutions = [];
     );
     this.ratingRangeService.getAllRatingRanges().subscribe(
       data => {
-        this.AllRatingRanges = data;
+        this.AllRatingRanges = data; resolve();
       },
       error => console.log('Error')
     );
+
+    });
   }
 
 
 
 
   addInterest() {
+    this.spinner.show();
     this.interestService.createInterest(this.interestForm).subscribe(
       data => {
-        this.updatePage();
-        this.notification.showSuccess('Item added', 'Success');
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item added', 'Success');
+          this.interestForm = {
+            interestName: '',
+            createdAt: new Date(),
+            updatedAt: new Date()
+          };
+        });
+
       },
-      error => this.notification.showError('Coud not create item', 'Failed')
+      error => {this.spinner.hide(); this.notification.showError('Coud not create item', 'Failed'); }
     );
   }
 
   addIndustry() {
+    this.spinner.show();
     this.industryService.createIndustry(this.industryForm).subscribe(
       data => {
-        this.updatePage();
-        this.notification.showSuccess('Item added', 'Success');
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item added', 'Success');
+          this.industryForm = {
+            industryName: '',
+            createdAt: new Date(),
+            updatedAt: new Date()
+          };
+        });
+
       },
-      error => this.notification.showError('Coud not create item', 'Failed')
+      error => {this.spinner.hide(); this.notification.showError('Coud not create item', 'Failed'); }
     );
   }
 
   addRatingRange() {
+    this.spinner.show();
     this.ratingRangeService.createRatingRange(this.ratingRangeForm).subscribe(
       data => {
-        this.updatePage();
-        this.notification.showSuccess('Item added', 'Success');
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item added', 'Success');
+          this.ratingRangeForm = {
+            minimumRange: null,
+            maximumRange: null,
+            rangeName: '',
+            createdAt: new Date(),
+            updatedAt: new Date()
+          };
+
+        });
+
       },
-      error => this.notification.showError('Coud not create item', 'Failed')
+      error => {this.spinner.hide(); this.notification.showError('Coud not create item', 'Failed'); }
     );
   }
 
   addTemplate() {
-    console.log(this.templateForm)
-    this.templateService.createTemplate(this.templateForm).subscribe(
+  }
+
+  addEmoji() {
+    this.spinner.show();
+    this.emojiService.createEmoji(this.emojiForm).subscribe(
       data => {
-        this.updatePage();
-        this.notification.showSuccess('Item added', 'Success');
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item added', 'Success');
+          this.emojiForm = {
+            emojiName: '',
+            rangeId: '',
+            emojiJson: '',
+            createdAt: new Date(),
+            updatedAt: new Date()
+          };
+        });
+
       },
-      error => this.notification.showError('Coud not create item', 'Failed')
+      error => {this.spinner.hide(); this.notification.showError('Coud not create item', 'Failed'); }
     );
   }
 
   addQuestion() {
+    this.spinner.show();
     this.questionService.createQuestion(this.questionForm).subscribe(
       data => {
-        this.updatePage();
-        this.notification.showSuccess('Item added', 'Success');
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item added', 'Success');
+          this.questionForm = {
+            industryId: '',
+            ratingRangeId: '',
+            question: '',
+            createdAt: new Date(),
+            updatedAt: new Date()
+          };
+        });
+
       },
-      error => this.notification.showError('Coud not create item', 'Failed')
+      error => {this.spinner.hide(); this.notification.showError('Coud not create item', 'Failed'); }
     );
   }
 
   addResponse() {
+    this.spinner.show();
     this.resposeService.createResponse(this.responseForm).subscribe(
       data => {
-        this.updatePage();
-        this.notification.showSuccess('Item added', 'Success');
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item added', 'Success');
+          this.responseForm = {
+            questionId: '',
+            response: '',
+            createdAt: new Date(),
+            updatedAt: new Date()
+          };
+
+        });
+
       },
-      error => this.notification.showError('Coud not create item', 'Failed')
+      error => {this.spinner.hide(); this.notification.showError('Coud not create item', 'Failed'); }
     );
   }
 
   addPossibleSolution() {
+    this.spinner.show();
     this.possibleSolutionService.createPossibleSolution(this.possibleSolutionForm).subscribe(
       data => {
-        this.updatePage();
-        this.notification.showSuccess('Item added', 'Success');
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item added', 'Success');
+          this.possibleSolutionForm = {
+            responseId: '',
+            solution: '',
+            createdAt: new Date(),
+            updatedAt: new Date()
+          };
+        });
+
       },
-      error => this.notification.showError('Coud not create item', 'Failed')
+      error => {this.spinner.hide(); this.notification.showError('Coud not create item', 'Failed'); }
     );
   }
 
@@ -222,73 +316,115 @@ public AllPossibleSolutions = [];
 
 
   removeInterest(id) {
+    this.spinner.show();
     this.interestService.deleteInterest(id).subscribe(
       data => {
-        this.updatePage();
-        this.notification.showSuccess('deleted', 'Success');
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item Removed', 'Success');
+        });
+
       },
-      error => this.notification.showError('could not delete item', 'Failed')
+      error => {this.spinner.hide(); this.notification.showError('Coud not remove item', 'Failed'); }
     );
   }
 
 
   removeIndustries(id) {
+    this.spinner.show();
     this.industryService.deleteIndustry(id).subscribe(
       data => {
-        this.updatePage();
-        this.notification.showSuccess('deleted', 'Success');
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item Removed', 'Success');
+        });
+
       },
-      error => this.notification.showError('could not delete item', 'Failed')
+      error => {this.spinner.hide(); this.notification.showError('Coud not remove item', 'Failed'); }
     );
   }
 
   removeRatingRange(id) {
+    this.spinner.show();
     this.ratingRangeService.deleteRatingRange(id).subscribe(
       data => {
-        this.updatePage();
-        this.notification.showSuccess('deleted', 'Success');
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item Removed', 'Success');
+        });
+
       },
-      error => this.notification.showError('could not delete item', 'Failed')
+      error => {this.spinner.hide(); this.notification.showError('Coud not remove item', 'Failed'); }
     );
   }
 
-  removeTemplate(id) {
-    this.templateService.deleteTemplate(id).subscribe(
+  // removeTemplate(id) {
+  //   this.templateService.deleteTemplate(id).subscribe(
+    // data => {
+    //   this.updatePage().then(() => {
+    //     this.spinner.hide();
+    //     this.notification.showSuccess('Item Removed', 'Success');
+    //   });
+
+    // },
+    // error => {this.spinner.hide(); this.notification.showError('Coud not remove item', 'Failed'); }
+  //   );
+  // }
+
+  removeEmoji(id) {
+    this.spinner.show();
+    this.emojiService.deleteEmoji(id).subscribe(
       data => {
-        this.updatePage();
-        this.notification.showSuccess('deleted', 'Success');
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item Removed', 'Success');
+        });
+
       },
-      error => this.notification.showError('could not delete item', 'Failed')
+      error => {this.spinner.hide(); this.notification.showError('Coud not remove item', 'Failed'); }
     );
   }
+
 
   removeQuestion(id) {
+    this.spinner.show();
     this.questionService.deleteQuestion(id).subscribe(
       data => {
-        this.updatePage();
-        this.notification.showSuccess('deleted', 'Success');
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item Removed', 'Success');
+        });
+
       },
-      error => this.notification.showError('could not delete item', 'Failed')
+      error => {this.spinner.hide(); this.notification.showError('Coud not remove item', 'Failed'); }
     );
   }
 
   removeResponse(id) {
+    this.spinner.show();
     this.resposeService.deleteResponse(id).subscribe(
       data => {
-        this.updatePage();
-        this.notification.showSuccess('deleted', 'Success');
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item Removed', 'Success');
+        });
+
       },
-      error => this.notification.showError('could not delete item', 'Failed')
+      error => {this.spinner.hide(); this.notification.showError('Coud not remove item', 'Failed'); }
     );
   }
 
   removeSolution(id) {
+    this.spinner.show();
     this.possibleSolutionService.deletePossibleSolution(id).subscribe(
       data => {
-        this.updatePage();
-        this.notification.showSuccess('deleted', 'Success');
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item Removed', 'Success');
+        });
+
       },
-      error => this.notification.showError('could not delete item', 'Failed')
+      error => {this.spinner.hide(); this.notification.showError('Coud not remove item', 'Failed'); }
     );
   }
 
