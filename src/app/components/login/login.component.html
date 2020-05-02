@@ -43,9 +43,15 @@
 <!--Password-->
       <div class="form-group">
       <div class="input1">
-        <input type="text" class="form-control rectangle" placeholder="Password"
-        formControlName="password"  [class.is-invalid]="formSignIn.password.invalid && formSignIn.password.touched" >
+        <input type="text" [type]="togglePassword" class="form-control rectangle" placeholder="Password"
+        formControlName="password"  [class.is-invalid]="formSignIn.password.invalid && formSignIn.password.touched">
       </div>
+
+<!--        <div class="input-group-append">-->
+<!--          <span [hidden]="showPasswordIcon" (click)="showPassword()"><fa-icon [icon]="faEye"></fa-icon></span>-->
+<!--          <span [hidden]="hidePasswordIcon" (click)="hidePassword()"><fa-icon [icon]=""></fa-icon></span>-->
+<!--        </div>-->
+
       </div>
 
 </div>

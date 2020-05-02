@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { UserService } from 'src/app/shared/services/user.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NotificationService } from 'src/app/shared/services/notification.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {faEye} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +13,11 @@ import { NotificationService } from 'src/app/shared/services/notification.servic
 })
 export class LoginComponent implements OnInit {
 
+  faEye = faEye;
+
+  public togglePassword = 'password';
+  public showPasswordIcon;
+  public hidePasswordIcon;
 
   constructor(
     private router: Router,
@@ -23,10 +30,11 @@ export class LoginComponent implements OnInit {
 public signInForm: FormGroup;
 
 
-
-
-
 ngOnInit() {
+  this.showPasswordIcon = false;
+  this.hidePasswordIcon = true;
+  this.togglePassword = 'password';
+
   this.signInForm = this.formBuilder.group({
     email: ['', [ Validators.required, Validators.email]],
     password: ['', [Validators.required]],
@@ -49,6 +57,19 @@ signIn() {
     },
     error =>  this.notification.showError(error.error.message, 'Access Denied')
   );
+}
+
+// Password Toogle Functions
+showPassword() {
+  this.showPasswordIcon = true;
+  this.hidePasswordIcon = false;
+  this.togglePassword = 'text';
+}
+
+hidePassword() {
+  this.showPasswordIcon = false;
+  this.hidePasswordIcon = true;
+  this.togglePassword = 'password';
 }
 
 

@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TokenGuard } from './shared/authGuards/token.guard';
 import {DashboardComponent} from './components/home/dashboard/dashboard.component';
 import { EditorialComponent } from './components/home/editorial/editorial.component';
+import {SystemAdminDashboardComponent} from './components/home/system-admin-dashboard/system-admin-dashboard.component';
 
 const routes: Routes = [
 
@@ -21,7 +22,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [TokenGuard] },
 
   // Dashboard
-  { path: 'dashboard', component: HomeComponent, canActivate: [TokenGuard],
+  { path: 'dashboard', component: HomeComponent,
     children: [{ path: '', component: DashboardComponent}]
   },
 
@@ -30,13 +31,10 @@ const routes: Routes = [
     children: [{ path: '', component: EditorialComponent}]
   },
 
-
-
-
-
-
-
-
+  // System Admin Dashboard
+  { path: 'admin-dashboard', component: HomeComponent,
+    children: [{ path: '', component: SystemAdminDashboardComponent}]
+  },
 
 
 

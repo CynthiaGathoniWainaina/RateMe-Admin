@@ -1,18 +1,53 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbCalendar, NgbDate, NgbDateParserFormatter} from '@ng-bootstrap/ng-bootstrap';
+import {ChartDataSets, ChartOptions} from 'chart.js';
+import {Color, Label} from 'ng2-charts';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-system-admin-dashboard',
+  templateUrl: './system-admin-dashboard.component.html',
+  styleUrls: ['./system-admin-dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
-
+export class SystemAdminDashboardComponent implements OnInit {
 
   hoveredDate: NgbDate | null = null;
 
   fromDate: NgbDate | null;
   toDate: NgbDate | null;
+
+
+  lineChartData: ChartDataSets[] = [
+    { data: [85, 72, 78, 75, 77, 75], label: 'Revenue history' },
+  ];
+
+  lineChartLabels: Label[] = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'];
+
+  lineChartOptions = {
+    responsive: true,
+    scales: {
+      xAxes: [{
+        gridLines: {
+          color: 'rgba(0, 0, 0, 0)',
+        }
+      }],
+      yAxes: [{
+
+        gridLines: {
+          color: 'rgba(0, 0, 0, 0)',
+        }
+      }]
+  }};
+
+  lineChartColors: Color[] = [
+    {
+      borderColor: '#2D0140',
+      backgroundColor: '#FFFFFF',
+    },
+  ];
+
+  lineChartLegend = true;
+  lineChartPlugins = [];
+  lineChartType = 'line';
 
 
   public barChartOptions = {
@@ -33,8 +68,8 @@ export class DashboardComponent implements OnInit {
           color: 'rgba(0, 0, 0, 0)',
         }
       }],
-    barThickness: 6,
-    maxBarThickness: 8,
+      barThickness: 6,
+      maxBarThickness: 8,
     }
   };
   public barChartLabels = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'];
@@ -42,16 +77,19 @@ export class DashboardComponent implements OnInit {
   public barChartLegend = true;
   public barChartData = [
     {data : ['150000', '150000', '200000', '250000', '300000', '350000', '400000', '450000'], label: 'Forecast'},
+    {data : ['200000', '300000', '350000', '400000', '450000', '500000', '600000', '700000'], label: 'Actual'},
+    {data : ['200000', '300000', '350000', '400000', '450000', '500000', '600000', '700000'], label: 'Actual'},
     {data : ['200000', '300000', '350000', '400000', '450000', '500000', '600000', '700000'], label: 'Actual'}
   ];
   public chartColors: Array<any> = [
     { // first color
-      backgroundColor: ['blue', '#C9E5FF', 'Orange', '#C9E5FF', 'green', '#C9E5FF', 'red', '#C9E5FF'],
+      backgroundColor: ['#264d59','#d46c4e','#f9e07f','2D0140',],
       border: 'none',
 
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff'
     }];
+
 
   constructor(private calendar: NgbCalendar, public formatter: NgbDateParserFormatter) {
     this.fromDate = calendar.getToday();

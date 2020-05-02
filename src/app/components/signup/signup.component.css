@@ -1,595 +1,127 @@
-
-@font-face {
-  font-family: "ProductSans-Regular";
-  /*src: url('../fonts/Product Sans Regular.ttf') format("truetype");*/
-}
-
-.signup {
-  width               : 100%;
-  min-width           : 1440px;
-  height              : 100vh;
-  min-height          : 955px;
-  position            : relative;
-  overflow            : hidden;
-  margin              : 0px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color    : rgba(255, 255, 255, 1.0);
-  opacity             : 1.0;
-}
-a {
-  text-decoration     : none;
-}
-div {
-  -webkit-text-size-adjust: none;
-}
-.anima-full-width-a {
-  width               : 100%;
-}
-.anima-full-height-a {
-  height              : 100%;
-}
-div {
-  -webkit-text-size-adjust: none;
-}
-.signup .hiletu2019sgetyoual {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 64px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 757px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 38.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.54px;
-  line-height         : 46.0px;
-}
-.signup .shouldonlytakeac {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 546px;
-  height              : auto;
-  width               : 473px;
-  position            : absolute;
-  margin              : 0;
-  left                : 129px;
-  transform           : rotate(0deg);
-  opacity             : 0.7;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 18.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : center;
-  letter-spacing      : 1.07px;
-  line-height         : 22.0px;
-}
-
-.signup .input {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 266px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 756px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .input .rectangle {
-  background-color    : rgba(249, 249, 249, 1.0);
-  top                 : 0px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 3px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .input .email {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 28px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 27px;
-  transform           : rotate(0deg);
-  opacity             : 0.7;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 16.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.23px;
-  line-height         : 19.0px;
-}
-.signup .input1 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 373px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 757px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .input1 .rectangle {
-  background-color    : rgba(249, 249, 249, 1.0);
-  top                 : 0px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 3px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .input1 .email {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 28px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 27px;
-  transform           : rotate(0deg);
-  opacity             : 0.7;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 16.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.23px;
-  line-height         : 19.0px;
-}
-.signup .input2 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 159px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 757px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .input2 .rectangle {
-  background-color    : rgba(249, 249, 249, 1.0);
-  top                 : 0px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 3px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .input2 .email {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 28px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 27px;
-  transform           : rotate(0deg);
-  opacity             : 0.7;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 16.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.23px;
-  line-height         : 19.0px;
-}
-.signup .iconnavigationexpandmore24px {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 514px;
-  height              : 13px;
-  width               : 20px;
-  position            : absolute;
-  margin              : 0;
-  left                : 1296px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .iconnavigationexpandmore24px .iconnavigationexpandmore24px1 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 13px;
-  width               : 20px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-
-.signup .form-control{
-  border: none;
-  padding-left: 20px;
-}
-.signup .input3 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 481px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 757px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  border: none;
-}
-.signup .input3 .rectangle {
-  background-color    : rgba(249, 249, 249, 1.0);
-  top                 : 0px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 3px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  border:none;
-}
-.signup .input3 .email {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 28px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 27px;
-  transform           : rotate(0deg);
-  opacity             : 0.7;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 16.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.23px;
-  line-height         : 19.0px;
-}
-.signup .input4 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 588px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 757px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .input4 .rectangle {
-  background-color    : rgba(249, 249, 249, 1.0);
-  top                 : 0px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 3px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .input4 .email {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 28px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 27px;
-  transform           : rotate(0deg);
-  opacity             : 0.7;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 16.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.23px;
-  line-height         : 19.0px;
-}
-.signup .input5 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 588px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 757px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .input5 .rectangle {
-  background-color    : rgba(249, 249, 249, 1.0);
-  top                 : 0px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 3px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .input5 .email {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 28px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 27px;
-  transform           : rotate(0deg);
-  opacity             : 0.7;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 16.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.23px;
-  line-height         : 19.0px;
-}
-.signup .input6 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 695px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 756px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .input6 .rectangle {
-  background-color    : rgba(249, 249, 249, 1.0);
-  top                 : 0px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 3px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .input6 .email {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 28px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 27px;
-  transform           : rotate(0deg);
-  opacity             : 0.7;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 16.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.23px;
-  line-height         : 19.0px;
-}
-.signup .rateme {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 54px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 130px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 30.0px;
-  color               : rgba(219, 79, 60, 1.0);
-  text-align          : left;
-  letter-spacing      : 1.47px;
-  line-height         : 37.0px;
-}
-.signup .signupbutton {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 840px;
-  height              : 48px;
-  width               : 214px;
-  position            : absolute;
-  margin              : 0;
-  left                : 947px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .signupbutton .group {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 48px;
-  width               : 214px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .signupbutton .group .rectangle {
-  background-color    : rgba(219, 79, 60, 1.0);
-  top                 : 0px;
-  height              : 48px;
-  width               : 214px;
-  position            : relative;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 4px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.signup .signupbutton .signup1 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 15px;
-  height              : auto;
-  width               : 71px;
-  position            : absolute;
-  margin              : 0;
-  left                : 72px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 14.0px;
-  color               : rgba(255, 255, 255, 1.0);
-  text-align          : center;
-  letter-spacing      : 0.68px;
-  line-height         : 17.0px;
-}
-.signup .screenshot20200121132616 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 147px;
-  height              : 315px;
-  width               : 538px;
-  position            : absolute;
-  margin              : 0;
-  left                : 130px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-/* .anima-animate-appear prefix for appear animations */
-.anima-animate-appear {
-  opacity             : 0;
-  display             : block;
-  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
-  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
-  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
-  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
-}
-.anima-animate-disappear {
-  opacity             : 1;
-  display             : block;
-  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
-  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
-  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
-  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
-}
-/*.anima-animate-nodelay {*/
-/*  -webkit-animation-delay: 0;*/
-/*  -moz-animation-delay: 0;*/
-/*  -o-animation-delay  : 0;*/
-/*  animation-delay     : 0;*/
-/*}*/
-@-webkit-keyframes anima-reveal {
-  0%
-
-  {
-    opacity: 0;
-  }
-
-
-  100%
-
-  {
-    opacity: 1;
-  }
-}
-@-moz-keyframes anima-reveal {
-  0%
-
-  {
-    opacity: 0;
-  }
-
-
-  100%
-
-  {
-    opacity: 1;
-  }
-}
-@-o-keyframes anima-reveal {
-  0%
-
-  {
-    opacity: 0;
-  }
-
-
-  100%
-
-  {
-    opacity: 1;
-  }
-}
-@keyframes anima-reveal {
-  0%
-
-  {
-    opacity: 0;
-  }
-
-
-  100%
-
-  {
-    opacity: 1;
-  }
-}
-.anima-component-wrapper,
-.anima-component-wrapper * {
-  pointer-events      : none;
-}
-.anima-component-wrapper a *,
-.anima-component-wrapper a,
-.anima-component-wrapper input,
-.anima-component-wrapper video,
-.anima-component-wrapper iframe,
-.anima-listeners-active,
-.anima-listeners-active * {
-  pointer-events      : auto;
-}
-.anima-hidden,
-.anima-hidden * {
-  visibility          : hidden;
-  pointer-events      : none;
-}
-.anima-smart-layers-pointers,
-.anima-smart-layers-pointers * {
-  pointer-events      : auto;
-  visibility          : visible;
-}
-.anima-component-wrapper.anima-not-ready,
-.anima-component-wrapper.anima-not-ready * {
-  visibility          : hidden !important;
-}
-.anima-listeners-active-click,
-.anima-listeners-active-click * {
-  cursor              : pointer;
-}
-
-
-
-#fileUploadedWrap {
-  position: absolute;
+main {
+  background-color: #ffffff;
   width: 100%;
-  display: flex;
+  height: 100%;
+  margin-top: 10px;
+  font-family: "Product Sans";
 }
 
-#fileUploadedWrap img {
-  width: 80px;
-  height: 75px;
-  margin: auto auto auto 0;
-  border-radius: 2px;
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-#fileUploadedWrap button {
-  width: 7em;
-  outline: none;
+.left {
+  left: 0;
+  background-color: #ffffff;
+}
+
+.title{
+  font-size: 30px;
+  color: #DB4F3C;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.title2{
+  font-size: 26px;
+  color: #212121;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.right {
+  right: 0;
+  background-color: #ffffff;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
   border: none;
-  padding: .5em;
-  border-radius: 2px;
-  background-color: whitesmoke;
-  color: black;
-  font-size: 13px;
-  margin: auto;
-  cursor: pointer;
+  background: #f9f9f9;
 }
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #f9f9f9;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #DB4F3C;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+
+.centered p{
+  margin-top: 20px;
+  color: #212121;
+}
+
+/*.centered img {*/
+/*  width: 150px;*/
+/*  border-radius: 50%;*/
+/*}*/
