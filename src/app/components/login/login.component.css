@@ -1,521 +1,128 @@
-
-@font-face {
-  font-family: "ProductSans-Regular";
-  /*src: url('../fonts/Product Sans Regular.ttf') format("truetype");*/
+main {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  font-family: "Product Sans";
 }
 
-.login {
-  width               : 100%;
-  min-width           : 1440px;
-  height              : 100vh;
-  min-height          : 895px;
-  position            : relative;
-  overflow            : hidden;
-  margin              : 0px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color    : rgba(255, 255, 255, 1.0);
-  opacity             : 1.0;
-}
-a {
-  text-decoration     : none;
-}
-div {
-  -webkit-text-size-adjust: none;
-}
-.anima-full-width-a {
-  width               : 100%;
-}
-.anima-full-height-a {
-  height              : 100%;
-}
-div {
-  -webkit-text-size-adjust: none;
-}
-.login .screenshot20200211123912 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 211px;
-  height              : 446px;
-  width               : 546px;
-  position            : absolute;
-  margin              : 0;
-  left                : 128px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.login .group2 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 68px;
-  height              : 716px;
-  width               : 596px;
-  position            : absolute;
-  margin              : 0;
-  left                : 798px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.login .group2 .staysignedin {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 458px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 69px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 20.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.28px;
-  line-height         : 24.0px;
-}
-.login .group2 .icontoggletoggleon24px {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 458px;
-  height              : 26px;
-  width               : 52px;
-  position            : absolute;
-  margin              : 0;
-  left                : 5px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.login .group2 .icontoggletoggleon24px .icontoggletoggleon24px1 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 26px;
-  width               : 52px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.login .group2 .welcomeback {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 2px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 30.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.42px;
-  line-height         : 37.0px;
-}
-.login .group2 .enteryourdetailst {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 94px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 2px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 20.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.28px;
-  line-height         : 24.0px;
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-.login .group2 .form-control{
+.left {
+  left: 0;
+  background-color: #ffffff;
+}
+
+.title{
+  font-size: 30px;
+  color: #DB4F3C;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.title2{
+  font-size: 26px;
+  color: #212121;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.right {
+  right: 0;
+  background-color: #ffffff;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
   border: none;
-  padding-left: 20px;
-}
-.login .group2 .input {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 166px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.login .group2 .input .rectangle {
-  background-color    : rgba(249, 249, 249, 1.0);
-  top                 : 0px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 3px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.login .group2 .input .email {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 28px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 27px;
-  transform           : rotate(0deg);
-  opacity             : 0.7;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 16.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.23px;
-  line-height         : 19.0px;
+  background: #f9f9f9;
 }
 
-.login .group2 .input1 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 289px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 2px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #f9f9f9;
+  outline: none;
 }
-.login .group2 .input1 .rectangle {
-  background-color    : rgba(249, 249, 249, 1.0);
-  top                 : 0px;
-  height              : 77px;
-  width               : 594px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 3px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.login .group2 .input1 .email {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 28px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 27px;
-  transform           : rotate(0deg);
-  opacity             : 0.7;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 16.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.23px;
-  line-height         : 19.0px;
-}
-.login .group2 .forgotyourpassword {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 636px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 155px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 18.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.25px;
-  line-height         : 22.0px;
-}
-.login .group2 .forgotyourpassword .span1 {
 
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
 }
-.login .group2 .forgotyourpassword .span2 {
-  color               : rgba(2, 48, 89, 1.0);
-  letter-spacing      : 0.24px;
-}
-.login .group2 .donu2019thaveanaccoun {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 692px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 135px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 20.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.28px;
-  line-height         : 24.0px;
-}
-.login .group2 .donu2019thaveanaccoun .span1 {
 
+/* Set a style for all buttons */
+button {
+  background-color: #DB4F3C;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
 }
-.login .group2 .donu2019thaveanaccoun .span2 {
-  color               : rgba(2, 48, 89, 1.0);
-  letter-spacing      : 0.27px;
+
+button:hover {
+  opacity:1;
 }
-.login .group4 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 2206px;
-  height              : 57px;
-  width               : 232px;
-  position            : absolute;
-  margin              : 0;
-  left                : 2178px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
 }
-.login .group4 .rectangle {
-  background-color    : rgba(16, 98, 162, 1.0);
-  top                 : 0px;
-  height              : 57px;
-  width               : 232px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 3px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
 }
-.login .group4 .login1 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 11px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 85px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 25.0px;
-  color               : rgba(255, 255, 255, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.35px;
-  line-height         : 30.0px;
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
 }
-.login .group41 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 720px;
-  height              : 57px;
-  width               : 232px;
-  position            : absolute;
-  margin              : 0;
-  left                : 2515px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
-.login .group41 .rectangle {
-  background-color    : rgba(16, 98, 162, 1.0);
-  top                 : 0px;
-  height              : 57px;
-  width               : 232px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 3px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
 }
-.login .group41 .login1 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 11px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 85px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 25.0px;
-  color               : rgba(255, 255, 255, 1.0);
-  text-align          : left;
-  letter-spacing      : 0.35px;
-  line-height         : 30.0px;
+
+.centered p{
+  margin-top: 20px;
+  color: #212121;
 }
-.login .rateme {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 54px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 128px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 30.0px;
-  color               : rgba(219, 79, 60, 1.0);
-  text-align          : left;
-  letter-spacing      : 1.47px;
-  line-height         : 37.0px;
-}
-.login .signupbutton {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 511px;
-  height              : 48px;
-  width               : 214px;
-  position            : absolute;
-  margin              : 0;
-  left                : 1161px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.login .signupbutton .group {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 48px;
-  width               : 214px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.login .signupbutton .group .rectangle {
-  background-color    : rgba(219, 79, 60, 1.0);
-  top                 : 0px;
-  height              : 48px;
-  width               : 214px;
-  position            : relative;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 4px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-.login .signupbutton .signup {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 15px;
-  height              : auto;
-  width               : 71px;
-  position            : absolute;
-  margin              : 0;
-  left                : 72px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-  font-family         : "ProductSans-Regular", Helvetica, Arial, serif;
-  font-size           : 14.0px;
-  color               : rgba(255, 255, 255, 1.0);
-  text-align          : center;
-  letter-spacing      : 0.68px;
-  line-height         : 17.0px;
-}
-/* .anima-animate-appear prefix for appear animations */
-.anima-animate-appear {
-  opacity             : 0;
-  display             : block;
-  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
-  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
-  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
-  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
-}
-.anima-animate-disappear {
-  opacity             : 1;
-  display             : block;
-  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
-  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
-  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
-  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
-}
-/*.anima-animate-nodelay {*/
-/*  -webkit-animation-delay: 0;*/
-/*  -moz-animation-delay: 0;*/
-/*  -o-animation-delay  : 0;*/
-/*  animation-delay     : 0;*/
+
+/*.centered img {*/
+/*  width: 150px;*/
+/*  border-radius: 50%;*/
 /*}*/
-@-webkit-keyframes anima-reveal {
-  0%
-
-  {
-    opacity: 0;
-  }
-
-
-  100%
-
-  {
-    opacity: 1;
-  }
-}
-@-moz-keyframes anima-reveal {
-  0%
-
-  {
-    opacity: 0;
-  }
-
-
-  100%
-
-  {
-    opacity: 1;
-  }
-}
-@-o-keyframes anima-reveal {
-  0%
-
-  {
-    opacity: 0;
-  }
-
-
-  100%
-
-  {
-    opacity: 1;
-  }
-}
-@keyframes anima-reveal {
-  0%
-
-  {
-    opacity: 0;
-  }
-
-
-  100%
-
-  {
-    opacity: 1;
-  }
-}
-.anima-component-wrapper,
-.anima-component-wrapper * {
-  pointer-events      : none;
-}
-.anima-component-wrapper a *,
-.anima-component-wrapper a,
-.anima-component-wrapper input,
-.anima-component-wrapper video,
-.anima-component-wrapper iframe,
-.anima-listeners-active,
-.anima-listeners-active * {
-  pointer-events      : auto;
-}
-.anima-hidden,
-.anima-hidden * {
-  visibility          : hidden;
-  pointer-events      : none;
-}
-.anima-smart-layers-pointers,
-.anima-smart-layers-pointers * {
-  pointer-events      : auto;
-  visibility          : visible;
-}
-.anima-component-wrapper.anima-not-ready,
-.anima-component-wrapper.anima-not-ready * {
-  visibility          : hidden !important;
-}
-.anima-listeners-active-click,
-.anima-listeners-active-click * {
-  cursor              : pointer;
-}
