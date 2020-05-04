@@ -24,12 +24,13 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { InterestService } from './shared/services/interest.service';
 import { HttpClientModule } from '@angular/common/http';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModalModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SystemAdminDashboardComponent } from './components/home/system-admin-dashboard/system-admin-dashboard.component';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFireModule} from '@angular/fire';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import {ModalModule} from 'ngx-bootstrap/modal';
 // import { GoogleplacesComponent } from './components/signup/googleplaces/googleplaces.component';
 
 var config = {
@@ -77,6 +78,8 @@ var config = {
     NgxSpinnerModule,
     NgbModule,
     BrowserAnimationsModule,
+    NgbModalModule,
+    ModalModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 5000,
       positionClass: 'toast-bottom-right',

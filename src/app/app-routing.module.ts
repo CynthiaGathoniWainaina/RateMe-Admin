@@ -8,6 +8,7 @@ import { TokenGuard } from './shared/authGuards/token.guard';
 import {DashboardComponent} from './components/home/dashboard/dashboard.component';
 import { EditorialComponent } from './components/home/editorial/editorial.component';
 import {SystemAdminDashboardComponent} from './components/home/system-admin-dashboard/system-admin-dashboard.component';
+import {ActionPlansComponent} from './components/home/action-plans/action-plans.component';
 
 const routes: Routes = [
 
@@ -26,8 +27,14 @@ const routes: Routes = [
     children: [{ path: '', component: DashboardComponent}]
   },
 
+  // Action Plans
+  { path: 'action-plans', component: HomeComponent,
+    children: [{ path: '', component: ActionPlansComponent}]
+  },
+
+
   // Editorial
-  { path: 'editorial', component: HomeComponent, canActivate: [TokenGuard],
+  { path: 'editorial', component: HomeComponent,
     children: [{ path: '', component: EditorialComponent}]
   },
 
