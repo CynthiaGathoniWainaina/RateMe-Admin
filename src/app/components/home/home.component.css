@@ -41,3 +41,27 @@ main{
   height: 50px;
   border-radius: 50%;
 }
+
+
+#dropdownNotification{
+  width: 300px;
+}
+
+#dropdownNotification .footer-btn {
+  text-align: center;
+  background: transparent ;
+  color: #DB4F3C;
+  padding: 10px 10px;
+  margin-top: 8px;
+  align-content: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 290px;
+  opacity: 0.9;
+}
+
+
+.footer-btn:hover {
+  opacity:1;
+}
