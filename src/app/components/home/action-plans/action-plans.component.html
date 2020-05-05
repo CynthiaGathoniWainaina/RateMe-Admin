@@ -4,7 +4,7 @@
     <div class="title">Action Plans</div>
 
     <div class="group12">
-      <div class="rectangle">
+      <div class="rectangle2">
       </div>
       <img src="./assets/images/dashboard/dashboard-lunchr-u2014-tonton-marty@2x.png" class="lunchru2014tontonmarty"/>
       <div class="welcomeback">
@@ -19,7 +19,7 @@
     <div class="container-fluid">
 
       <!--Date Picker-->
-      <form class="form-inline">
+      <form class="form-inline" style="margin-left: 10px;">
         <div class="form-group hidden">
           <div class="input-group">
             <input name="datepicker"
@@ -52,7 +52,7 @@
                    [value]="formatter.format(fromDate)"
                    (input)="fromDate = validateInput(fromDate, dpFromDate.value)">
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"></button>
+              <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"><i class="fa fa-calendar"></i></button>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@
                    [value]="formatter.format(toDate)"
                    (input)="toDate = validateInput(toDate, dpToDate.value)">
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"></button>
+              <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"><i class="fa fa-calendar"></i></button>
             </div>
           </div>
         </div>
@@ -78,16 +78,21 @@
             <div class="kanban-block">
               <h4 class="kanban-title">New issues <span class="pull-right">80</span></h4>
               <hr>
+              <p class="card-text2">Sanitation (Restrooms)<span class="pull-right">23</span></p>
+              <p class="card-text2">Service (Slow service)<span class="pull-right">14</span></p>
+              <hr>
+
+
               <div class="card">
                 <div class="card-block">
-                  <h4 class="card-text">Issue: Sanitation</h4>
+                  <h4 class="card-text">Issue: Sanitation (Restrooms)</h4>
                   <p class="card-text2">Customer name: Marty Byrde</p>
                   <p class="card-text2">Age: 24</p>
                 </div>
               </div>
               <div class="card">
                 <div class="card-block">
-                  <h4 class="card-text">Issue: Sanitation</h4>
+                  <h4 class="card-text">Issue: Sanitation (Dining area)</h4>
                   <p class="card-text2">Customer name: Marty Byrde</p>
                   <p class="card-text2">Age: 24</p>
                 </div>
@@ -101,6 +106,9 @@
           <div class="kanban-column">
             <div class="kanban-block">
               <h4 class="kanban-title">Under review <span class="pull-right">80</span></h4>
+              <hr>
+              <p class="card-text2">Sanitation (Restrooms)<span class="pull-right">23</span></p>
+              <p class="card-text2">Service (Slow service)<span class="pull-right">14</span></p>
               <hr>
               <div class="card">
                 <div class="card-block">
@@ -121,6 +129,9 @@
           <div class="kanban-column">
             <div class="kanban-block">
               <h4 class="kanban-title">Send update <span class="pull-right">80</span></h4>
+              <hr>
+              <p class="card-text2">Sanitation (Washrooms)<span class="pull-right">23</span></p>
+              <p class="card-text2">Service (Slow service)<span class="pull-right">14</span></p>
               <hr>
               <div class="card">
                 <div class="card-block">

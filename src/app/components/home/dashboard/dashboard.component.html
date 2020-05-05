@@ -20,7 +20,7 @@
     <div class="container-fluid">
 
       <!--Date Picker-->
-      <form class="form-inline">
+      <form class="form-inline" style="margin-left: 10px;">
         <div class="form-group hidden">
           <div class="input-group">
             <input name="datepicker"
@@ -53,7 +53,7 @@
                    [value]="formatter.format(fromDate)"
                    (input)="fromDate = validateInput(fromDate, dpFromDate.value)">
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"></button>
+              <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"><i class="fa fa-calendar"></i></button>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@
                    [value]="formatter.format(toDate)"
                    (input)="toDate = validateInput(toDate, dpToDate.value)">
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"></button>
+              <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"><i class="fa fa-calendar"></i></button>
             </div>
           </div>
         </div>
