@@ -7,6 +7,7 @@ import { FileUploadService } from 'src/app/shared/services/fileUpload.service';
 import { dev } from 'src/app/shared/dev/dev';
 import { OrgProfileService } from 'src/app/shared/services/orgProfile.service';
 import { NotificationService } from 'src/app/shared/services/notification.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 // import {} from "googlemaps";
 
 @Component({
@@ -16,7 +17,7 @@ import { NotificationService } from 'src/app/shared/services/notification.servic
 })
 
 export class SignupComponent implements OnInit, AfterViewInit {
-// tslint:disable: prefer-const
+// tslint:disable
 // tslint:disable: object-literal-shorthand
 // tslint:disable: max-line-length
 // tslint:disable: new-parens
@@ -47,6 +48,7 @@ export class SignupComponent implements OnInit, AfterViewInit {
     private industryService: IndustryService,
     private fileUploadService: FileUploadService,
     private notification: NotificationService,
+    private spinner: NgxSpinnerService,
     public zone: NgZone
   ) { }
 
@@ -147,8 +149,8 @@ onSubmit() {
     formData.append('fileUploaded', this.myLogo, this.myLogo.name);
     this.fileUploadService.uploadOrgLogo(formData).subscribe(
       data => {
-        this.signUpForm.value.logo.url = `${dev.connect}static/images/orgProfileImages/${data.imageName}`;
-        this.signUpForm.value.logo.name = data.imageName;
+        this.signUpForm.value.logo.url = `${dev.connect}${data.url}`;
+        this.signUpForm.value.logo.name = data.name;
         this.registerUser();
       },
       error => {
@@ -305,6 +307,29 @@ createOrgProfile(id) {
 }
 
 
+
+
+
+
+
+
+superAdmin() {
+  this.spinner.show();
+  let newUserData = {
+    password: 'cynthia@2020',
+    email: 'cynthia@admin.com',
+    userType: 'systemAdmin',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  };
+  this.userService.registerUser(newUserData).subscribe(
+    data => {
+      this.spinner.hide();
+      this.notification.showSuccess('Super admin created', 'Success')
+    },
+    error => { this.spinner.hide(); this.notification.showWarning(error.error.message, 'Failed') }
+  );
+}
 
 
 

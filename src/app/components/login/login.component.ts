@@ -5,6 +5,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NotificationService } from 'src/app/shared/services/notification.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {faEye} from '@fortawesome/free-solid-svg-icons';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +24,8 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private formBuilder: FormBuilder,
     private userService: UserService,
-    private notification: NotificationService
+    private notification: NotificationService,
+    private spinner: NgxSpinnerService
   ) { }
 
 
@@ -49,13 +51,22 @@ get formSignIn() {return this.signInForm.controls; }
 
 
 signIn() {
+  this.spinner.show();
   this.userService.loginUser(this.signInForm.value).subscribe(
     data => {
       localStorage.setItem('loggedInUserToken', data.token);
       localStorage.setItem('loggedInUserType', data.userType);
-      this.router.navigate(['/dashboard']);
+      this.spinner.hide();
+      if (data.userType === 'orgAdmin') {
+        this.router.navigate(['/dashboard']);
+      }
+      if (data.userType === 'systemAdmin') {
+        this.router.navigate(['/admin-dashboard']);
+      }
+     
+
     },
-    error =>  this.notification.showError(error.error.message, 'Access Denied')
+    error =>  {this.notification.showError(error.error.message, 'Access Denied'); this.spinner.hide();}
   );
 }
 
