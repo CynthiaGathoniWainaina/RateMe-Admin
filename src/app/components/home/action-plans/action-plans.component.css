@@ -1,0 +1,138 @@
+a {
+  -webkit-transition: .25s all;
+  transition: .25s all;
+}
+
+
+.kanban-column {
+  padding: 20px 10px 10px 10px;
+  min-height: auto;
+  min-width: 100px;
+  margin-top: 15px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transition: .25s box-shadow;
+  transition: .25s box-shadow;
+}
+
+.kanban-title {
+  font-family: "Product Sans";
+  font-size: 16px;
+  color: #264d59;
+}
+
+.kanban-title span {
+  font-size: 23px;
+  color: #000000;
+}
+
+
+.card {
+  padding: 20px 10px 10px 10px;
+  min-height: auto;
+  min-width: 100px;
+  margin-top: 15px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transition: .25s box-shadow;
+  transition: .25s box-shadow;
+}
+.card:focus, .card:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.card-inverse .card-img-overlay {
+  background-color: rgba(51, 51, 51, 0.85);
+  border-color: rgba(51, 51, 51, 0.85);
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #264d59;
+}
+
+.card-text {
+  font-size: 15px;
+  color: #DB4F3C;
+}
+
+.card-text2 {
+  font-size: 15px;
+}
+
+.card-text3 {
+  font-size: 17px;
+  color: #DB4F3C;
+}
+
+.card-text3 img{
+  height: 26px;
+  width: 30px;
+
+}
+
+.card-img-top{
+  margin-top:10px;
+}
+
+.card-footer{
+  background: transparent;
+  left: 0;
+}
+.col-xs-12{
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+.row{
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 20px;
+}
+
+.footer-btn {
+  background-color: #DB4F3C;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.footer-btn:hover {
+  opacity:1;
+}
+
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+.form-group.hidden {
+  width: 0;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+.custom-day {
+  text-align: center;
+  padding: 0.185rem 0.25rem;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+}
+.custom-day.focused {
+  background-color: #e6e6e6;
+}
+.custom-day.range, .custom-day:hover {
+  background-color: rgb(2, 117, 216);
+  color: white;
+}
+.custom-day.faded {
+  background-color: rgba(2, 117, 216, 0.5);
+}

@@ -1,7 +1,102 @@
 /* You can add global styles to this file, and also import other style files */
 
 #main_body {
-    font-family: "ProductSans-Regular", Helvetica, Arial, serif;
+    font-family: "Product Sans";
+}
+
+main {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  font-family: "Product Sans";
+}
+
+main header {
+  width: 100%;
+  padding: 3em 0;
+  text-align: left;
+}
+main header .title {
+  font-size: 32px;
+  font-weight: lighter;
+  margin-left: 20px;
+}
+
+main section {
+  width: 100%;
+  text-align: center;
+  padding: 15em 0 1em 0;
+
+}
+
+main .group12 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 180px;
+  height              : 167px;
+  width               : 1300px;
+  position            : absolute;
+  margin              : 0;
+  left                : 50px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+
+main .group12 .rectangle {
+  background-color    : rgba(219, 79, 60, 1.0);
+  top                 : 20px;
+  height              : 180px;
+  width               : 1300px;
+  position            : relative;
+  margin-left         : 0;
+  left                : 0;
+  border-radius       : 16px;
+  transform           : rotate(0deg);
+  opacity             : 0.69;
+}
+
+
+main .group12 .rectangle2 {
+  background-color    : #264d59;
+  top                 : 20px;
+  height              : 180px;
+  width               : 1300px;
+  position            : relative;
+  margin-left         : 0;
+  left                : 0;
+  border-radius       : 16px;
+  transform           : rotate(0deg);
+  opacity             : 0.69;
+}
+
+main .group12 .lunchru2014tontonmarty {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 187px;
+  width               : 209px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1044px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+
+main .group12 .welcomeback {
+  background-color: rgba(255, 255, 255, 0.0);
+  top: 94px;
+  height: auto;
+  width: auto;
+  position: absolute;
+  margin: 0;
+  left: 44px;
+  transform: rotate(0deg);
+  opacity: 1.0;
+  font-family: "ProductSans-Bold", Helvetica, Arial, serif;
+  font-size: 30.0px;
+  color: rgba(255, 255, 255, 1.0);
+  text-align: left;
+  letter-spacing: 0.81px;
+  line-height: 37.0px;
 }
 
 .toast-custom-one {
@@ -39,4 +134,4 @@
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: "Product Sans", "Product Sans"; }

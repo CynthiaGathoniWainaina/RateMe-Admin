@@ -1,3 +1,176 @@
-<p>
-  action-plans works!
-</p>
+<main class="container-fluid">
+
+  <header class="container-fluid">
+    <div class="title">Action Plans</div>
+
+    <div class="group12">
+      <div class="rectangle2">
+      </div>
+      <img src="./assets/images/dashboard/dashboard-lunchr-u2014-tonton-marty@2x.png" class="lunchru2014tontonmarty"/>
+      <div class="welcomeback">
+          Resolve customer issues in one place
+      </div>
+    </div>
+
+  </header>
+
+
+  <section>
+    <div class="container-fluid">
+
+      <!--Date Picker-->
+      <form class="form-inline" style="margin-left: 10px;">
+        <div class="form-group hidden">
+          <div class="input-group">
+            <input name="datepicker"
+                   class="form-control"
+                   ngbDatepicker
+                   #datepicker="ngbDatepicker"
+                   [autoClose]="'outside'"
+                   (dateSelect)="onDateSelection($event)"
+                   [displayMonths]="2"
+                   [dayTemplate]="t"
+                   outsideDays="hidden"
+                   [startDate]="fromDate!">
+            <ng-template #t let-date let-focused="focused">
+        <span class="custom-day"
+              [class.focused]="focused"
+              [class.range]="isRange(date)"
+              [class.faded]="isHovered(date) || isInside(date)"
+              (mouseenter)="hoveredDate = date"
+              (mouseleave)="hoveredDate = null">
+          {{ date.day }}
+        </span>
+            </ng-template>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <input #dpFromDate
+                   class="form-control" placeholder="yyyy-mm-dd"
+                   name="dpFromDate"
+                   [value]="formatter.format(fromDate)"
+                   (input)="fromDate = validateInput(fromDate, dpFromDate.value)">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"><i class="fa fa-calendar"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="form-group ml-2">
+          <div class="input-group">
+            <input #dpToDate
+                   class="form-control" placeholder="yyyy-mm-dd"
+                   name="dpToDate"
+                   [value]="formatter.format(toDate)"
+                   (input)="toDate = validateInput(toDate, dpToDate.value)">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"><i class="fa fa-calendar"></i></button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+
+      <!--First row-->
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <div class="kanban-column">
+            <div class="kanban-block">
+              <h4 class="kanban-title">New issues <span class="pull-right">80</span></h4>
+              <hr>
+              <p class="card-text2">Sanitation (Restrooms)<span class="pull-right">23</span></p>
+              <p class="card-text2">Service (Slow service)<span class="pull-right">14</span></p>
+              <hr>
+
+
+              <div class="card">
+                <div class="card-block">
+                  <h4 class="card-text">Issue: Sanitation (Restrooms)</h4>
+                  <p class="card-text2">Customer name: Marty Byrde</p>
+                  <p class="card-text2">Age: 24</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-block">
+                  <h4 class="card-text">Issue: Sanitation (Dining area)</h4>
+                  <p class="card-text2">Customer name: Marty Byrde</p>
+                  <p class="card-text2">Age: 24</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <div class="kanban-column">
+            <div class="kanban-block">
+              <h4 class="kanban-title">Under review <span class="pull-right">80</span></h4>
+              <hr>
+              <p class="card-text2">Sanitation (Restrooms)<span class="pull-right">23</span></p>
+              <p class="card-text2">Service (Slow service)<span class="pull-right">14</span></p>
+              <hr>
+              <div class="card">
+                <div class="card-block">
+                  <h4 class="card-text">Issue: Sanitation</h4>
+                  <p class="card-text2">Customer name: Marty Byrde</p>
+                  <p class="card-text2">Age: 24</p>
+                </div>
+                <div class="card-footer">
+                  <button class="footer-btn">Options how to resolve issue</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <div class="kanban-column">
+            <div class="kanban-block">
+              <h4 class="kanban-title">Send update <span class="pull-right">80</span></h4>
+              <hr>
+              <p class="card-text2">Sanitation (Washrooms)<span class="pull-right">23</span></p>
+              <p class="card-text2">Service (Slow service)<span class="pull-right">14</span></p>
+              <hr>
+              <div class="card">
+                <div class="card-block">
+                  <h4 class="card-text">Issue: Sanitation</h4>
+                  <p class="card-text2">Customer name: Marty Byrde</p>
+                  <p class="card-text2">Age: 24</p>
+                </div>
+                <div class="card-footer">
+                  <button class="footer-btn">Send update</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="kanban-column">
+          <div class="kanban-block">
+            <h4 class="kanban-title">Resolved <span class="total-number pull-right">80</span></h4>
+            <hr>
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-text">Issue: Sanitation</h4>
+                <p class="card-text2">Customer name: Marty Byrde</p>
+                <p class="card-text2">Age: 24</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+

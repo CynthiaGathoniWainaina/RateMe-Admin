@@ -18,18 +18,21 @@ import { DashboardComponent } from './components/home/dashboard/dashboard.compon
 import { FeebackFormsComponent } from './components/home/feeback-forms/feeback-forms.component';
 import { DesignFeedbackFormsComponent } from './components/home/design-feedback-forms/design-feedback-forms.component';
 import {ChartsModule} from 'ng2-charts';
-import { EditorialComponent } from './components/home/editorial/editorial.component';
+import { EditorialComponent } from './components/home-admin/editorial/editorial.component';
 import 'hammerjs';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { InterestService } from './shared/services/interest.service';
 import { HttpClientModule } from '@angular/common/http';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { SystemAdminDashboardComponent } from './components/home/system-admin-dashboard/system-admin-dashboard.component';
+import {NgbModalModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { SystemAdminDashboardComponent } from './components/home-admin/system-admin-dashboard/system-admin-dashboard.component';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFireModule} from '@angular/fire';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import {ModalModule} from 'ngx-bootstrap/modal';
+import { OrgProfileComponent } from './components/home/org-profile/org-profile.component';
+import { HomeAdminComponent } from './components/home-admin/home-admin.component';
 // import { GoogleplacesComponent } from './components/signup/googleplaces/googleplaces.component';
 
 var config = {
@@ -62,6 +65,8 @@ var config = {
     SystemAdminDashboardComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
+    OrgProfileComponent,
+    HomeAdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,6 +82,8 @@ var config = {
     NgxSpinnerModule,
     NgbModule,
     BrowserAnimationsModule,
+    NgbModalModule,
+    ModalModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 5000,
       positionClass: 'toast-bottom-right',

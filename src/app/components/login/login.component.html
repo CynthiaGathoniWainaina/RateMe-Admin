@@ -1,172 +1,75 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link href="./img/favicon.png" rel="shortcut icon"/>
-  <meta charset="utf-8"/>
-  <meta content="width=1440, maximum-scale=1.0" name="viewport"/>
-<!--  <link href="./css/login.css" rel="stylesheet" type="text/css"/>-->
-<!--  <meta content="Launchpad by Anima" name="author">-->
-<!--  </meta>-->
-</head>
-<body style="margin: 0;
- background: rgba(255, 255, 255, 1.0);">
-<input id="anPageName" name="page" type="hidden" value="login"/>
-<div class="login">
-  <div style="width: 1440px; height: 100%; position:relative; margin:auto;">
-    <img src="./assets/images/login-screenshot-2020-02-11-123912.png" class="screenshot20200211123912"/>
-    <div class="group2">
-      <div class="staysignedin">
-        Stay signed in
-      </div>
-      <div class="icontoggletoggleon24px">
-        <img src="./assets/images/login-icontoggletoggleon24px@2x.png" class="icontoggletoggleon24px1"/>
-      </div>
-      <div class="welcomeback">
-        Welcome back!
-      </div>
-      <div class="enteryourdetailst">
-        Enter your details to keep connected
-      </div>
+<main class="container-fluid">
 
-<form class="form" [formGroup]="signInForm">
-<div class="form-body">
+  <section class="container-fluid">
 
-<!--Email address-->
+    <div class="split left">
+      <p class="title">Rate Me</p>
+      <div class="centered">
+        <img src="./assets/images/login-image.png" alt="">
+        <p>Welcome back !</p>
 
-      <div class="form-group">
-        <div class="input">
-          <input type="text" class="form-control rectangle" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Email"
-          formControlName="email"  [class.is-invalid]="formSignIn.email.invalid && formSignIn.email.touched" >
-        </div>
-      </div>
-
-<!--Password-->
-      <div class="form-group">
-      <div class="input1">
-        <input type="text" [type]="togglePassword" class="form-control rectangle" placeholder="Password"
-        formControlName="password"  [class.is-invalid]="formSignIn.password.invalid && formSignIn.password.touched">
-      </div>
-
-<!--        <div class="input-group-append">-->
-<!--          <span [hidden]="showPasswordIcon" (click)="showPassword()"><fa-icon [icon]="faEye"></fa-icon></span>-->
-<!--          <span [hidden]="hidePasswordIcon" (click)="hidePassword()"><fa-icon [icon]=""></fa-icon></span>-->
-<!--        </div>-->
-
-      </div>
-
-</div>
-</form>
-
-      <div class="forgotyourpassword">
-        <span class="span1">Forgot your password? </span><span class="span2">Reset</span>
-      </div>
-      <div class="donu2019thaveanaccoun">
-        <span class="span1">Don’t have an account? </span><span class="span2">Signup</span>
       </div>
     </div>
 
-<!--    <div class="group4">-->
-<!--      <div class="rectangle">-->
-<!--      </div>-->
-<!--      <div class="login1">-->
-<!--        Login-->
-<!--      </div>-->
-<!--    </div>-->
+    <div class="split right">
+      <p class="title2"></p>
+      <div class="">
 
-    <div class="rateme">
-      Rate Me
+        <form class="form" [formGroup]="signInForm" style="width: 600px;">
+          <div class="container">
+            <h1>Welcome back !</h1>
+            <p>Enter your details to keep connected</p>
+            <hr>
+
+          <div class="form-body">
+            <div class="form-group">
+              <label for="email"><b>Email</b></label>
+              <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+                     placeholder="Enter Email"
+                     formControlName="email" [class.is-invalid]="formSignIn.email.invalid && formSignIn.email.touched"
+                     name="email" required>
+            </div>
+
+
+
+            <div class="form-group">
+              <label for="psw"><b>Password</b></label>
+              <input type="password" class="form-control"
+                     formControlName="password" [class.is-invalid]="formSignIn.password.invalid && formSignIn.password.touched"
+                     placeholder="Enter Password" name="psw" required>
+            </div>
+
+
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+
+
+            <div class="clearfix">
+              <!--              <button type="button" class="cancelbtn">Cancel</button>-->
+              <button type="submit" [disabled]="!signInForm.valid" class="signupbtn" (click)="signIn()">Sign In</button>
+            </div>
+          </div>
+            <p>Forgot password? <a href="#" style="color:#264d59; font-size:16px;">Reset</a>.</p>
+            <p>Don't have an account? <a routerLink="/signup" style="color:#264d59; font-size:16px;">Sign Up</a>.</p>
+          </div>
+
+        </form>
+
+
+
+
+
+      </div>
     </div>
 
-    <button [disabled]="!signInForm.valid" class="signupbutton" (click)="signIn()">
-      <div class="group">
-        <div class="rectangle">
-        </div>
-      </div>
-      <div class="signup">
-        Login
-      </div>
-    </button>
 
-  </div>
 
-</div>
-<!-- Scripts -->
-<script>
-  anima_isHidden = function(e) {
-    if (!(e instanceof HTMLElement)) return !1;
-    if (getComputedStyle(e).display == "none") return !0; else if (e.parentNode && anima_isHidden(e.parentNode)) return !0;
-    return !1;
-  };
-  anima_loadAsyncSrcForTag = function(tag) {
-    var elements = document.getElementsByTagName(tag);
-    var toLoad = [];
-    for (var i = 0; i < elements.length; i++) {
-      var e = elements[i];
-      var src = e.getAttribute("src");
-      var loaded = (src != undefined && src.length > 0 && src != 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
-      if (loaded) continue;
-      var asyncSrc = e.getAttribute("anima-src");
-      if (asyncSrc == undefined || asyncSrc.length == 0) continue;
-      if (anima_isHidden(e)) continue;
-      toLoad.push(e);
-    }
-    toLoad.sort(function(a, b) {
-      return anima_getTop(a) - anima_getTop(b);
-    });
-    for (var i = 0; i < toLoad.length; i++) {
-      var e = toLoad[i];
-      var asyncSrc = e.getAttribute("anima-src");
-      e.setAttribute("src", asyncSrc);
-    }
-  };
-  anima_pauseHiddenVideos = function(tag) {
-    var elements = document.getElementsByTagName("video");
-    for (var i = 0; i < elements.length; i++) {
-      var e = elements[i];
-      var isPlaying = !!(e.currentTime > 0 && !e.paused && !e.ended && e.readyState > 2);
-      var isHidden = anima_isHidden(e);
-      if (!isPlaying && !isHidden && e.getAttribute("autoplay") == "autoplay") {
-        e.play();
-      } else if (isPlaying && isHidden) {
-        e.pause();
-      }
-    }
-  };
-  anima_loadAsyncSrc = function(tag) {
-    anima_loadAsyncSrcForTag("img");
-    anima_loadAsyncSrcForTag("iframe");
-    anima_loadAsyncSrcForTag("video");
-    anima_pauseHiddenVideos();
-  };
-  var anima_getTop = function(e) {
-    var top = 0;
-    do {
-      top += e.offsetTop || 0;
-      e = e.offsetParent;
-    } while (e);
-    return top;
-  };
-  anima_loadAsyncSrc();
-  anima_old_onResize = window.onresize;
-  anima_new_onResize = undefined;
-  anima_updateOnResize = function() {
-    if (anima_new_onResize == undefined || window.onresize != anima_new_onResize) {
-      anima_new_onResize = function(x) {
-        if (anima_old_onResize != undefined) anima_old_onResize(x);
-        anima_loadAsyncSrc();
-      };
-      window.onresize = anima_new_onResize;
-      setTimeout(function() {
-        anima_updateOnResize();
-      }, 3000);
-    }
-  };
-  anima_updateOnResize();
-  setTimeout(function() {
-    anima_loadAsyncSrc();
-  }, 200);
-</script>
-<!-- End of Scripts -->
-</body>
-</html>
+  </section>
+
+
+
+
+
+</main>
 

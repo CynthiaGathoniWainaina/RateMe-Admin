@@ -6,8 +6,12 @@ import {LoginComponent} from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { TokenGuard } from './shared/authGuards/token.guard';
 import {DashboardComponent} from './components/home/dashboard/dashboard.component';
-import { EditorialComponent } from './components/home/editorial/editorial.component';
-import {SystemAdminDashboardComponent} from './components/home/system-admin-dashboard/system-admin-dashboard.component';
+import { EditorialComponent } from './components/home-admin/editorial/editorial.component';
+import {SystemAdminDashboardComponent} from './components/home-admin/system-admin-dashboard/system-admin-dashboard.component';
+import {ActionPlansComponent} from './components/home/action-plans/action-plans.component';
+import {InsightsComponent} from './components/home/insights/insights.component';
+import {CustomersComponent} from './components/home/customers/customers.component';
+import {HomeAdminComponent} from './components/home-admin/home-admin.component';
 
 const routes: Routes = [
 
@@ -26,13 +30,32 @@ const routes: Routes = [
     children: [{ path: '', component: DashboardComponent}]
   },
 
+  // Action Plans
+  { path: 'action-plans', component: HomeComponent,
+    children: [{ path: '', component: ActionPlansComponent}]
+  },
+
+
+  // Insights
+  { path: 'insights', component: HomeComponent,
+    children: [{ path: '', component: InsightsComponent}]
+  },
+
+  // Customers
+  { path: 'customers', component: HomeComponent,
+    children: [{ path: '', component: CustomersComponent}]
+  },
+
+
+  //Admin side routes
+
   // Editorial
-  { path: 'editorial', component: HomeComponent, canActivate: [TokenGuard],
+  { path: 'editorial', component: HomeAdminComponent,
     children: [{ path: '', component: EditorialComponent}]
   },
 
   // System Admin Dashboard
-  { path: 'admin-dashboard', component: HomeComponent,
+  { path: 'admin-dashboard', component: HomeAdminComponent,
     children: [{ path: '', component: SystemAdminDashboardComponent}]
   },
 
