@@ -10,6 +10,8 @@ import { PossibleSolutionService } from 'src/app/shared/services/possibleSolutio
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { EmojiService } from 'src/app/shared/services/emoji.service';
+import { RewardService } from 'src/app/shared/services/reward.service';
+import { OrgProfileService } from 'src/app/shared/services/orgProfile.service';
 
 
 @Component({
@@ -33,6 +35,8 @@ export class EditorialComponent implements OnInit {
     private templateService: TemplateService,
     private resposeService: ResponseService,
     private possibleSolutionService: PossibleSolutionService,
+    private rewardService: RewardService,
+    private orgProfileService: OrgProfileService,
     private emojiService: EmojiService
 
   ) { }
@@ -40,13 +44,14 @@ export class EditorialComponent implements OnInit {
 
 public faTrash = faTrash;
 
-public interestForm;
-public industryForm;
-public ratingRangeForm;
-public emojiForm;
-public questionForm;
-public responseForm;
-public possibleSolutionForm;
+public interestForm: any;
+public industryForm: any;
+public ratingRangeForm: any;
+public emojiForm: any;
+public questionForm: any;
+public responseForm: any;
+public possibleSolutionForm: any;
+public rewardForm: any;
 
 public AllInterests = [];
 public AllIndustries = [];
@@ -55,7 +60,9 @@ public AllTemplates = [];
 public AllQuestions = [];
 public AllResponses = [];
 public AllPossibleSolutions = [];
+public AllRewards = [];
 public AllEmojis = [];
+public AllOrgProfiles = [];
 
 
 
@@ -104,6 +111,13 @@ public AllEmojis = [];
       createdAt: new Date(),
       updatedAt: new Date()
     };
+    this.rewardForm = {
+      orgId: '',
+      points: null,
+      reward: '',
+      createdAt: new Date(),
+      updatedAt: new Date ()
+    };
   }
 
 
@@ -149,6 +163,18 @@ public AllEmojis = [];
     this.resposeService.getAllResponses().subscribe(
       data => {
         this.AllResponses = data;
+      },
+      error => console.log('Error')
+    );
+    this.rewardService.getAllRewards().subscribe(
+      data => {
+        this.AllRewards = data;
+      },
+      error => console.log('Error')
+    );
+    this.orgProfileService.getAllOrgProfiles().subscribe(
+      data => {
+        this.AllOrgProfiles = data;
       },
       error => console.log('Error')
     );
@@ -311,10 +337,38 @@ public AllEmojis = [];
     );
   }
 
+  addReward() {
+    this.spinner.show();
+    this.rewardService.createReward(this.rewardForm).subscribe(
+      data => {
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item added', 'Success');
+          this.rewardForm = {
+            orgId: '',
+            points: null,
+            reward: '',
+            createdAt: new Date(),
+            updatedAt: new Date ()
+          };
+        });
+
+      },
+      error => {this.spinner.hide(); this.notification.showError('Coud not create item', 'Failed'); }
+    );
+  }
 
 
 
 
+
+
+
+
+
+
+
+  // Remove Functions
   removeInterest(id) {
     this.spinner.show();
     this.interestService.deleteInterest(id).subscribe(
@@ -417,6 +471,20 @@ public AllEmojis = [];
   removeSolution(id) {
     this.spinner.show();
     this.possibleSolutionService.deletePossibleSolution(id).subscribe(
+      data => {
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notification.showSuccess('Item Removed', 'Success');
+        });
+
+      },
+      error => {this.spinner.hide(); this.notification.showError('Coud not remove item', 'Failed'); }
+    );
+  }
+
+  removeReward(id) {
+    this.spinner.show();
+    this.rewardService.deleteReward(id).subscribe(
       data => {
         this.updatePage().then(() => {
           this.spinner.hide();

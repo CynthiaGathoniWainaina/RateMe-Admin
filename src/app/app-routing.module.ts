@@ -12,6 +12,8 @@ import {ActionPlansComponent} from './components/home/action-plans/action-plans.
 import {InsightsComponent} from './components/home/insights/insights.component';
 import {CustomersComponent} from './components/home/customers/customers.component';
 import {HomeAdminComponent} from './components/home-admin/home-admin.component';
+import { SystemAdminGuard } from './shared/authGuards/systemAdmin.guard';
+import { OrgAdminGuard } from './shared/authGuards/orgAdmin.guard';
 
 const routes: Routes = [
 
@@ -26,23 +28,23 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [TokenGuard] },
 
   // Dashboard
-  { path: 'dashboard', component: HomeComponent,
+  { path: 'dashboard', component: HomeComponent, canActivate: [OrgAdminGuard],
     children: [{ path: '', component: DashboardComponent}]
   },
 
   // Action Plans
-  { path: 'action-plans', component: HomeComponent,
+  { path: 'action-plans', component: HomeComponent, canActivate: [OrgAdminGuard],
     children: [{ path: '', component: ActionPlansComponent}]
   },
 
 
   // Insights
-  { path: 'insights', component: HomeComponent,
+  { path: 'insights', component: HomeComponent, canActivate: [OrgAdminGuard],
     children: [{ path: '', component: InsightsComponent}]
   },
 
   // Customers
-  { path: 'customers', component: HomeComponent,
+  { path: 'customers', component: HomeComponent, canActivate: [OrgAdminGuard],
     children: [{ path: '', component: CustomersComponent}]
   },
 
@@ -50,12 +52,12 @@ const routes: Routes = [
   //Admin side routes
 
   // Editorial
-  { path: 'editorial', component: HomeAdminComponent,
+  { path: 'editorial', component: HomeAdminComponent, canActivate: [SystemAdminGuard],
     children: [{ path: '', component: EditorialComponent}]
   },
 
   // System Admin Dashboard
-  { path: 'admin-dashboard', component: HomeAdminComponent,
+  { path: 'admin-dashboard', component: HomeAdminComponent, canActivate: [SystemAdminGuard],
     children: [{ path: '', component: SystemAdminDashboardComponent}]
   },
 
