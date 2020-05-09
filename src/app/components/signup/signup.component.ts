@@ -313,23 +313,23 @@ createOrgProfile(id) {
 
 
 
-superAdmin() {
-  this.spinner.show();
-  let newUserData = {
-    password: 'cynthia@2020',
-    email: 'cynthia@admin.com',
-    userType: 'systemAdmin',
-    createdAt: new Date(),
-    updatedAt: new Date()
-  };
-  this.userService.registerUser(newUserData).subscribe(
-    data => {
-      this.spinner.hide();
-      this.notification.showSuccess('Super admin created', 'Success')
-    },
-    error => { this.spinner.hide(); this.notification.showWarning(error.error.message, 'Failed') }
-  );
-}
+// superAdmin() {
+//   this.spinner.show();
+//   let newUserData = {
+//     password: 'cynthia@2020',
+//     email: 'cynthia@admin.com',
+//     userType: 'systemAdmin',
+//     createdAt: new Date(),
+//     updatedAt: new Date()
+//   };
+//   this.userService.registerUser(newUserData).subscribe(
+//     data => {
+//       this.spinner.hide();
+//       this.notification.showSuccess('Super admin created', 'Success')
+//     },
+//     error => { this.spinner.hide(); this.notification.showWarning(error.error.message, 'Failed') }
+//   );
+// }
 
 
 
