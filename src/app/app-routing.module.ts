@@ -33,7 +33,7 @@ const routes: Routes = [
   },
 
   // Action Plans
-  { path: 'action-plans', component: HomeComponent, canActivate: [OrgAdminGuard],
+  { path: 'action-plans', component: HomeComponent,
     children: [{ path: '', component: ActionPlansComponent}]
   },
 

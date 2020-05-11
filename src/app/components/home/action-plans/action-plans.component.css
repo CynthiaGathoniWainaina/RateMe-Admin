@@ -136,3 +136,8 @@ a {
 .custom-day.faded {
   background-color: rgba(2, 117, 216, 0.5);
 }
+
+.modal-title{
+  font-size: 18px;
+  color: #DB4F3C;
+}

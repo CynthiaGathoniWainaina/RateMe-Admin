@@ -23,7 +23,7 @@ main header .title {
   margin-left: 20px;
 }
 
-main section {
+main .body-section {
   width: 100%;
   text-align: center;
   padding: 15em 0 1em 0;
