@@ -1,0 +1,55 @@
+nav{
+  margin-left: 25px;
+}
+
+a{
+  color: #DB4F3C;
+}
+
+.search-filter{
+  margin: 20px 0 30px 25px;
+
+}
+
+.search{
+  width: 400px;
+}
+
+
+.col-xs-12{
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+.row{
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 20px;
+}
+
+.kanban-title {
+  font-family: "Product Sans";
+  font-size: 16px;
+  color: #264d59;
+}
+
+.kanban-title span {
+  font-size: 23px;
+  color: #000000;
+}
+
+
+.customerdetails {
+  padding: 20px 10px 10px 10px;
+  min-height: auto;
+  min-width: 100px;
+  margin-top: 15px;
+
+}
+
+.customerdetails:focus, .customerdetails:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+
+

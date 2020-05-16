@@ -35,6 +35,7 @@ import { OrgProfileComponent } from './components/home/org-profile/org-profile.c
 import { HomeAdminComponent } from './components/home-admin/home-admin.component';
 import {InsightsComponent} from './components/home/insights/insights.component';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
+import { CustomerDetailsComponent } from './components/home/customer-details/customer-details.component';
 // import { GoogleplacesComponent } from './components/signup/googleplaces/googleplaces.component';
 
 var config = {
@@ -70,6 +71,7 @@ var config = {
     VerifyEmailComponent,
     OrgProfileComponent,
     HomeAdminComponent,
+    CustomerDetailsComponent,
   ],
   imports: [
     BrowserModule,
