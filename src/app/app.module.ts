@@ -33,6 +33,8 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 import {ModalModule} from 'ngx-bootstrap/modal';
 import { OrgProfileComponent } from './components/home/org-profile/org-profile.component';
 import { HomeAdminComponent } from './components/home-admin/home-admin.component';
+import {InsightsComponent} from './components/home/insights/insights.component';
+import {Ng2SearchPipeModule} from 'ng2-search-filter';
 // import { GoogleplacesComponent } from './components/signup/googleplaces/googleplaces.component';
 
 var config = {
@@ -59,6 +61,7 @@ var config = {
     ActionPlansComponent,
     CustomersComponent,
     DashboardComponent,
+    InsightsComponent,
     FeebackFormsComponent,
     DesignFeedbackFormsComponent,
     EditorialComponent,
@@ -80,6 +83,7 @@ var config = {
     HttpClientModule,
     MatTooltipModule,
     NgxSpinnerModule,
+    Ng2SearchPipeModule,
     NgbModule,
     BrowserAnimationsModule,
     NgbModalModule,

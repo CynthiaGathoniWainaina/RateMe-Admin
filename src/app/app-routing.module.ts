@@ -14,6 +14,7 @@ import {CustomersComponent} from './components/home/customers/customers.componen
 import {HomeAdminComponent} from './components/home-admin/home-admin.component';
 import { SystemAdminGuard } from './shared/authGuards/systemAdmin.guard';
 import { OrgAdminGuard } from './shared/authGuards/orgAdmin.guard';
+import {OrgProfileComponent} from './components/home/org-profile/org-profile.component';
 
 const routes: Routes = [
 
@@ -33,7 +34,7 @@ const routes: Routes = [
   },
 
   // Action Plans
-  { path: 'action-plans', component: HomeComponent,
+  { path: 'action-plans', component: HomeComponent, canActivate: [OrgAdminGuard],
     children: [{ path: '', component: ActionPlansComponent}]
   },
 
@@ -47,6 +48,13 @@ const routes: Routes = [
   { path: 'customers', component: HomeComponent, canActivate: [OrgAdminGuard],
     children: [{ path: '', component: CustomersComponent}]
   },
+
+  // Organisation Profile
+  { path: 'orgprofile', component: HomeComponent, canActivate: [OrgAdminGuard],
+    children: [{ path: '', component: OrgProfileComponent}]
+  },
+
+
 
 
   //Admin side routes

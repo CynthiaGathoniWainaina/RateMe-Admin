@@ -1,1 +1,132 @@
-<p>org-profile works!</p>
+<main class="container-fluid" style="background-color: #f9f9f9;">
+
+  <header class="container-fluid">
+    <div class="title">General</div>
+    <span class="pull-right"><button style="background-color: #264d59">Save changes</button></span>
+
+  </header>
+  <hr>
+
+
+  <section class="body">
+    <div class="container-fluid">
+
+      <!--First row-->
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-lg-6">
+          Business Details
+        </div>
+
+        <div class="col-xs-12 col-md-6 col-lg-6">
+          <div class="card">
+            <div class="card-block">
+              <img src="./assets/images/landing-page-javalogo2@2x.png" alt="Avatar" class="avatar">
+                <span><button class="signupbtn">Upload different business logo</button></span>
+              <hr>
+              <div class="form-group">
+                <label><b>Business name</b></label>
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+                       placeholder="Change business name" formControlName="businessName"  name="business-name" required>
+              </div>
+
+              <div class="form-group">
+                <label><b>Email</b></label>
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+                       placeholder="Change Email" formControlName="email" name="email" required>
+
+              </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-lg-6">
+          Business Address
+        </div>
+
+        <div class="col-xs-12 col-md-6 col-lg-6">
+          <div class="card">
+            <div class="card-block">
+              <div class="form-group">
+                <label><b>Location</b></label>
+                <input type="input" class="form-control"
+                       aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Location"
+                       formControlName="location"
+                       placeholder="Location of business" name="location" required>
+
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    <hr>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-lg-6">
+        Security
+      </div>
+
+      <div class="col-xs-12 col-md-6 col-lg-6">
+        <div class="card">
+          <div class="card-block">
+            <div class="form-group">
+              <label><b>You last changed your password 8 months ago</b></label>
+
+              <button data-toggle="modal" data-target="#passwordModal">Change Password</button>
+
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="passwordModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="passwordModalLabel">Change password</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label><b>Current Password</b></label>
+                    <input type="password" class="form-control"
+                           formControlName="password" placeholder="Enter Password" name="psw" required>
+                </div>
+
+                <div class="form-group">
+                  <label><b>New Password</b></label>
+                    <input type="password" class="form-control"
+                           formControlName="password"  placeholder="New Password" name="psw" required>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+
