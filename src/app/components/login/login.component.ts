@@ -14,7 +14,6 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class LoginComponent implements OnInit {
 
-  faEye = faEye;
 
   public togglePassword = 'password';
   public showPasswordIcon;

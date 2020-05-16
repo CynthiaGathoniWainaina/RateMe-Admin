@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from '../../../shared/services/user.service';
+import {Router} from '@angular/router';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-customers',
@@ -7,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomersComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private userService: UserService,
+    private spinner: NgxSpinnerService
+  ) { }
 
   ngOnInit() {
   }

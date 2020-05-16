@@ -15,8 +15,6 @@ import { LoginComponent } from './components/login/login.component';
 import { ActionPlansComponent } from './components/home/action-plans/action-plans.component';
 import { CustomersComponent } from './components/home/customers/customers.component';
 import { DashboardComponent } from './components/home/dashboard/dashboard.component';
-import { FeebackFormsComponent } from './components/home/feeback-forms/feeback-forms.component';
-import { DesignFeedbackFormsComponent } from './components/home/design-feedback-forms/design-feedback-forms.component';
 import {ChartsModule} from 'ng2-charts';
 import { EditorialComponent } from './components/home-admin/editorial/editorial.component';
 import 'hammerjs';
@@ -63,8 +61,6 @@ var config = {
     CustomersComponent,
     DashboardComponent,
     InsightsComponent,
-    FeebackFormsComponent,
-    DesignFeedbackFormsComponent,
     EditorialComponent,
     SystemAdminDashboardComponent,
     ForgotPasswordComponent,
