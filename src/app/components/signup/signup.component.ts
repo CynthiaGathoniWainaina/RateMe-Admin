@@ -144,6 +144,7 @@ removeLogo() {
 
 
 onSubmit() {
+  this.spinner.show();
   if (this.previewLogo) {
     const formData = new FormData;
     formData.append('fileUploaded', this.myLogo, this.myLogo.name);
@@ -152,6 +153,7 @@ onSubmit() {
         this.signUpForm.value.logo.url = `${dev.connect}${data.url}`;
         this.signUpForm.value.logo.name = data.name;
         this.registerUser();
+
       },
       error => {
         this.notification.showInfo('Logo was not uploaded', 'Info');
@@ -179,7 +181,7 @@ registerUser() {
     data => {
       this.createOrgProfile(data._id);
     },
-    error => this.notification.showWarning(error.error.message, 'Failed')
+    error => {  this.spinner.hide(); this.notification.showWarning(error.error.message, 'Failed'); }
   );
 }
 
@@ -300,13 +302,36 @@ createOrgProfile(id) {
   };
   this.orgProfileService.createOrgProfile(newOrgProfile).subscribe(
     data => {
-      this.router.navigate(['/home']);
+      this.signIn();
     },
-    error => console.log('could not create org profile')
+    error => {this.spinner.hide(); this.notification.showWarning('could not create org profile', 'Failed'); }
   );
 }
 
 
+signIn() {
+  let loginCred = {
+    password: this.signUpForm.value.password,
+    email: this.signUpForm.value.email
+  }
+  this.userService.loginUser(loginCred).subscribe(
+    data => {
+      localStorage.setItem('loggedInUserEmail', data.email);
+      localStorage.setItem('loggedInUserId', data._id);
+      localStorage.setItem('loggedInUserToken', data.token);
+      localStorage.setItem('loggedInUserType', data.userType);
+      this.spinner.hide();
+      if (data.userType === 'orgAdmin') {
+        this.router.navigate(['/dashboard']);
+      }
+      if (data.userType === 'systemAdmin') {
+        this.router.navigate(['/admin-dashboard']);
+      }
+
+    },
+    error =>  {this.spinner.hide(); this.notification.showError(error.error.message, 'Access Denied'); this.spinner.hide();}
+  );
+}
 
 
 

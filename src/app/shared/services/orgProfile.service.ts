@@ -36,6 +36,10 @@ export class OrgProfileService {
         return this.http.get<any>(this.url + 'getOne/' + id, {headers : this.header});
     }
 
+    getOrgProfileByUserId() {
+        const data = { userId: localStorage.getItem('loggedInUserId')}
+        return this.http.post<any>(this.url + 'getByUserId/', data, {headers : this.header});
+    }
 
     updateOrgProfile(id, data: any) {
         return this.http.put<any>(this.url + 'update/' + id, data, {headers : this.header});

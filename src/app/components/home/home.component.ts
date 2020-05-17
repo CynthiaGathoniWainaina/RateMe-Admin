@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import {Router} from '@angular/router';
+import { OrgProfileService } from 'src/app/shared/services/orgProfile.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,8 @@ import {Router} from '@angular/router';
 export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(
-    private router: Router
+    private router: Router,
+    private orgProfileService: OrgProfileService
   ) { }
 
 
@@ -26,10 +28,17 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   public myInterval: any;
 
+  public MyProfile: any;
 
 
   ngOnInit() {
     this.sideBarStatus = false;
+
+    this.orgProfileService.getOrgProfileByUserId().subscribe(
+      data => {
+        this.MyProfile = data;
+      }, error => console.log('Error getting profile by user Id')
+    );
 
     this.myInterval = setInterval(() => {
       this.CheckActiveNavBar();

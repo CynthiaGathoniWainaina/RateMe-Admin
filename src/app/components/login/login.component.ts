@@ -53,6 +53,8 @@ signIn() {
   this.spinner.show();
   this.userService.loginUser(this.signInForm.value).subscribe(
     data => {
+      localStorage.setItem('loggedInUserEmail', data.email);
+      localStorage.setItem('loggedInUserId', data._id);
       localStorage.setItem('loggedInUserToken', data.token);
       localStorage.setItem('loggedInUserType', data.userType);
       this.spinner.hide();
@@ -62,7 +64,6 @@ signIn() {
       if (data.userType === 'systemAdmin') {
         this.router.navigate(['/admin-dashboard']);
       }
-     
 
     },
     error =>  {this.notification.showError(error.error.message, 'Access Denied'); this.spinner.hide();}

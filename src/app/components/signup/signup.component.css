@@ -126,3 +126,18 @@ button:hover {
 /*  width: 150px;*/
 /*  border-radius: 50%;*/
 /*}*/
+
+#fileUploadedWrap {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+#fileUploadedWrap img {
+  margin: auto auto auto 0;
+  height: 150px;
+  width: 150px;
+}
+#fileUploadedWrap button {
+  margin: auto 0 auto auto;
+  width: 7em;
+}

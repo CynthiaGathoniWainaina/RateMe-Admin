@@ -62,7 +62,7 @@
                        name="fileUploaded" (change)="uploadLogo($event)">
                 <div *ngIf="previewLogo" id="fileUploadedWrap" class="d-flex">
                   <img [src]="previewLogo" alt="logo">
-                  <button (click)="removeLogo()">Remove</button>
+                  <button (click)="removeLogo()" class="btn btn-sm btn-danger">Remove</button>
                 </div>
             </div>
 
