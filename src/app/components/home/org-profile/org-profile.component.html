@@ -20,19 +20,22 @@
         <div class="col-xs-12 col-md-6 col-lg-6">
           <div class="card">
             <div class="card-block">
-              <img src="./assets/images/landing-page-javalogo2@2x.png" alt="Avatar" class="avatar">
-                <span><button class="signupbtn">Upload different business logo</button></span>
+              <img *ngIf="!MyProfile" src="./assets/images/landing-page-javalogo2@2x.png" alt="Avatar" class="avatar">
+              <img *ngIf="MyProfile" [src]="MyProfile.logo.url" [alt]="MyProfile.logo.name" class="avatar">
+                <span><button class="signupbtn" (click)="logoFileInput.click()">Upload different business logo</button></span>
+                <span><input hidden readonly type="file" #logoFileInput name="fileUploaded" (change)="uploadLogo($event)" placeholder="Upload different business logo"></span> 
+       
               <hr>
               <div class="form-group">
                 <label><b>Business name</b></label>
                 <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
-                       placeholder="Change business name" formControlName="businessName"  name="business-name" required>
+                       placeholder="Change business name" name="business-name" required>
               </div>
 
               <div class="form-group">
                 <label><b>Email</b></label>
                 <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
-                       placeholder="Change Email" formControlName="email" name="email" required>
+                       placeholder="Change Email"  name="email" required>
 
               </div>
 
@@ -57,7 +60,7 @@
                 <label><b>Location</b></label>
                 <input type="input" class="form-control"
                        aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Location"
-                       formControlName="location"
+                     
                        placeholder="Location of business" name="location" required>
 
               </div>
@@ -104,13 +107,13 @@
                 <div class="form-group">
                   <label><b>Current Password</b></label>
                     <input type="password" class="form-control"
-                           formControlName="password" placeholder="Enter Password" name="psw" required>
+                           placeholder="Enter Password" name="psw" required>
                 </div>
 
                 <div class="form-group">
                   <label><b>New Password</b></label>
                     <input type="password" class="form-control"
-                           formControlName="password"  placeholder="New Password" name="psw" required>
+                            placeholder="New Password" name="psw" required>
                 </div>
 
               </div>

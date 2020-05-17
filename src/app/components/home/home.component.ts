@@ -33,18 +33,23 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.sideBarStatus = false;
-
-    this.orgProfileService.getOrgProfileByUserId().subscribe(
-      data => {
-        this.MyProfile = data;
-      }, error => console.log('Error getting profile by user Id')
-    );
+    this.myProfileFunction();
 
     this.myInterval = setInterval(() => {
       this.CheckActiveNavBar();
     }, 700);
 
   }
+
+
+  myProfileFunction() {
+    this.orgProfileService.getOrgProfileByUserId().subscribe(
+      data => {
+        this.MyProfile = data;
+      }, error => console.log('Error getting profile by user Id')
+    );
+  }
+
 
   CheckActiveNavBar() {
 
