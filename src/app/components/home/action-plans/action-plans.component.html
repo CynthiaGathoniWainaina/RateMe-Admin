@@ -74,7 +74,9 @@
       <!--First row-->
       <div class="row">
         <div class="col-xs-12 col-md-6 col-lg-3">
-          <div class="kanban-column">
+          <div class="kanban-column"
+          id="column_1"
+          (dragover)="allowDrop($event)" (drop)="drop($event)">
             <div class="kanban-block">
               <h4 class="kanban-title">New issues <span class="pull-right">80</span></h4>
               <hr>
@@ -84,7 +86,10 @@
               <hr>
 
 
-              <div class="card">
+              <div class="card"
+              draggable="true" id="card_1" (drop)="drop($event)"
+              (dragover)="allowDrop($event)" (dragstart)="drag($event)" 
+             (dragenter)="dragenter($event)" (dragleave)="dragleave($event)">>
                 <div class="card-block">
                   <h4 class="card-text">Issue: Sanitation (<span>(Restrooms)</span> </h4>
                   <p class="card-text2">Number of complaints: 13</p>
@@ -145,7 +150,9 @@
 
 
         <div class="col-xs-12 col-md-6 col-lg-3">
-          <div class="kanban-column">
+          <div class="kanban-column" id="column_2"
+          (dragover)="allowDrop($event)" (drop)="drop($event)"
+          >
             <div class="kanban-block">
               <h4 class="kanban-title">Under review <span class="pull-right">80</span></h4>
               <hr>
@@ -153,7 +160,10 @@
               <p class="card-text2">Sanitation (Restrooms)<span class="pull-right">23</span></p>
               <p class="card-text2">Service (Slow service)<span class="pull-right">14</span></p>
               <hr>
-              <div class="card">
+              <div class="card" 
+              draggable="true" id="card_2" (drop)="drop($event)"
+              (dragover)="allowDrop($event)" (dragstart)="drag($event)" 
+             (dragenter)="dragenter($event)" (dragleave)="dragleave($event)">
                 <div class="card-block">
                   <h4 class="card-text">Issue: Service <span>(Slow service)</span> </h4>
                   <p class="card-text2">Number of complaints: 13</p>
@@ -198,7 +208,9 @@
 
 
         <div class="col-xs-12 col-md-6 col-lg-3">
-          <div class="kanban-column">
+          <div class="kanban-column"
+          id="column_3"
+          (dragover)="allowDrop($event)" (drop)="drop($event)">
             <div class="kanban-block">
               <h4 class="kanban-title">Send update <span class="pull-right">80</span></h4>
               <hr>
@@ -206,7 +218,10 @@
               <p class="card-text2">Sanitation (Restrooms)<span class="pull-right">23</span></p>
               <p class="card-text2">Service (Slow service)<span class="pull-right">14</span></p>
               <hr>
-              <div class="card">
+              <div class="card"
+              draggable="true" id="card_3" (drop)="drop($event)"
+              (dragover)="allowDrop($event)" (dragstart)="drag($event)" 
+             (dragenter)="dragenter($event)" (dragleave)="dragleave($event)">>
                 <div class="card-block">
                   <h4 class="card-text">Issue: Sanitation <span>(Dining area)</span> </h4>
                   <p class="card-text2">Number of complaints: 9</p>
