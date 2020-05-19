@@ -115,7 +115,7 @@ export class OrgProfileComponent implements OnInit {
       pdf.page = 1;
       pdf.setFontSize(12);
       pdf.text(260, 40, 'RATE ME ! ');
-      pdf.text(180, 100, 'Scan the code to rate your experience with us :)' );
+      pdf.text(180, 100, 'Scan the code to share your experience with us :)' );
       pdf.line(0, 675, 675, 675);
       pdf.text(250, 685, 'www.rateme.com');
       // pdf.text(190, 285, 'page ' + pdf.page);
