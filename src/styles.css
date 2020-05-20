@@ -17,17 +17,28 @@ main header {
   padding: 3em 0;
   text-align: left;
 }
+
+main header .nav-back{
+  font-family: "Product Sans";
+  font-size: 20px;
+  font-weight: lighter;
+  color: #264d59;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+}
 main header .title {
   font-size: 32px;
   font-weight: lighter;
   margin-left: 20px;
 }
 
+
 main .body-section {
   width: 100%;
   text-align: center;
   padding: 15em 0 1em 0;
-
 }
 
 main .group12 {

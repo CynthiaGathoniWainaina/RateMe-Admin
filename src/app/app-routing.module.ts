@@ -15,6 +15,7 @@ import {HomeAdminComponent} from './components/home-admin/home-admin.component';
 import { SystemAdminGuard } from './shared/authGuards/systemAdmin.guard';
 import { OrgAdminGuard } from './shared/authGuards/orgAdmin.guard';
 import {OrgProfileComponent} from './components/home/org-profile/org-profile.component';
+import {CustomerDetailsComponent} from './components/home/customer-details/customer-details.component';
 
 const routes: Routes = [
 
@@ -48,6 +49,12 @@ const routes: Routes = [
   { path: 'customers', component: HomeComponent, canActivate: [OrgAdminGuard],
     children: [{ path: '', component: CustomersComponent}]
   },
+
+  // Customer details
+  { path: 'customer-details', component: HomeComponent, canActivate: [OrgAdminGuard],
+    children: [{ path: '', component: CustomerDetailsComponent}]
+  },
+
 
   // Organisation Profile
   { path: 'orgprofile', component: HomeComponent, canActivate: [OrgAdminGuard],
