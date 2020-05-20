@@ -68,7 +68,7 @@ ngOnInit() {
   });
 
   this.updatePage();
-  this.addIndustryTypes();
+  // this.addIndustryTypes();
 }
 
 
@@ -92,41 +92,41 @@ updatePage() {
 
 
 // Delete this function when there is a form for inputing industry types
-addIndustryTypes() {
-
-  this.industryService.getAllIndustries().subscribe(
-    dataIndustry => {
-      if (dataIndustry.length === 0) {
-        let industryOne = {
-          industryName: 'Food & Beverage Industry',
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        };
-
-        this.industryService.createIndustry(industryOne).subscribe(
-          dataOne => {
-            let industryTwo = {
-              industryName: 'Health Industry',
-              createdAt: new Date(),
-              updatedAt: new Date(),
-            };
-
-            this.industryService.createIndustry(industryTwo).subscribe(
-              dataTwo => {
-                this.updatePage();
-              },
-              error => console.log('Error creating industry one')
-            );
-
-          },
-          error => console.log('Error creating industry one')
-        );
-
-      }
-    },
-    error => console.log('Error getting all Industry Types')
-  );
-}
+// addIndustryTypes() {
+//
+//   this.industryService.getAllIndustries().subscribe(
+//     dataIndustry => {
+//       if (dataIndustry.length === 0) {
+//         let industryOne = {
+//           industryName: 'Food & Beverage Industry',
+//           createdAt: new Date(),
+//           updatedAt: new Date(),
+//         };
+//
+//         this.industryService.createIndustry(industryOne).subscribe(
+//           dataOne => {
+//             let industryTwo = {
+//               industryName: 'Health Industry',
+//               createdAt: new Date(),
+//               updatedAt: new Date(),
+//             };
+//
+//             this.industryService.createIndustry(industryTwo).subscribe(
+//               dataTwo => {
+//                 this.updatePage();
+//               },
+//               error => console.log('Error creating industry one')
+//             );
+//
+//           },
+//           error => console.log('Error creating industry one')
+//         );
+//
+//       }
+//     },
+//     error => console.log('Error getting all Industry Types')
+//   );
+// }
 
 
 uploadLogo(logoFile) {

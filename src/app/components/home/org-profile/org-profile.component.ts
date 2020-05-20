@@ -12,6 +12,7 @@ import html2canvas from 'html2canvas';
 
 import * as jspdf from 'jspdf';
 import {toBase64String} from '@angular/compiler/src/output/source_map';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 // declare let html2canvas: any;
 
@@ -24,6 +25,7 @@ export class OrgProfileComponent implements OnInit {
 
   constructor(
     private userService: UserService,
+    private formBuilder: FormBuilder,
     private notifyService: NotificationService,
     private orgProfileService: OrgProfileService,
     private fileUploadService: FileUploadService,
@@ -34,11 +36,11 @@ export class OrgProfileComponent implements OnInit {
 
 
   public MyProfile: any;
+  public User: any;
   public pdfAction;
-
-
-
-
+  public updateOrgProfileForm: FormGroup;
+  public previewLogo = null;
+  public myLogo;
 
 
 
@@ -49,8 +51,75 @@ export class OrgProfileComponent implements OnInit {
         console.log(this.MyProfile)
       }, error => console.log('Error getting profile by user Id')
     );
+
+
+    this.updateOrgProfileForm = this.formBuilder.group({
+      email: ['', [Validators.email]],
+      location: [''],
+      businessName: [''],
+      password: ['', [Validators.minLength(4)]],
+      logo: {name: '', url: ''}
+    });
+
+
   }
 
+  get formUpdateProfle() {return this.updateOrgProfileForm.controls; }
+
+  updateOrgProfile() {
+    let updatedOrgProfile = {
+      businessName: this.updateOrgProfileForm.value.businessName,
+      email: this.updateOrgProfileForm.value.email,
+      logo: {name: this.updateOrgProfileForm.value.logo.name, url: this.updateOrgProfileForm.value.logo.url},
+      location: this.updateOrgProfileForm.value.location,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    };
+    this.orgProfileService.updateOrgProfile(this.MyProfile._id, updatedOrgProfile).subscribe(
+      data => {
+        this.updateUser();
+      },
+      error => {this.spinner.hide(); this.notifyService.showWarning('could not update org profile', 'Failed'); }
+    );
+  }
+
+  onSubmit() {
+    if (this.previewLogo) {
+      const formData = new FormData;
+      formData.append('fileUploaded', this.myLogo, this.myLogo.name);
+      this.fileUploadService.uploadOrgLogo(formData).subscribe(
+        data => {
+          this.updateOrgProfileForm.value.logo.url = `${dev.connect}${data.url}`;
+          this.updateOrgProfileForm.value.logo.name = data.name;
+          this.updateUser();
+          this.spinner.show();
+
+        }, error => {
+          this.notifyService.showInfo('Logo was not uploaded', 'Info');
+          this.updateUser();
+        }
+      );
+    } else {
+      this.updateUser();
+    }
+
+  }
+
+
+  updateUser() {
+    this.spinner.show();
+    this.userService.updateUsers(this.User._id, this.updateOrgProfile).subscribe(
+      data => {
+        localStorage.setItem('UpdatedLoggedInUser', data.email);
+        this.notifyService.showSuccess('User updated', 'Success');
+          },
+         error => {
+           this.notifyService.showError(error.error.message, 'Could not update user');
+           this.spinner.hide();
+         },
+         )
+
+  }
 
 
 
@@ -79,6 +148,11 @@ export class OrgProfileComponent implements OnInit {
         }, error => { this.spinner.hide(); this.notifyService.showInfo('Logo was not uploaded', 'Info'); }
     );
   }
+
+  removeLogo() {
+    this.previewLogo = null;
+  }
+
 
 
   previewQrCode() {
@@ -119,7 +193,6 @@ export class OrgProfileComponent implements OnInit {
       pdf.line(0, 675, 675, 675);
       pdf.text(250, 685, 'www.rateme.com');
       // pdf.text(190, 285, 'page ' + pdf.page);
-
 
       switch (this.pdfAction) {
         case 'preview': pdf.output('dataurlnewwindow'); this.spinner.hide(); break;

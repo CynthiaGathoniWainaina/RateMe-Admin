@@ -1,4 +1,4 @@
-<main class="container-fluid">
+<main class="container-fluid" xmlns="http://www.w3.org/1999/html">
 
   <header class="container-fluid">
     <div class="title">General</div>
@@ -11,10 +11,13 @@
   <section class="body">
     <div class="container-fluid">
 
+      <form class="form" [formGroup]="updateOrgProfileForm" (ngSubmit)="onSubmit()">
+
+
       <!--First row-->
       <div class="row">
         <div class="col-xs-12 col-md-6 col-lg-6">
-          Business Details
+         <p>Business Details</p>
         </div>
 
         <div class="col-xs-12 col-md-6 col-lg-6">
@@ -29,12 +32,14 @@
               <div class="form-group">
                 <label><b>Business name</b></label>
                 <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+                       formControlName="businessName" [class.is-invalid]="formUpdateProfle.businessName.invalid && formUpdateProfle.businessName.touched"
                        placeholder="Change business name" name="business-name" required>
               </div>
 
               <div class="form-group">
                 <label><b>Email</b></label>
                 <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+                       formControlName="email" [class.is-invalid]="formUpdateProfle.email.invalid && formUpdateProfle.email.touched"
                        placeholder="Change Email"  name="email" required>
 
               </div>
@@ -44,7 +49,6 @@
             </div>
           </div>
         </div>
-      </div>
 
       <hr>
 
@@ -60,7 +64,7 @@
                 <label><b>Location</b></label>
                 <input type="input" class="form-control"
                        aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Location"
-                     
+                       formControlName="location" [class.is-invalid]="formUpdateProfle.location.invalid && formUpdateProfle.location.touched"
                        placeholder="Location of business" name="location" required>
 
               </div>
@@ -113,12 +117,13 @@
                 <div class="form-group">
                   <label><b>New Password</b></label>
                     <input type="password" class="form-control"
+                            formControlName="password" [class.is-invalid]="formUpdateProfle.password.invalid && formUpdateProfle.password.touched"
                             placeholder="New Password" name="psw" required>
                 </div>
 
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="submit" class="btn btn-submit" [disabled]="!updateOrgProfileForm.valid">Save changes</button>
               </div>
             </div>
           </div>
@@ -126,7 +131,10 @@
       </div>
 
     </div>
-<hr>
+
+    <hr>
+
+      </form>
 
   <div class="row">
     <div class="col-xs-12 col-md-6 col-lg-6">
@@ -139,6 +147,8 @@
     </div>
 
   </div>
+
+    </div>
 
 
 
