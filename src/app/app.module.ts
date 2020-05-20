@@ -34,6 +34,7 @@ import { HomeAdminComponent } from './components/home-admin/home-admin.component
 import {InsightsComponent} from './components/home/insights/insights.component';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import { CustomerDetailsComponent } from './components/home/customer-details/customer-details.component';
+import {NgAnonymizeModule} from 'ng-anonymize';
 // import { GoogleplacesComponent } from './components/signup/googleplaces/googleplaces.component';
 
 var config = {
@@ -82,6 +83,7 @@ var config = {
     MatTooltipModule,
     NgxSpinnerModule,
     Ng2SearchPipeModule,
+    NgAnonymizeModule,
     NgbModule,
     BrowserAnimationsModule,
     NgbModalModule,

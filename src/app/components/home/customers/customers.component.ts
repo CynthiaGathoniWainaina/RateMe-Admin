@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UserService} from '../../../shared/services/user.service';
 import {Router} from '@angular/router';
 import {NgxSpinnerService} from 'ngx-spinner';
+import {AnonymizePipe} from 'ng-anonymize';
 
 @Component({
   selector: 'app-customers',

@@ -39,6 +39,7 @@
     "jquery": "^3.4.1",
     "jspdf": "^1.5.3",
     "lru-cache": "^5.1.1",
+    "ng-anonymize": "^0.1.8",
     "ng2-charts": "^2.3.0",
     "ng2-search-filter": "^0.5.1",
     "ngx-bootstrap": "^5.6.1",
