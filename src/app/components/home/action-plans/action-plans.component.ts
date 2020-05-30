@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbCalendar, NgbDate, NgbDateParserFormatter} from '@ng-bootstrap/ng-bootstrap';
 import { NotificationService } from 'src/app/shared/services/notification.service';
+import {CustomerRatings} from '../../../shared/customer-rating-data';
+
 
 @Component({
   selector: 'app-action-plans',

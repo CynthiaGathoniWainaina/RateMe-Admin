@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {CustomerRatings} from '../../../shared/customer-rating-data';
+
 
 @Component({
   selector: 'app-customer-details',
