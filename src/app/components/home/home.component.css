@@ -1,8 +1,9 @@
-main{
+
+main {
   width: 100%;
 }
 
-.navbar{
+.navbar {
   width: 100%;
   height: 90px;
   background-color: #ffffff;
@@ -12,24 +13,24 @@ main{
 
 }
 
-.navbar-nav{
+.navbar-nav {
   margin-left: 30px;
 }
 
-.nav-item{
+.nav-item {
   width: 100px;
 }
 
-.form-inline{
+.form-inline {
   width: 400px;
   margin-left: 50px;
 }
 
-.form-control{
+.form-control {
   height: 35px;
 }
 
-.btn-submit{
+.btn-submit {
   height: 34px;
   background-color: #DB4F3C;
   color: #f9f9f9;
@@ -43,13 +44,13 @@ main{
 }
 
 
-#dropdownNotification{
+#dropdownNotification {
   width: 300px;
 }
 
 #dropdownNotification .footer-btn {
   text-align: center;
-  background: transparent ;
+  background: transparent;
   color: #DB4F3C;
   padding: 10px 10px;
   margin-top: 8px;
@@ -63,5 +64,7 @@ main{
 
 
 .footer-btn:hover {
-  opacity:1;
+  opacity: 1;
 }
+
+
