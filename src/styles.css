@@ -17,121 +17,138 @@ main header {
   padding: 3em 0;
   text-align: left;
 }
+
+main header .nav-back {
+  font-family: "Product Sans";
+  font-size: 20px;
+  font-weight: lighter;
+  color: #264d59;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+}
+
 main header .title {
   font-size: 32px;
   font-weight: lighter;
   margin-left: 20px;
 }
 
+
 main .body-section {
   width: 100%;
   text-align: center;
-  padding: 15em 0 1em 0;
-
+  padding: 5em 0 1em 0;
 }
 
-main .group12 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 180px;
-  height              : 167px;
-  width               : 1300px;
-  position            : absolute;
-  margin              : 0;
-  left                : 50px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-
-main .group12 .rectangle {
-  background-color    : rgba(219, 79, 60, 1.0);
-  top                 : 20px;
-  height              : 180px;
-  width               : 1300px;
-  position            : relative;
-  margin-left         : 0;
-  left                : 0;
-  border-radius       : 16px;
-  transform           : rotate(0deg);
-  opacity             : 0.69;
-}
-
-
-main .group12 .rectangle2 {
-  background-color    : #264d59;
-  top                 : 20px;
-  height              : 180px;
-  width               : 1300px;
-  position            : relative;
-  margin-left         : 0;
-  left                : 0;
-  border-radius       : 16px;
-  transform           : rotate(0deg);
-  opacity             : 0.69;
-}
-
-main .group12 .lunchru2014tontonmarty {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 187px;
-  width               : 209px;
-  position            : absolute;
-  margin              : 0;
-  left                : 1044px;
-  transform           : rotate(0deg);
-  opacity             : 1.0;
-}
-
-main .group12 .welcomeback {
+main .container {
   background-color: rgba(255, 255, 255, 0.0);
-  top: 94px;
+  top: 30px;
+  height: 167px;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  left: 0;
+  transform: rotate(0deg);
+  opacity: 1.0;
+}
+
+main .container .rectangle {
+  background-color: rgba(219, 79, 60, 1.0);
+  top: 20px;
+  height: 180px;
+  width: 100%;
+  position: relative;
+  margin-left: 0;
+  left: 0;
+  border-radius: 16px;
+  transform: rotate(0deg);
+  opacity: 0.69;
+  margin-bottom: 0;
+}
+
+
+main .container .rectangle2 {
+  background-color: #264d59;
+  top: 20px;
+  height: 180px;
+  width: 100%;
+  position: relative;
+  margin-left: 0;
+  left: 0;
+  border-radius: 16px;
+  transform: rotate(0deg);
+  opacity: 0.69;
+}
+
+main .rectangle .lunchru2014tontonmarty, main .rectangle2 .lunchru2014tontonmarty {
+  background-color: rgba(255, 255, 255, 0.0);
+  top: -60px;
+  height: 227px;
+  width: 249px;
+  position: relative;
+  margin: 0;
+  left: 80%;
+
+}
+
+main .container .welcomeback {
+  background-color: rgba(255, 255, 255, 0.0);
+  top: 50%;
   height: auto;
   width: auto;
-  position: absolute;
+  position: relative;
   margin: 0;
-  left: 44px;
+  left: 2%;
   transform: rotate(0deg);
   opacity: 1.0;
   font-family: "ProductSans-Bold", Helvetica, Arial, serif;
-  font-size: 30.0px;
+  font-size: 30px;
   color: rgba(255, 255, 255, 1.0);
   text-align: left;
   letter-spacing: 0.81px;
-  line-height: 37.0px;
 }
 
 .toast-custom-one {
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #toast-container > div {
-    opacity: 1;
+  opacity: 1;
 }
+
 .toast {
-    /* // font-size: initial !important; */
-    font-size: 13px !important;
-    font-family: Montserrat !important;
-    border: initial !important;
-    backdrop-filter: blur(0) !important;
+  /* // font-size: initial !important; */
+  font-size: 13px !important;
+  font-family: Montserrat !important;
+  border: initial !important;
+  backdrop-filter: blur(0) !important;
 }
 
 .toast-success {
-    background-color: #51A351 !important;
+  background-color: #51A351 !important;
 }
 
 .toast-error {
-    background-color: #BD362F !important;
+  background-color: #BD362F !important;
 }
 
 .toast-info {
-    background-color: #2F96B4 !important;
+  background-color: #2F96B4 !important;
 }
 
 .toast-warning {
-    background-color: #F89406 !important;
+  background-color: #F89406 !important;
 }
 
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body { margin: 0; font-family: "Product Sans", "Product Sans"; }

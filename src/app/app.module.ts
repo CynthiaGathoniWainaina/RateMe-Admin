@@ -35,6 +35,7 @@ import {InsightsComponent} from './components/home/insights/insights.component';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import { CustomerDetailsComponent } from './components/home/customer-details/customer-details.component';
 import {NgAnonymizeModule} from 'ng-anonymize';
+import { PricingPlansComponent } from './components/home/pricing-plans/pricing-plans.component';
 // import { GoogleplacesComponent } from './components/signup/googleplaces/googleplaces.component';
 
 var config = {
@@ -69,6 +70,7 @@ var config = {
     OrgProfileComponent,
     HomeAdminComponent,
     CustomerDetailsComponent,
+    PricingPlansComponent,
   ],
   imports: [
     BrowserModule,

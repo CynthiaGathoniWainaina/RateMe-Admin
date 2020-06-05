@@ -106,7 +106,9 @@
                     </div>
                 </form>
                 <div class="list-wrap">
-                    <div class="list-item d-flex" *ngFor="let item of AllRatingRanges"> <span class="mr-auto">{{item.rangeName}}</span> <fa-icon [icon]="faTrash" (click)="removeRatingRange(item._id)"></fa-icon></div>
+                    <div class="list-item d-flex" *ngFor="let item of AllRatingRanges">
+                      <span class="mr-auto">{{item.rangeName}}</span> <fa-icon [icon]="faTrash" (click)="removeRatingRange(item._id)"></fa-icon>
+                    </div>
                 </div>
             </div>
 

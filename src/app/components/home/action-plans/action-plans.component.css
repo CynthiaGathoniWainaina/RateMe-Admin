@@ -142,3 +142,16 @@ a {
   font-size: 18px;
   color: #DB4F3C;
 }
+
+.apply-dates{
+  background-color: #DB4F3C;
+  color: white;
+  padding: 8px 20px;
+  margin: 0 0 0 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+
+}

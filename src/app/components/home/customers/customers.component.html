@@ -3,16 +3,21 @@
   <header class="container-fluid">
     <div class="title">Customers</div>
 
-    <div class="group12">
+    <div class="container">
       <div class="rectangle2">
-      </div>
-      <img src="./assets/images/dashboard/dashboard-lunchr-u2014-tonton-marty@2x.png" class="lunchru2014tontonmarty"/>
-      <div class="welcomeback">
-       <p>Have a look at customers who have rated your service</p>
+
+        <div class="welcomeback">
+          <p>Have a look at customers who have rated your service</p>
+        </div>
+
+        <div>
+          <img src="./assets/images/dashboard/dashboard-lunchr-u2014-tonton-marty@2x.png" class="lunchru2014tontonmarty"/>
+        </div>
+
 
       </div>
+
     </div>
-
   </header>
 
   <section class="body-section">
@@ -61,7 +66,7 @@
           </div>
           <hr>
 
-          <div class="row customerdetails">
+          <div class="row customerdetails" routerLink="/customer-details">
 
                 <div class="col-xs-12 col-md-6 col-lg-3">
                   <span class="card-text2">{{'Marty Byrde' | anonymize: 'shuffle'}}</span>

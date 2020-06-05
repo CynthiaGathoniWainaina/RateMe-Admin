@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbCalendar, NgbDate, NgbDateParserFormatter} from '@ng-bootstrap/ng-bootstrap';
+import {CustomerRatings} from '../../../shared/customer-rating-data';
+
 
 @Component({
   selector: 'app-insights',

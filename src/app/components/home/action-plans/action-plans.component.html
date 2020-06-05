@@ -3,13 +3,20 @@
   <header class="container-fluid">
     <div class="title">Action Plans</div>
 
-    <div class="group12">
+    <div class="container">
       <div class="rectangle2">
+
+        <div class="welcomeback">
+          <p>Resolve customer issues in one place</p>
+        </div>
+
+        <div>
+          <img src="./assets/images/dashboard/dashboard-lunchr-u2014-tonton-marty@2x.png" class="lunchru2014tontonmarty"/>
+        </div>
+
+
       </div>
-      <img src="./assets/images/dashboard/dashboard-lunchr-u2014-tonton-marty@2x.png" class="lunchru2014tontonmarty"/>
-      <div class="welcomeback">
-          Resolve customer issues in one place
-      </div>
+
     </div>
 
   </header>
@@ -68,6 +75,9 @@
             </div>
           </div>
         </div>
+
+        <span> <button class="apply-dates" type="submit">APPLY</button></span>
+
       </form>
 
 
@@ -89,7 +99,7 @@
               <div class="card"
               draggable="true" id="card_1" (drop)="drop($event)"
               (dragover)="allowDrop($event)" (dragstart)="drag($event)" 
-             (dragenter)="dragenter($event)" (dragleave)="dragleave($event)">>
+             (dragenter)="dragenter($event)" (dragleave)="dragleave($event)">
                 <div class="card-block">
                   <h4 class="card-text">Issue: Sanitation (<span>(Restrooms)</span> </h4>
                   <p class="card-text2">Number of complaints: 13</p>
@@ -221,7 +231,7 @@
               <div class="card"
               draggable="true" id="card_3" (drop)="drop($event)"
               (dragover)="allowDrop($event)" (dragstart)="drag($event)" 
-             (dragenter)="dragenter($event)" (dragleave)="dragleave($event)">>
+             (dragenter)="dragenter($event)" (dragleave)="dragleave($event)">
                 <div class="card-block">
                   <h4 class="card-text">Issue: Sanitation <span>(Dining area)</span> </h4>
                   <p class="card-text2">Number of complaints: 9</p>

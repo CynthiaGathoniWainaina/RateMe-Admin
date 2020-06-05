@@ -15,6 +15,8 @@ import {HomeAdminComponent} from './components/home-admin/home-admin.component';
 import { SystemAdminGuard } from './shared/authGuards/systemAdmin.guard';
 import { OrgAdminGuard } from './shared/authGuards/orgAdmin.guard';
 import {OrgProfileComponent} from './components/home/org-profile/org-profile.component';
+import {CustomerDetailsComponent} from './components/home/customer-details/customer-details.component';
+import {PricingPlansComponent} from './components/home/pricing-plans/pricing-plans.component';
 
 const routes: Routes = [
 
@@ -25,6 +27,9 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
 
   { path: 'login', component: LoginComponent },
+
+  { path: 'pricing', component: PricingPlansComponent },
+
 
   { path: 'home', component: HomeComponent, canActivate: [TokenGuard] },
 
@@ -49,10 +54,17 @@ const routes: Routes = [
     children: [{ path: '', component: CustomersComponent}]
   },
 
+  // Customer details
+  { path: 'customer-details', component: HomeComponent, canActivate: [OrgAdminGuard],
+    children: [{ path: '', component: CustomerDetailsComponent}]
+  },
+
+
   // Organisation Profile
   { path: 'orgprofile', component: HomeComponent, canActivate: [OrgAdminGuard],
     children: [{ path: '', component: OrgProfileComponent}]
   },
+
 
 
 
