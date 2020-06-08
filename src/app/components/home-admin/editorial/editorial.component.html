@@ -3,14 +3,21 @@
     <header>
         <div class="title">Editorial</div>
 
-          <div class="group12">
-            <div class="rectangle2">
-            </div>
-            <img src="./assets/images/dashboard/dashboard-lunchr-u2014-tonton-marty@2x.png" class="lunchru2014tontonmarty"/>
-            <div class="welcomeback">
-              Welcome back !
-            </div>
+      <div class="container">
+        <div class="rectangle2">
+
+          <div class="welcomeback">
+            <p>Welcome back !</p>
           </div>
+
+          <div>
+            <img src="./assets/images/dashboard/dashboard-lunchr-u2014-tonton-marty@2x.png" class="lunchru2014tontonmarty"/>
+          </div>
+
+
+        </div>
+
+      </div>
 
     </header>
 
@@ -101,6 +108,10 @@
                         <input type="text" placeholder="Range Name" name="rangeName" [(ngModel)]="ratingRangeForm.rangeName">
                     </div>
 
+                    <div class="form-group">
+                      <input type="text" placeholder="Range Message" name="rangeName" [(ngModel)]="ratingRangeForm.rangeMessage">
+                    </div>
+
                     <div class="btn-wrap">
                         <button class="btn btn-sm btn-success" (click)="addRatingRange()">Save</button>
                     </div>
@@ -130,7 +141,12 @@
                         <textarea type="text" placeholder="Emoji Json Text" name="emojiJson" [(ngModel)]="emojiForm.emojiJson"></textarea>
                     </div>
 
-                    <div class="btn-wrap">
+                  <div class="form-group">
+                    <input type="text" placeholder="Emoji Message" name="emojiName" [(ngModel)]="emojiForm.emojiMessage">
+                  </div>
+
+
+                  <div class="btn-wrap">
                         <button class="btn btn-sm btn-success" (click)="addEmoji()">Save</button>
                     </div>
                 </form>
@@ -224,12 +240,12 @@
           <!-- Rewards -->
           <div class="tab-pane fade" id="reward" role="tabpanel" aria-labelledby="reward-tab" >
             <form class="form" class="form">
-                <div class="form-group">
-                    <select type="text" name="responseId" [(ngModel)]="rewardForm.orgId">
-                        <option value="" disabled selected hidden> --- Select Org</option>
-                        <option *ngFor="let item of AllOrgProfiles" [value]="item._id">{{item.businessName}}</option>
-                    </select>
-                </div>
+<!--                <div class="form-group">-->
+<!--                    <select type="text" name="responseId" [(ngModel)]="rewardForm.orgId">-->
+<!--                        <option value="" disabled selected hidden> -&#45;&#45; Select Org</option>-->
+<!--                        <option *ngFor="let item of AllOrgProfiles" [value]="item._id">{{item.businessName}}</option>-->
+<!--                    </select>-->
+<!--                </div>-->
                 <div class="form-group">
                     <input type="number" placeholder="Points" name="points" [(ngModel)]="rewardForm.points">
                 </div>
