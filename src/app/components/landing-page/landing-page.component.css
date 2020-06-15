@@ -35,7 +35,7 @@ main{
 }
 
 .btn-submit1{
-  height: 40px;
+  height: 45px;
   background-color: #DB4F3C;
   color: #f9f9f9;
   width: 200px;
@@ -44,7 +44,7 @@ main{
 }
 
 .btn-submit2{
-  height: 40px;
+  height: 45px;
   background-color: #f9f9f9;
   border-color: #264d59;
   color: #DB4F3C;
@@ -66,19 +66,20 @@ main{
   width: 50%;
   position: fixed;
   z-index: 1;
-  top: 15%;
+  top: 25%;
   overflow-x: hidden;
   padding-top: 20px;
 }
 
 .left {
-  left: 0;
+  top: 40%;
+  left: 40px;
   background-color: #ffffff;
 }
 
 .welcome-message{
-  font-size: 40px;
-  width: 400px;
+  font-size: 50px;
+  width: 500px;
 }
 
 .right {
@@ -93,7 +94,6 @@ main{
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-
 }
 
 
