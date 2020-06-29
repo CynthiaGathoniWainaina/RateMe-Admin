@@ -1,159 +1,70 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link href="./img/favicon.png" rel="shortcut icon"/>
-  <meta charset="utf-8"/>
-  <meta content="width=1440, maximum-scale=1.0" name="viewport"/>
-<!--  <link href="./css/landingPage.css" rel="stylesheet" type="text/css"/>-->
-</head>
+<nav class="navbar navbar-expand-md navbar-light">
 
-<body style="margin: 0;
- background: rgba(255, 255, 255, 1.0);">
+  <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link site-title" routerLink="/landing">Rate Me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin-dashboard">Our Story</a>
+      </li>
 
-<input id="anPageName" name="page" type="hidden" value="landingpage"/>
-
-<div class="landingpage">
-  <div style="width: 100%; height: 100%; position:relative; margin:0;">
-    <img src="./assets/images/landing-page-screenshot-2020-01-21-132616.png" class="screenshot20200121132616"/>
-    <div class="welcometorateme">
-      Welcome to Rate Me
-    </div>
-
-    <img src="./assets/images/landing-page-rectangle.png" class="rectangle"/>
-
-    <div class="rateme">
-      Rate Me
-    </div>
-
-    <button class="signupbutton" routerLink="/signup">
-      <div class="group">
-        <div class="rectangle1">
-        </div>
-      </div>
-      <span class="signup">
-        Signup
-      </span>
-    </button>
-
-    <button class="signupbutton1" routerLink="/signup">
-      <div class="group">
-        <div class="rectangle1">
-        </div>
-      </div>
-      <div class="signup">
-        Signup
-      </div>
-    </button>
-
-    <button class="loginbutton" routerLink="/login">
-      <div class="group2">
-        <div class="rectangle1">
-        </div>
-      </div>
-      <div class="login">
-        Login
-      </div>
-    </button>
-
-    <div class="createsurveysthat">
-      Create surveys that are straight to the point
-    </div>
-
-    <div class="reachyourcustomers">
-      Reach your customers easier
-    </div>
-
-    <div class="getinsightscreate">
-      Get insights, create and communicate action plans from customer feedback
-    </div>
-
-    <div class="aboutus">
-      About us
-    </div>
-
-    <img src="./assets/images/landing-page-2523-loading.png" class="a2523loading" />
-    <img src="./assets/images/landing-page-13634-data-analysis-animation.png" class="a13634dataanalysisanimation" />
-    <img src="./assets/images/landing-page-screenshot-2020-03-03-111607.png" class="screenshot20200303111607" />
+    </ul>
   </div>
-</div>
 
 
-<!-- Scripts -->
-<script>
-  anima_isHidden = function(e) {
-    if (!(e instanceof HTMLElement)) return !1;
-    if (getComputedStyle(e).display == "none") return !0; else if (e.parentNode && anima_isHidden(e.parentNode)) return !0;
-    return !1;
-  };
-  anima_loadAsyncSrcForTag = function(tag) {
-    var elements = document.getElementsByTagName(tag);
-    var toLoad = [];
-    for (var i = 0; i < elements.length; i++) {
-      var e = elements[i];
-      var src = e.getAttribute("src");
-      var loaded = (src != undefined && src.length > 0 && src != 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
-      if (loaded) continue;
-      var asyncSrc = e.getAttribute("anima-src");
-      if (asyncSrc == undefined || asyncSrc.length == 0) continue;
-      if (anima_isHidden(e)) continue;
-      toLoad.push(e);
-    }
-    toLoad.sort(function(a, b) {
-      return anima_getTop(a) - anima_getTop(b);
-    });
-    for (var i = 0; i < toLoad.length; i++) {
-      var e = toLoad[i];
-      var asyncSrc = e.getAttribute("anima-src");
-      e.setAttribute("src", asyncSrc);
-    }
-  };
-  anima_pauseHiddenVideos = function(tag) {
-    var elements = document.getElementsByTagName("video");
-    for (var i = 0; i < elements.length; i++) {
-      var e = elements[i];
-      var isPlaying = !!(e.currentTime > 0 && !e.paused && !e.ended && e.readyState > 2);
-      var isHidden = anima_isHidden(e);
-      if (!isPlaying && !isHidden && e.getAttribute("autoplay") == "autoplay") {
-        e.play();
-      } else if (isPlaying && isHidden) {
-        e.pause();
-      }
-    }
-  };
-  anima_loadAsyncSrc = function(tag) {
-    anima_loadAsyncSrcForTag("img");
-    anima_loadAsyncSrcForTag("iframe");
-    anima_loadAsyncSrcForTag("video");
-    anima_pauseHiddenVideos();
-  };
-  var anima_getTop = function(e) {
-    var top = 0;
-    do {
-      top += e.offsetTop || 0;
-      e = e.offsetParent;
-    } while (e);
-    return top;
-  };
-  anima_loadAsyncSrc();
-  anima_old_onResize = window.onresize;
-  anima_new_onResize = undefined;
-  anima_updateOnResize = function() {
-    if (anima_new_onResize == undefined || window.onresize != anima_new_onResize) {
-      anima_new_onResize = function(x) {
-        if (anima_old_onResize != undefined) anima_old_onResize(x);
-        anima_loadAsyncSrc();
-      };
-      window.onresize = anima_new_onResize;
-      setTimeout(function() {
-        anima_updateOnResize();
-      }, 3000);
-    }
-  };
-  anima_updateOnResize();
-  setTimeout(function() {
-    anima_loadAsyncSrc();
-  }, 200);
-</script>
-<!-- End of Scripts -->
-</body>
-</html>
+  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <button class="btn btn-submit1" routerLink="/signup">Sign Up</button>
+      </li>
+
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <button class="btn btn-submit2" routerLink="/login">Log In</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <section class="container-fluid">
+
+    <div class="split left">
+
+        <p class="welcome-message">Welcome to Rate Me</p>
+      <p style="opacity: 70%; margin-top: 40px; font-size: 17px;">We are a service built for businesses that provides simple,
+        straight-to-the-point <br> delightful surveys that enables more of your customers to provide useful feedback</p>
+      <br><br><br>
+      <hr>
+      <p style="font-size: 15px; opacity: 80%;"><span style="color: #DB4F3C">Learn more</span> about Rate Me</p>
+
+    </div>
+
+    <div class="split right">
+      <img src="./assets/images/landing-page-screenshot-2020-01-21-132616.png">
+    </div>
+
+  </section>
+
+<!--<section class="container-fluid">-->
+
+<!--      <div class="split2 left2">-->
+<!--        <div class="centered2">-->
+<!--          <img src="./assets/images/landing-page-screenshot-2020-03-03-111607.png">-->
+
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="split2 right2">-->
+<!--        <p>Send out surveys that are straight to the point</p>-->
+
+<!--      </div>-->
+<!--</section>-->
+
+
+
+

@@ -82,6 +82,7 @@ public AllOrgProfiles = [];
       minimumRange: null,
       maximumRange: null,
       rangeName: '',
+      rangeMessage: '',
       createdAt: new Date(),
       updatedAt: new Date()
     };
@@ -89,6 +90,7 @@ public AllOrgProfiles = [];
       emojiName: '',
       rangeId: '',
       emojiJson: '',
+      emojiMessage: '',
       createdAt: new Date(),
       updatedAt: new Date()
     };
@@ -240,6 +242,7 @@ public AllOrgProfiles = [];
             minimumRange: null,
             maximumRange: null,
             rangeName: '',
+            rangeMessage: '',
             createdAt: new Date(),
             updatedAt: new Date()
           };
@@ -265,6 +268,7 @@ public AllOrgProfiles = [];
             emojiName: '',
             rangeId: '',
             emojiJson: '',
+            emojiMessage: '',
             createdAt: new Date(),
             updatedAt: new Date()
           };

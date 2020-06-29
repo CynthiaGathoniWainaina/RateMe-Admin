@@ -89,8 +89,7 @@ export class OrgProfileComponent implements OnInit {
       formData.append('fileUploaded', this.myLogo, this.myLogo.name);
       this.fileUploadService.uploadOrgLogo(formData).subscribe(
         data => {
-          this.updateOrgProfileForm.value.logo.url = `${dev.connect}${data.url}`;
-          this.updateOrgProfileForm.value.logo.name = data.name;
+          this.updateOrgProfile();
           this.updateUser();
           this.spinner.show();
 
@@ -185,7 +184,7 @@ export class OrgProfileComponent implements OnInit {
       let img = new Image();
 
       pdf.addImage(img.src = this.MyProfile.qrCode, 'PNG', 200, 200, 200, 200);
-      pdf.addImage(canvas, 10, 45, 190, 210);
+      // pdf.addImage(canvas, 10, 45, 190, 210);
       pdf.page = 1;
       pdf.setFontSize(12);
       pdf.text(260, 40, 'RATE ME ! ');
