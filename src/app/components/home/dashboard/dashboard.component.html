@@ -1,3 +1,5 @@
+<ngx-spinner></ngx-spinner>
+
 <main class="container-fluid">
 
 <header class="container-fluid">
@@ -88,7 +90,7 @@
           <div class="card">
             <div class="card-block">
               <h4 class="card-title">Total number of ratings</h4>
-              <p class="card-text2">40</p>
+              <p class="card-text2" *ngIf="TotalNumberOfRating">{{TotalNumberOfRating}}</p>
             </div>
           </div>
         </div>
@@ -97,7 +99,7 @@
           <div class="card">
             <div class="card-block">
               <h4 class="card-title">Average satisfaction rate</h4>
-              <p class="card-text2">52%</p>
+              <p class="card-text2" *ngIf="AverageSatRate">{{AverageSatRate}} %</p>
             </div>
 
           </div>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {NgbCalendar, NgbDate, NgbDateParserFormatter} from '@ng-bootstrap/ng-bootstrap';
 import { OrgProfileService } from 'src/app/shared/services/orgProfile.service';
 import {CustomerRatings} from '../../../shared/customer-rating-data';
+import { StatsService } from 'src/app/shared/services/stats.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,7 +17,10 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private calendar: NgbCalendar,
-    public formatter: NgbDateParserFormatter
+    public formatter: NgbDateParserFormatter,
+    private orgProfileService: OrgProfileService,
+    private statsService: StatsService,
+    private spinner: NgxSpinnerService
     ) {
     this.fromDate = calendar.getToday();
     this.toDate = calendar.getNext(calendar.getToday(), 'd', 10);
@@ -73,16 +78,50 @@ public chartColors: Array<any> = [
 public MyProfile: any;
 
 
+public AverageSatRate: any;
+public TotalNumberOfRating: number;
 
 
 
 
   ngOnInit() {
+    this.spinner.show();
+
+    this.orgProfileService.getOrgProfileByUserId().subscribe(
+      data => {
+        this.MyProfile = data;
+        this.fetchStats().then(() => { this.spinner.hide(); });
+      }, error => console.log('Error getting profile by user Id')
+    );
 
   }
 
 
 
+
+
+// Call stats api from here
+
+fetchStats() {
+  return new Promise((resolve, reject) => {
+    this.statsService.averageSatRateByOrg({orgProfileId: this.MyProfile._id}).subscribe(
+      dataAverageSatRateByOrg => {
+        this.AverageSatRate = (dataAverageSatRateByOrg.averageRating).toFixed(0);
+
+
+        this.statsService.totalNumOfRatingByOrg({orgProfileId: this.MyProfile._id}).subscribe(
+          dataTNumOfRating=> {
+            this.TotalNumberOfRating = dataTNumOfRating.totalNumberOfRating;
+
+            resolve();
+          }, error => console.log('Error fetching Stats')
+        );
+
+      }, error => console.log('Error fetching Stats')
+    );
+
+  });
+}
 
 
 
