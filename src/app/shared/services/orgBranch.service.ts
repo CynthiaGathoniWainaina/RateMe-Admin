@@ -36,10 +36,14 @@ export class OrgBranchService {
         return this.http.get<any>(this.url + 'getOne/' + id, {headers : this.header});
     }
 
+    getOneByOrgProfileId(id) {
+      return this.http.get<any>(this.url + 'getOneByOrgProfileId/' + id, {headers : this.header});
+    }
+
 
     updateOrgBranch(id, data: any) {
-        return this.http.put<any>(this.url + 'update/' + id, data, {headers : this.header});
-    }
+          return this.http.put<any>(this.url + 'update/' + id, data, {headers : this.header});
+      }
 
 
     deleteOrgBranch(id) {

@@ -80,6 +80,7 @@ public MyProfile: any;
 
 public AverageSatRate: any;
 public TotalNumberOfRating: number;
+public MostFreqSelectedEmojiByOrg: any;
 
 
 
@@ -112,12 +113,21 @@ fetchStats() {
         this.statsService.totalNumOfRatingByOrg({orgProfileId: this.MyProfile._id}).subscribe(
           dataTNumOfRating=> {
             this.TotalNumberOfRating = dataTNumOfRating.totalNumberOfRating;
-
             resolve();
           }, error => console.log('Error fetching Stats')
         );
 
+
       }, error => console.log('Error fetching Stats')
+    );
+
+    this.statsService.mostFrqSelectedEmojiByOrg({orgProfileId: this.MyProfile._id}).subscribe(
+      dataMostFreqSelectedEmoji=> {
+        this.MostFreqSelectedEmojiByOrg = (dataMostFreqSelectedEmoji.mostFrqSelectedEmojiByOrg.emojiJson);
+        resolve();
+
+      },
+      error => console.log('Error fetching Stats')
     );
 
   });

@@ -7,12 +7,14 @@ import { dev } from 'src/app/shared/dev/dev';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Observable } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { HomeComponent } from '../home.component';
 import html2canvas from 'html2canvas';
 
 import * as jspdf from 'jspdf';
 import {toBase64String} from '@angular/compiler/src/output/source_map';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {OrgBranchService} from '../../../shared/services/orgBranch.service';
 
 // declare let html2canvas: any;
 
@@ -28,23 +30,30 @@ export class OrgProfileComponent implements OnInit {
     private formBuilder: FormBuilder,
     private notifyService: NotificationService,
     private orgProfileService: OrgProfileService,
+    private orgBranchService: OrgBranchService,
     private fileUploadService: FileUploadService,
     private spinner: NgxSpinnerService,
     private homeComponent: HomeComponent
   ) { }
 
 
-
+  public faTrash = faTrash;
   public MyProfile: any;
   public User: any;
+  public branchForm: any;
   public pdfAction;
   public updateOrgProfileForm: FormGroup;
   public previewLogo = null;
   public myLogo;
 
+  public AllBranches = [];
+
+
 
 
   ngOnInit(): void {
+    this.updatePage();
+
     this.orgProfileService.getOrgProfileByUserId().subscribe(
       data => {
         this.MyProfile = data;
@@ -61,8 +70,61 @@ export class OrgProfileComponent implements OnInit {
       logo: {name: '', url: ''}
     });
 
+    this.branchForm = {
+      branchName: '',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    };
+
 
   }
+
+  updatePage() {
+    return new Promise((resolve, reject) => {
+      this.orgBranchService.getAllOrgBranches().subscribe(
+        data => {
+          this.AllBranches = data;
+        },
+        error => console.log('Error')
+      );
+    }
+
+    )}
+
+  addOrgBranch() {
+    this.spinner.show();
+    this.orgBranchService.createOrgBranch(this.branchForm).subscribe(
+      data => {
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notifyService.showSuccess('Branch added', 'Success');
+          this.branchForm = {
+            branchName: '',
+            createdAt: new Date(),
+            updatedAt: new Date()
+          };
+        });
+
+      },
+      error => {this.spinner.hide(); this.notifyService.showError('Coud not create branch', 'Failed'); }
+    );
+  }
+
+  // Remove Branch Function
+  removeBranch(id) {
+    this.spinner.show();
+    this.orgBranchService.deleteOrgBranch(id).subscribe(
+      data => {
+        this.updatePage().then(() => {
+          this.spinner.hide();
+          this.notifyService.showSuccess('Branch Removed', 'Success');
+        });
+
+      },
+      error => {this.spinner.hide(); this.notifyService.showError('Could not remove branch', 'Failed'); }
+    );
+  }
+
 
   get formUpdateProfle() {return this.updateOrgProfileForm.controls; }
 

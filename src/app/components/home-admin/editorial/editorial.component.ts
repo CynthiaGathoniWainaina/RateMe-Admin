@@ -21,10 +21,6 @@ import { OrgProfileService } from 'src/app/shared/services/orgProfile.service';
 })
 export class EditorialComponent implements OnInit {
 
-
-
-
-
   constructor(
     private spinner: NgxSpinnerService,
     private notification: NotificationService,
@@ -67,6 +63,7 @@ public AllOrgProfiles = [];
 
 
   ngOnInit() {
+
     this.updatePage();
     this.interestForm = {
       interestName: '',
@@ -189,8 +186,6 @@ public AllOrgProfiles = [];
 
     });
   }
-
-
 
 
   addInterest() {

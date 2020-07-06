@@ -107,10 +107,10 @@
 
         <div class="clearfix hidden-sm-down hidden-lg-up"></div>
         <div class="col-xs-12 col-md-6 col-lg-3">
-          <div class="card">
+          <div class="card" routerLink="/action-plans" style="cursor: pointer">
             <div class="card-block">
-              <h4 class="card-title">No. of actions to be taken</h4>
-              <p class="card-text2">10</p>
+            <h4 class="card-title">No. of actions to be taken <i class="fa fa-arrow-right pull-right"></i> </h4>
+              <p class="card-text2">10 open</p>
             </div>
           </div></div>
 
@@ -140,8 +140,11 @@
         <div class="col-xs-12 col-md-6 col-lg-6">
           <div class="card">
             <div class="card-block">
-              <h4 class="card-title">How most of your customers felt about their experince at your facility</h4>
-              <img src="./assets/images/dashboard/dashboard-screenshot-2020-03-05-152334.png">
+              <h4 class="card-title">How most of your customers felt about their experience at your facility</h4>
+              <lottie-player
+                [src] = "MostFreqSelectedEmojiByOrg" class="mx-auto" speed="1" loop  autoplay ><!-- add  'controls' to see controls -->
+              </lottie-player>
+
             </div>
           </div>
         </div>

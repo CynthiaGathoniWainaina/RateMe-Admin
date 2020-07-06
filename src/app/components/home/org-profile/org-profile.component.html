@@ -35,6 +35,7 @@
                        formControlName="businessName" [class.is-invalid]="formUpdateProfle.businessName.invalid && formUpdateProfle.businessName.touched"
                        placeholder="Change business name" name="business-name" required>
               </div>
+              <hr>
 
               <div class="form-group">
                 <label><b>Email</b></label>
@@ -44,11 +45,39 @@
 
               </div>
 
+              <hr>
+
+              <div class="form-group">
+                <label><b>Your business branches</b></label>
+                <br>
+                <p style="font-size: 13px">Add your business branches</p>
+
+                <form class="form" class="form">
+
+                  <div class="form-group">
+                    <input type="text" placeholder="Branch Name" name="branchName" [(ngModel)]="branchForm.branchName">
+                  </div>
+
+                  <div class="btn-wrap">
+                    <button class="btn btn-sm btn-success" (click)="addOrgBranch()">Save</button>
+                  </div>
+
+                </form>
+
+                <hr>
+
+                <p><b>Saved branches</b></p><br>
+                <div class="list-wrap">
+                  <div class="list-item d-flex" *ngFor="let item of AllBranches"> <span class="mr-auto">{{item.branchName}}</span> <fa-icon [icon]="faTrash" (click)="removeBranch(item._id)"></fa-icon></div>
+                </div>
+
               </div>
 
             </div>
+
+            </div>
           </div>
-        </div>
+      </div>
 
       <hr>
 
@@ -72,6 +101,7 @@
 
             </div>
           </div>
+
 
         </div>
 
