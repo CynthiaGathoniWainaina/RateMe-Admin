@@ -21,6 +21,7 @@ import {error} from 'selenium-webdriver';
   styleUrls: ['./org-profile.component.css']
 })
 export class OrgProfileComponent implements OnInit {
+// tslint:disable
 
   constructor(
     private userService: UserService,
@@ -46,54 +47,52 @@ export class OrgProfileComponent implements OnInit {
 
   ngOnInit() {
 
-    this.myProfileFunction();
-
-    this.updatePage();
-
-  }
-
-  myProfileFunction() {
-    return new Promise((resolve, reject) => {
-      this.orgProfileService.getOrgProfileByUserId().subscribe(
-        data => {
-          this.MyOrgProfile = data;
-        }, error => console.log('Error getting profile by user Id')
-      );
-    }
-    )}
-
-  orgBranchForm(){
-    return Promise.resolve(this.myProfileFunction()).then(() => {
+    this.updatePage().then(() => {
       this.branchForm = {
         orgProfileId: this.MyOrgProfile._id,
         branchName: '',
         createdAt: new Date(),
         updatedAt: new Date()
       };
-    }, error => console.log('org Branch Form error')
-    );
+    })
+
+
   }
+
+
+
+
 
   updatePage() {
     return new Promise((resolve, reject) => {
-      this.orgBranchService.getAllByOrgProfileId(this.MyOrgProfile._id).subscribe(
+      this.orgProfileService.getOrgProfileByUserId().subscribe(
         data => {
-          this.AllBranches = data;
-        },
-        error => console.log('Error')
+          this.MyOrgProfile = data;
+          this.orgBranchService.getAllByOrgProfileId(this.MyOrgProfile._id).subscribe(
+            data => {
+              this.AllBranches = data;
+              resolve();
+            },
+            error => console.log('Error')
+          );
+      }, error => console.log('Error getting profile by user Id')
       );
     }
-
     )}
 
   addOrgBranch() {
     this.spinner.show();
-    this.orgBranchService.createOrgBranch(this.orgBranchForm()).subscribe(
+    this.orgBranchService.createOrgBranch(this.branchForm).subscribe(
       data => {
         this.updatePage().then(() => {
           this.spinner.hide();
           this.notifyService.showSuccess('Branch added', 'Success');
-          this.orgBranchForm();
+          this.branchForm = {
+            orgProfileId: this.MyOrgProfile._id,
+            branchName: '',
+            createdAt: new Date(),
+            updatedAt: new Date()
+          };
         });
 
       },
