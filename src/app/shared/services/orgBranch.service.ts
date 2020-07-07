@@ -36,8 +36,8 @@ export class OrgBranchService {
         return this.http.get<any>(this.url + 'getOne/' + id, {headers : this.header});
     }
 
-    getOneByOrgProfileId(id) {
-      return this.http.get<any>(this.url + 'getOneByOrgProfileId/' + id, {headers : this.header});
+    getAllByOrgProfileId(id) {
+      return this.http.get<any>(this.url + 'getAllByOrgProfileId/' + id, {headers : this.header});
     }
 
 

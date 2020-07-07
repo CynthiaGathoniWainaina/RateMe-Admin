@@ -1,0 +1,112 @@
+<ngx-spinner></ngx-spinner>
+<main class="container-fluid">
+
+  <header class="container-fluid">
+    <div class="title">Branch Performance</div>
+
+    <div class="container">
+      <div class="rectangle">
+
+        <div class="welcomeback">
+          <p>Compare customer experience in all your branches</p>
+        </div>
+
+        <div>
+          <img src="./assets/images/dashboard/dashboard-lunchr-u2014-tonton-marty@2x.png" class="lunchru2014tontonmarty"/>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <section class="body-section">
+    <div class="container-fluid">
+
+<!--      Average sat rate per branch bar chart-->
+
+      <div class = "row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">Average satisfaction rate</h4>
+              <canvas baseChart
+                      [datasets]="barChartData"
+                      [labels]="barChartLabels"
+                      [options]="barChartOptions"
+                      [legend]="barChartLegend"
+                      [chartType]="barChartType"
+                      [colors]="chartColors" >
+              </canvas>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+<!--      Most frequently selected emojis per branch-->
+
+      <div class = "row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">How most of your customers felt about their experience at each branch</h4><br>
+
+              <div class="list-wrap">
+                <div class="list-item d-flex">
+                  <span class="mr-auto">Aga Khan Walk</span>
+                  <img src="./assets/images/dashboard/dashboard-screenshot-2020-03-05-152334.png" class="mr-auto" >
+
+                  <span class="mr-auto">Kimathi Street</span>
+                  <img src="./assets/images/dashboard/dashboard-screenshot-2020-03-05-152334.png" class="mr-auto" >
+
+                  <span class="mr-auto">Lifestyle</span>
+                  <img src="./assets/images/dashboard/dashboard-screenshot-2020-03-05-152334.png" class="mr-auto" > <!-- add  'controls' to see controls -->
+
+              </div>
+
+            </div>
+          </div>
+
+          </div>
+      </div>
+</div>
+
+<!--      Top issues per branch-->
+
+      <div class = "row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">Top issues in every branch</h4>
+
+              <div class="card-block">
+                <p class="card-text">Aga Khan Walk</p>
+                <p class="card-text3">Service: Slow service  (30)</p>
+                <p class="card-text3">Service: Wrong order (15)</p>
+                <p class="card-text3">Sanitation: Dining area (43)</p>
+                <p class="card-text">Kimathi Street</p>
+                <p class="card-text3">Service: Slow service  (30)</p>
+                <p class="card-text3">Service: Wrong order (15)</p>
+                <p class="card-text3">Sanitation: Dining area (43)</p>
+
+
+              </div>
+
+
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+

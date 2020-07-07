@@ -17,6 +17,7 @@ import { OrgAdminGuard } from './shared/authGuards/orgAdmin.guard';
 import {OrgProfileComponent} from './components/home/org-profile/org-profile.component';
 import {CustomerDetailsComponent} from './components/home/customer-details/customer-details.component';
 import {PricingPlansComponent} from './components/home/pricing-plans/pricing-plans.component';
+import {BranchPerformanceComponent} from './components/home/dashboard/branch-performance/branch-performance.component';
 
 const routes: Routes = [
 
@@ -64,6 +65,13 @@ const routes: Routes = [
   { path: 'orgprofile', component: HomeComponent, canActivate: [OrgAdminGuard],
     children: [{ path: '', component: OrgProfileComponent}]
   },
+
+  // Branch Performance
+  { path: 'branch-performance', component: HomeComponent, canActivate: [OrgAdminGuard],
+    children: [{ path: '', component: BranchPerformanceComponent}]
+  },
+
+
 
 
 

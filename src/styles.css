@@ -58,7 +58,7 @@ main .container .rectangle {
   background-color: rgba(219, 79, 60, 1.0);
   top: 20px;
   height: 180px;
-  width: 120%;
+  width: 100%;
   position: relative;
   margin-left: 0;
   left: 0;
@@ -73,7 +73,7 @@ main .container .rectangle2 {
   background-color: #264d59;
   top: 20px;
   height: 180px;
-  width: 120%;
+  width: 100%;
   position: relative;
   margin-left: 0;
   left: 0;

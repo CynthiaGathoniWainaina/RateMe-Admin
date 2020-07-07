@@ -11,7 +11,7 @@
   <section class="body">
     <div class="container-fluid">
 
-      <form class="form" [formGroup]="updateOrgProfileForm" (ngSubmit)="onSubmit()">
+      <form class="form">
 
 
       <!--First row-->
@@ -26,13 +26,12 @@
               <img *ngIf="!MyProfile" src="./assets/images/landing-page-javalogo2@2x.png" alt="Avatar" class="avatar">
               <img *ngIf="MyProfile" [src]="MyProfile.logo.url" [alt]="MyProfile.logo.name" class="avatar">
                 <span><button class="signupbtn" (click)="logoFileInput.click()">Upload different business logo</button></span>
-                <span><input hidden readonly type="file" #logoFileInput name="fileUploaded" (change)="uploadLogo($event)" placeholder="Upload different business logo"></span> 
+                <span><input hidden readonly type="file" #logoFileInput name="fileUploaded"  placeholder="Upload different business logo"></span>
        
               <hr>
               <div class="form-group">
                 <label><b>Business name</b></label>
                 <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
-                       formControlName="businessName" [class.is-invalid]="formUpdateProfle.businessName.invalid && formUpdateProfle.businessName.touched"
                        placeholder="Change business name" name="business-name" required>
               </div>
               <hr>
@@ -40,7 +39,6 @@
               <div class="form-group">
                 <label><b>Email</b></label>
                 <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
-                       formControlName="email" [class.is-invalid]="formUpdateProfle.email.invalid && formUpdateProfle.email.touched"
                        placeholder="Change Email"  name="email" required>
 
               </div>
@@ -52,10 +50,11 @@
                 <br>
                 <p style="font-size: 13px">Add your business branches</p>
 
-                <form class="form" class="form">
+                <form class="form">
 
                   <div class="form-group">
-                    <input type="text" placeholder="Branch Name" name="branchName" [(ngModel)]="branchForm.branchName">
+                    <input type="text" placeholder="Branch Name" name="branchName"
+                           [(ngModel)]="branchForm.branchName">
                   </div>
 
                   <div class="btn-wrap">
@@ -93,7 +92,6 @@
                 <label><b>Location</b></label>
                 <input type="input" class="form-control"
                        aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Location"
-                       formControlName="location" [class.is-invalid]="formUpdateProfle.location.invalid && formUpdateProfle.location.touched"
                        placeholder="Location of business" name="location" required>
 
               </div>
@@ -147,13 +145,12 @@
                 <div class="form-group">
                   <label><b>New Password</b></label>
                     <input type="password" class="form-control"
-                            formControlName="password" [class.is-invalid]="formUpdateProfle.password.invalid && formUpdateProfle.password.touched"
                             placeholder="New Password" name="psw" required>
                 </div>
 
               </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-submit" [disabled]="!updateOrgProfileForm.valid">Save changes</button>
+                <button type="submit" class="btn btn-submit">Save changes</button>
               </div>
             </div>
           </div>

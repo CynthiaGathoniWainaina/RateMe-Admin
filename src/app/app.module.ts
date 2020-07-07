@@ -36,6 +36,7 @@ import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import { CustomerDetailsComponent } from './components/home/customer-details/customer-details.component';
 import {NgAnonymizeModule} from 'ng-anonymize';
 import { PricingPlansComponent } from './components/home/pricing-plans/pricing-plans.component';
+import { BranchPerformanceComponent } from './components/home/dashboard/branch-performance/branch-performance.component';
 // import { GoogleplacesComponent } from './components/signup/googleplaces/googleplaces.component';
 
 var config = {
@@ -71,6 +72,7 @@ var config = {
     HomeAdminComponent,
     CustomerDetailsComponent,
     PricingPlansComponent,
+    BranchPerformanceComponent,
   ],
   imports: [
     BrowserModule,
