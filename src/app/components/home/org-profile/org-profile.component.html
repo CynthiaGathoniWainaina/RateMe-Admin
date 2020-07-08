@@ -67,7 +67,15 @@
 
                 <p><b>Saved branches</b></p><br>
                 <div class="list-wrap">
-                  <div class="list-item d-flex" *ngFor="let item of AllBranches"> <span class="mr-auto">{{item.branchName}}</span> <fa-icon [icon]="faTrash" (click)="removeBranch(item._id)"></fa-icon></div>
+                  <div class="list-item d-flex" *ngFor="let item of AllBranches"> <span class="mr-auto">{{item.branchName}}</span>
+
+                    <div class="mx-auto" id="qrCode">
+                      <img [src]= "item.qrCode" alt="">
+                      <button type="button" (click)="downLoadQrCode(item.qrCode) "style="background-color: #264d59">Download QR Code</button>
+                    </div>
+
+
+                    <fa-icon [icon]="faTrash" (click)="removeBranch(item._id)"></fa-icon></div>
                 </div>
 
               </div>
@@ -168,10 +176,7 @@
       <p>QR Code</p>
     </div>
 
-    <div class="col-xs-12 col-md-6 col-lg-6" id="qrCode" >
-      <img *ngIf="MyProfile" [src]="MyProfile.qrCode" alt="">
-      <button type="button" *ngIf="MyProfile" (click)="downLoadQrCode() "style="background-color: #264d59">Download QR Code</button>
-    </div>
+
 
   </div>
 

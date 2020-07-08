@@ -40,6 +40,7 @@ export class OrgProfileComponent implements OnInit {
   public MyOrgProfile: any;
   public branchForm: any;
   public pdfAction;
+  public OrgBranch: any;
 
 
   public AllBranches = [];
@@ -51,16 +52,13 @@ export class OrgProfileComponent implements OnInit {
       this.branchForm = {
         orgProfileId: this.MyOrgProfile._id,
         branchName: '',
+        qrCode: '',
         createdAt: new Date(),
         updatedAt: new Date()
       };
     })
 
-
   }
-
-
-
 
 
   updatePage() {
@@ -71,6 +69,7 @@ export class OrgProfileComponent implements OnInit {
           this.orgBranchService.getAllByOrgProfileId(this.MyOrgProfile._id).subscribe(
             data => {
               this.AllBranches = data;
+              console.log(data)
               resolve();
             },
             error => console.log('Error')
@@ -90,11 +89,13 @@ export class OrgProfileComponent implements OnInit {
           this.branchForm = {
             orgProfileId: this.MyOrgProfile._id,
             branchName: '',
+            qrCode: '',
             createdAt: new Date(),
             updatedAt: new Date()
           };
+          this.OrgBranch = data;
+          console.log(this.OrgBranch);
         });
-
       },
       error => {this.spinner.hide(); this.notifyService.showError('Could not create branch', 'Failed'); }
     );
@@ -116,33 +117,36 @@ export class OrgProfileComponent implements OnInit {
   }
 
 
-  previewQrCode() {
+
+  previewQrCode(qrCode) {
     this.spinner.show();
     this.pdfAction = 'preview';
-    this.generatePDF();
+    this.generatePDF(qrCode);
   }
 
-  downLoadQrCode() {
+  downLoadQrCode(qrCode) {
     this.spinner.show();
     this.pdfAction = 'download';
-    this.generatePDF();
+    this.generatePDF(qrCode);
   }
 
 
-  printQrCode() {
+  printQrCode(qrCode) {
     this.spinner.show();
     this.pdfAction = 'print';
-    this.generatePDF();
+    this.generatePDF(qrCode);
   }
 
 
-  async generatePDF() {
+  async generatePDF(qrCode) {
+
     html2canvas(document.querySelector('#qrCode'), {scale: 2}).then(canvas => {
+
       let pdf = new jspdf('p', 'pt', 'a4');
       let img = new Image();
 
-      pdf.addImage(img.src = this.MyProfile.qrCode, 'PNG', 200, 200, 200, 200);
-      // pdf.addImage(canvas, 10, 45, 190, 210);
+      pdf.addImage(img.src = qrCode, 'PNG', 200, 200, 200, 200);
+      // pdf.addImage(canvas,'PNG', 200, 200, 200, 200);
       pdf.page = 1;
       pdf.setFontSize(12);
       pdf.text(260, 40, 'RATE ME ! ');
@@ -153,7 +157,7 @@ export class OrgProfileComponent implements OnInit {
 
       switch (this.pdfAction) {
         case 'preview': pdf.output('dataurlnewwindow'); this.spinner.hide(); break;
-        case 'download': pdf.save(`${this.MyProfile.qrCode}.pdf`);
+        case 'download': pdf.save(`${qrCode}.pdf`);
           this.spinner.hide(); this.notifyService.showInfo('Document downloading..', 'Info...');  break;
         // case 'share': this.sendInvoiceViaEmail(); break;
         case 'print': pdf.autoPrint(); this.notifyService.showInfo('Document on print', 'Info...'); this.spinner.hide(); break;
