@@ -47,4 +47,12 @@ export class StatsService {
         return this.http.post<any>(this.url + 'totalNumOfRatingByOrg', data, {headers : this.header});
     }
 
+    totalNumberOfPleasantReactionsByOrg( data: any ) {
+        return this.http.post<any>(this.url + 'totalNumberOfPleasantReactionsByOrg', data, {headers : this.header});
+    }
+
+    totalNumberOfUnpleasantReactionsByOrg( data: any ) {
+      return this.http.post<any>(this.url + 'totalNumberOfPleasantReactionsByOrg', data, {headers : this.header});
+    }
+
 }

@@ -13,8 +13,6 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class DashboardComponent implements OnInit {
 
 
-
-
   constructor(
     private calendar: NgbCalendar,
     public formatter: NgbDateParserFormatter,
@@ -81,8 +79,8 @@ public MyProfile: any;
 public AverageSatRate: any;
 public TotalNumberOfRating: number;
 public MostFreqSelectedEmojiByOrg: any;
-
-
+public TotalNumberOfPleasantReactionsByOrg: any;
+public TotalNumberOfUnpleasantReactionsByOrg: any;
 
 
   ngOnInit() {
@@ -96,9 +94,6 @@ public MostFreqSelectedEmojiByOrg: any;
     );
 
   }
-
-
-
 
 
 // Call stats api from here
@@ -130,13 +125,24 @@ fetchStats() {
       error => console.log('Error fetching Stats')
     );
 
+    this.statsService.totalNumberOfPleasantReactionsByOrg({orgProfileId: this.MyProfile._id}).subscribe(
+      dataTotalNoOfPleasantReactionsByOrg=> {
+        this.TotalNumberOfPleasantReactionsByOrg = (dataTotalNoOfPleasantReactionsByOrg.totalNumberOfPleasantReactionsByOrg);
+        resolve();
+      },
+      error => console.log('Error fetching Stats')
+    );
+
+    this.statsService.totalNumberOfUnpleasantReactionsByOrg({orgProfileId: this.MyProfile._id}).subscribe(
+      dataTotalNoOfUnpleasantReactionsByOrg=> {
+        this.TotalNumberOfUnpleasantReactionsByOrg = (dataTotalNoOfUnpleasantReactionsByOrg.totalNumberOfUnpleasantReactionsByOrg);
+        resolve();
+      },
+      error => console.log('Error fetching Stats')
+    );
+
   });
 }
-
-
-
-
-
 
 
 onDateSelection(date: NgbDate) {
@@ -149,11 +155,6 @@ onDateSelection(date: NgbDate) {
     this.fromDate = date;
   }
 }
-
-
-
-
-
 
 
 
