@@ -55,4 +55,26 @@ export class StatsService {
       return this.http.post<any>(this.url + 'totalNumberOfPleasantReactionsByOrg', data, {headers : this.header});
     }
 
+    topIssuesByOrg( data: any ) {
+      return this.http.post<any>(this.url + 'topIssuesByOrg', data, {headers : this.header});
+    }
+
+    topIssuesByOrgBranch( data: any ) {
+      return this.http.post<any>(this.url + 'topIssuesByOrgBranch', data, {headers : this.header});
+    }
+
+    averageSatRateByOrgBranch( data: any ) {
+      return this.http.post<any>(this.url + 'averageSatRateByOrgBranch', data, {headers : this.header});
+    }
+
+    mostFreqSelectedEmojiByOrgBranch( data: any ) {
+      return this.http.post<any>(this.url + 'mostFreqSelectedEmojiByOrgBranch', data, {headers : this.header});
+    }
+
+
+
+
+
+
+
 }
