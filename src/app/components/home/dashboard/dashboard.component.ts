@@ -33,44 +33,41 @@ fromDate: NgbDate | null;
 toDate: NgbDate | null;
 
 
-public barChartOptions = {
-  scaleShowVerticalLines: true,
-  responsive: true,
-  scales: {
-    xAxes: [{
-      stacked: true,
+  public barChartOptions = {
+    scaleShowVerticalLines: true,
+    responsive: true,
+    scales: {
+      xAxes: [{
+        barThickness: 6,
+        maxBarThickness: 8,
+        gridLines: {
+          color: 'rgba(0, 0, 0, 0)',
+        }
+      }],
+      yAxes: [{
+        gridLines: {
+          color: 'rgba(0, 0, 0, 0)',
+        }
+      }],
       barThickness: 6,
       maxBarThickness: 8,
-      gridLines: {
-        color: 'rgba(0, 0, 0, 0)',
-      }
-    }],
-    yAxes: [{
-      stacked: true,
-      gridLines: {
-        color: 'rgba(0, 0, 0, 0)',
-      }
-    }],
-  barThickness: 6,
-  maxBarThickness: 8,
-  }
-};
-public barChartLabels = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'];
-public barChartType = 'bar';
-public barChartLegend = true;
-public barChartData = [
-  {data : ['150000', '150000', '200000', '250000', '300000', '350000', '400000', '450000'], label: 'Forecast'},
-  {data : ['200000', '300000', '350000', '400000', '450000', '500000', '600000', '700000'], label: 'Actual'}
-];
+    }
+  };
+  public barChartLabels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Fri', 'Sat', 'Sun'];
+  public barChartType = 'bar';
+  public barChartLegend = false;
+  public barChartData = [
+    {data : ['35', '40', '23', '63', '39', '77', '55', '80']},
+  ];
 
-public chartColors: Array<any> = [
-  { // first color
-    backgroundColor: ['blue', '#C9E5FF', 'Orange', '#C9E5FF', 'green', '#C9E5FF', 'red', '#C9E5FF'],
-    border: 'none',
+  public chartColors: Array<any> = [
+    { // first color
+      backgroundColor: ['blue', '#C9E5FF', 'Orange', '#C9E5FF', 'green', '#C9E5FF', 'red', '#C9E5FF'],
+      border: 'none',
 
-    pointBorderColor: '#fff',
-    pointHoverBackgroundColor: '#fff'
-  }];
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff'
+    }];
 
 
 public MyProfile: any;
@@ -78,9 +75,11 @@ public MyProfile: any;
 
 public AverageSatRate: any;
 public TotalNumberOfRating: number;
-public MostFreqSelectedEmojiByOrg: any;
+public MostFreqSelectedEmojiByOrg = [];
 public TotalNumberOfPleasantReactionsByOrg: any;
 public TotalNumberOfUnpleasantReactionsByOrg: any;
+public TopIssue = [];
+public ComplimentByOrg = [];
 
 
   ngOnInit() {
@@ -118,7 +117,7 @@ fetchStats() {
 
     this.statsService.mostFrqSelectedEmojiByOrg({orgProfileId: this.MyProfile._id}).subscribe(
       dataMostFreqSelectedEmoji=> {
-        this.MostFreqSelectedEmojiByOrg = (dataMostFreqSelectedEmoji.mostFrqSelectedEmojiByOrg.emojiJson);
+        this.MostFreqSelectedEmojiByOrg = dataMostFreqSelectedEmoji;
         resolve();
 
       },
@@ -126,20 +125,46 @@ fetchStats() {
     );
 
     this.statsService.totalNumberOfPleasantReactionsByOrg({orgProfileId: this.MyProfile._id}).subscribe(
-      dataTotalNoOfPleasantReactionsByOrg=> {
-        this.TotalNumberOfPleasantReactionsByOrg = (dataTotalNoOfPleasantReactionsByOrg.totalNumberOfPleasantReactionsByOrg);
+      dataTotalNoOfPleasantReactionsByOrg => {
+        this.TotalNumberOfPleasantReactionsByOrg = (dataTotalNoOfPleasantReactionsByOrg.totalNumberOfPleasantReactions);
         resolve();
       },
       error => console.log('Error fetching Stats')
     );
 
     this.statsService.totalNumberOfUnpleasantReactionsByOrg({orgProfileId: this.MyProfile._id}).subscribe(
-      dataTotalNoOfUnpleasantReactionsByOrg=> {
-        this.TotalNumberOfUnpleasantReactionsByOrg = (dataTotalNoOfUnpleasantReactionsByOrg.totalNumberOfUnpleasantReactionsByOrg);
+      dataTotalNoOfUnpleasantReactionsByOrg => {
+        this.TotalNumberOfUnpleasantReactionsByOrg = (dataTotalNoOfUnpleasantReactionsByOrg.totalNumberOfUnpleasantReactions);
         resolve();
       },
       error => console.log('Error fetching Stats')
     );
+
+    this.statsService.topIssuesByOrg({orgProfileId: this.MyProfile._id}).subscribe(
+      dataTopIssue=> {
+        this.TopIssue = dataTopIssue;
+        resolve();
+      },
+      error => console.log('Error fetching Stats')
+    );
+
+    this.statsService.complimentsByOrg({orgProfileId: this.MyProfile._id}).subscribe(
+      dataCompliment=> {
+        this.ComplimentByOrg = dataCompliment;
+        resolve();
+      },
+      error => console.log('Error fetching Stats')
+    );
+
+    // this.statsService.topRater({orgProfileId: this.MyProfile._id}).subscribe(
+    //   dataTopIssue=> {
+    //     this.TopIssue = dataTopIssue;
+    //     resolve();
+    //   },
+    //   error => console.log('Error fetching Stats')
+    // );
+
+
 
   });
 }
@@ -155,9 +180,6 @@ onDateSelection(date: NgbDate) {
     this.fromDate = date;
   }
 }
-
-
-
 
 
 isHovered(date: NgbDate) {

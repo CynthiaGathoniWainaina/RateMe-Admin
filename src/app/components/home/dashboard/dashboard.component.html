@@ -88,7 +88,7 @@
       <div class="row">
         <div class="col-xs-12 col-md-6 col-lg-3">
           <div class="card">
-            <div class="card-block">
+            <div class="card-block" matTooltip="Number of people who have rated your business">
               <h4 class="card-title">Total number of ratings</h4>
               <p class="card-text2" *ngIf="TotalNumberOfRating">{{TotalNumberOfRating}}</p>
             </div>
@@ -106,17 +106,19 @@
         </div>
 
         <div class="clearfix hidden-sm-down hidden-lg-up"></div>
-        <div class="col-xs-12 col-md-6 col-lg-3">
-          <div class="card" routerLink="/action-plans" style="cursor: pointer">
-            <div class="card-block">
-            <h4 class="card-title">No. of actions to be taken <i class="fa fa-arrow-right pull-right"></i> </h4>
-              <p class="card-text2">10 open</p>
-            </div>
-          </div></div>
 
         <div class="col-xs-12 col-md-6 col-lg-3">
           <div class="card">
-            <div class="card-block">
+            <div class="card-block" matTooltip="Number of ratings above 50%">
+              <h4 class="card-title">Total number of pleasant reactions</h4>
+              <p class="card-text2" *ngIf="TotalNumberOfPleasantReactionsByOrg">{{TotalNumberOfPleasantReactionsByOrg}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <div class="card">
+            <div class="card-block" matTooltip="Number of ratings below 50%">
               <h4 class="card-title">Total number of unpleasant reactions</h4>
               <p class="card-text2" *ngIf="TotalNumberOfUnpleasantReactionsByOrg">{{TotalNumberOfUnpleasantReactionsByOrg}}</p>
             </div>
@@ -127,13 +129,32 @@
       <div class="row">
 
         <div class="col-xs-12 col-md-6 col-lg-3">
-          <div class="card">
-            <div class="card-block">
-              <h4 class="card-title">Total number of pleasant reactions</h4>
-              <p class="card-text2" *ngIf="TotalNumberOfPleasantReactionsByOrg">{{TotalNumberOfPleasantReactionsByOrg}}</p>
+          <div class="card" routerLink="/action-plans" style="cursor: pointer">
+            <div class="card-block" matTooltip="This is the most common issue among customers who have given feedback">
+              <h4 class="card-title">Top Issue</h4>
+              <p class="card-text2" *ngFor ="let item of TopIssue">{{item.response}}</p>
             </div>
           </div>
         </div>
+
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <div class="card" routerLink="/action-plans" style="cursor: pointer">
+            <div class="card-block" matTooltip="This is the most common issue among customers who have given feedback">
+              <h4 class="card-title">Top Compliment</h4>
+              <p class="card-text2" *ngFor ="let item of ComplimentByOrg">{{item.response}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <div class="card" routerLink="/action-plans" style="cursor: pointer">
+            <div class="card-block">
+              <h4 class="card-title">No. of actions to be taken <i class="fa fa-arrow-right pull-right"></i> </h4>
+              <p class="card-text2">1</p>
+            </div>
+          </div>
+        </div>
+
 
         <div class="col-xs-12 col-md-6 col-lg-3">
           <div class="card" routerLink="/branch-performance" style="cursor: pointer">
@@ -148,35 +169,37 @@
 
 <!--Third row-->
       <div class="row">
-        <div class="col-xs-12 col-md-6 col-lg-6">
+        <div class="col-xs-12 col-md-12 col-lg-12">
           <div class="card">
-            <div class="card-block">
+            <div class="card-block" matTooltip="The emoji shows the sentiments your customers had towards your service.
+            They are grouped into 5. Very dissatisfied (angry emoji), Slightly dissatisfied (sad emoji), Slightly satisfied (smiling emoji),
+            Very Satisfied (Love smiley emoji) and Completely satisfied (Love flower emoji). You should aim for the last 3">
               <h4 class="card-title">How most of your customers felt about their experience at your facility</h4>
-              <lottie-player
-                [src] = "MostFreqSelectedEmojiByOrg" class="mx-auto" speed="1" loop  autoplay ><!-- add  'controls' to see controls -->
+              <lottie-player *ngFor="let item of MostFreqSelectedEmojiByOrg"
+                [src] = "item.emojiJson" class="mx-auto" speed="1" loop  autoplay ><!-- add  'controls' to see controls -->
               </lottie-player>
 
             </div>
           </div>
         </div>
 
-        <div class="col-xs-12 col-md-6 col-lg-6">
-          <div class="card">
-            <div class="card-block">
-              <h4 class="card-title">Top issues</h4>
-              <canvas baseChart
-                      [datasets]="barChartData"
-                      [labels]="barChartLabels"
-                      [options]="barChartOptions"
-                      [legend]="barChartLegend"
-                      [chartType]="barChartType"
-                      [colors]="chartColors" >
-              </canvas>
+<!--        <div class="col-xs-12 col-md-6 col-lg-6">-->
+<!--          <div class="card">-->
+<!--            <div class="card-block">-->
+<!--              <h4 class="card-title">Top issues</h4>-->
+<!--              <canvas baseChart-->
+<!--                      [datasets]="barChartData"-->
+<!--                      [labels]="barChartLabels"-->
+<!--                      [options]="barChartOptions"-->
+<!--                      [legend]="barChartLegend"-->
+<!--                      [chartType]="barChartType"-->
+<!--                      [colors]="chartColors" >-->
+<!--              </canvas>-->
 
-            </div>
+<!--            </div>-->
 
-          </div>
-        </div>
+<!--          </div>-->
+<!--        </div>-->
       </div>
 
       <!--Fourth row-->
@@ -192,9 +215,9 @@
                 <span class="card-text3"><img src="./assets/images/dashboard/dashboard-screenshot-2020-03-06-094811@2x.png" class="top-raters"></span>
                 <hr>
 
-              <img src="./assets/images/dashboard/dashboard-lunchr-u2014-tonton-marty@2x.png" alt="Avatar" class="avatar">
-              <br> <span class="card-text">Marty Byrde:  </span> <span class="card-text3">5 ratings</span><br>
-              <span class="card-text">Avg satisfaction rate:  </span> <span class="card-text3"> 55%</span><br>
+              <img src="" alt="Avatar" class="avatar">
+              <br> <span class="card-text">Marty Byrde:  </span> <span class="card-text3">2 ratings</span><br>
+              <span class="card-text">Avg satisfaction rate:  </span> <span class="card-text3"> 45%</span><br>
               <span class="card-text">Most common emotion:  </span>
               <span class="card-text3"><img src="./assets/images/dashboard/dashboard-screenshot-2020-03-06-094811@2x.png" class="top-raters"></span>
               <hr>

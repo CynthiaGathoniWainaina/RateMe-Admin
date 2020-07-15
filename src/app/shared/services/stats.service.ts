@@ -52,11 +52,15 @@ export class StatsService {
     }
 
     totalNumberOfUnpleasantReactionsByOrg( data: any ) {
-      return this.http.post<any>(this.url + 'totalNumberOfPleasantReactionsByOrg', data, {headers : this.header});
+      return this.http.post<any>(this.url + 'totalNumberOfUnpleasantReactionsByOrg', data, {headers : this.header});
     }
 
     topIssuesByOrg( data: any ) {
       return this.http.post<any>(this.url + 'topIssuesByOrg', data, {headers : this.header});
+    }
+
+    complimentsByOrg( data: any ) {
+      return this.http.post<any>(this.url + 'complimentByOrg', data, {headers : this.header});
     }
 
     topIssuesByOrgBranch( data: any ) {
@@ -71,10 +75,9 @@ export class StatsService {
       return this.http.post<any>(this.url + 'mostFreqSelectedEmojiByOrgBranch', data, {headers : this.header});
     }
 
-
-
-
-
+    totalNumberOfRatingsByOrgBranch( data: any ) {
+      return this.http.post<any>(this.url + 'totalNumOfRatingByOrgBranch', data, {headers : this.header});
+    }
 
 
 }

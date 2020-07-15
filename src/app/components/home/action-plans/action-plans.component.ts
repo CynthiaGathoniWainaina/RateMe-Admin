@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NgbCalendar, NgbDate, NgbDateParserFormatter} from '@ng-bootstrap/ng-bootstrap';
 import { NotificationService } from 'src/app/shared/services/notification.service';
 import {CustomerRatings} from '../../../shared/customer-rating-data';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 
 @Component({
@@ -24,6 +25,7 @@ export class ActionPlansComponent implements OnInit {
     private calendar: NgbCalendar, 
     public formatter: NgbDateParserFormatter,
     private notification: NotificationService,
+    private spinner: NgxSpinnerService
     ) {
     this.fromDate = calendar.getToday();
     this.toDate = calendar.getNext(calendar.getToday(), 'd', 10);
@@ -38,6 +40,8 @@ public salesCatHoveredOnDrag: any;
 
 
   ngOnInit() {
+    this.spinner.show();
+    this.spinner.hide();
   }
 
 
